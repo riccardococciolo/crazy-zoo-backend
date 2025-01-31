@@ -19,11 +19,11 @@ public class Animale {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@Column(name="nome_animale",
 			nullable = false)
 	private String nomeAnimale;
-	
+
 	@OneToMany(mappedBy = "animale",
 			fetch = FetchType.EAGER,
 			cascade = CascadeType.REMOVE)
@@ -43,5 +43,13 @@ public class Animale {
 
 	public void setNomeAnimale(String nomeAnimale) {
 		this.nomeAnimale = nomeAnimale;
+	}
+
+	public List<Prodotto> getProdotti() {
+		return prodotti;
+	}
+
+	public void setProdotti(List<Prodotto> prodotti) {
+		this.prodotti = prodotti;
 	}
 }

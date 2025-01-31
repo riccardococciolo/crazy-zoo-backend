@@ -1,6 +1,6 @@
 package com.betacom.cz.models;
 
-import java.util.List;
+import org.hibernate.annotations.AnyDiscriminator;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,8 +10,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 @Entity
 @Table(name = "recensioni")
@@ -21,7 +22,9 @@ public class Recensione {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column
+	@Column(nullable = false)
+	@Min(1)
+	@Max(5)
 	private Integer valutazione;
 	
 	@Column
@@ -30,6 +33,10 @@ public class Recensione {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_prodotto")
 	private Prodotto prodotto;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_utente")
+	private Utente utente;
 
 	public Integer getId() {
 		return id;
@@ -61,5 +68,13 @@ public class Recensione {
 
 	public void setProdotto(Prodotto prodotto) {
 		this.prodotto = prodotto;
+	}
+
+	public Utente getUtente() {
+		return utente;
+	}
+
+	public void setUtente(Utente utente) {
+		this.utente = utente;
 	}
 }
