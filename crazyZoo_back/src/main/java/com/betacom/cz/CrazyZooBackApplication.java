@@ -15,6 +15,7 @@ public class CrazyZooBackApplication {
 		SpringApplication.run(CrazyZooBackApplication.class, args);
 	}
 	
+
 	@Bean
     @Scope("prototype")
     Logger logger(InjectionPoint ip) {
