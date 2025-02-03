@@ -7,7 +7,7 @@ import com.betacom.cz.request.MarcaRequest;
 public interface MarcaServices {
 
 	void create(MarcaRequest req);
-	void update(Integer id, MarcaRequest req);
-	void delete(Integer id);
+	void updateByName(MarcaRequest req, String nomeMarca);
+	void delete(String nomeMarca);
 	List<MarcaDTO> listAll();
 }
