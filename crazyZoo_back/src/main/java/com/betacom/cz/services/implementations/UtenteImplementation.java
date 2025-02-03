@@ -28,7 +28,7 @@ public class UtenteImplementation implements UtenteServices{
 	}
 
 	@Override
-	public List<UtenteDTO> getAllUsers() {
+	public List<UtenteDTO> listAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

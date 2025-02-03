@@ -1,18 +1,18 @@
-2025-01-31T15:58:32.044+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 11404 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T15:58:32.061+01:00 DEBUG 11404 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T15:58:32.067+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T15:58:32.230+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T15:58:33.366+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T15:58:33.443+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 JPA repository interfaces.
-2025-01-31T15:58:34.257+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T15:58:35.110+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3867a12a
-2025-01-31T15:58:35.114+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T15:58:35.214+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T15:58:35.357+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T15:58:35.426+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T15:58:35.983+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T15:58:36.262+01:00  WARN 11404 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T15:58:36.302+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-02-03T18:10:24.844+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 2532 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:10:24.855+01:00 DEBUG 2532 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:10:24.857+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:10:24.933+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:10:26.186+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:10:26.350+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:10:26.998+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:10:27.687+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bc74a51
+2025-02-03T18:10:27.691+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:10:27.837+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:10:28.039+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:10:28.114+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:10:28.691+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:10:28.918+01:00  WARN 2532 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-03T18:10:28.963+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 5.5.5
@@ -20,264 +20,997 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-31T15:58:36.705+01:00 ERROR 11404 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'com.betacom.cz.models.Carrello.ordine' is 'mappedBy' a property named 'id_ordine' which does not exist in the target entity type 'com.betacom.cz.models.Ordine'
-2025-01-31T15:58:36.706+01:00  WARN 11404 --- [crazyZoo_back] [restartedMain] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'com.betacom.cz.models.Carrello.ordine' is 'mappedBy' a property named 'id_ordine' which does not exist in the target entity type 'com.betacom.cz.models.Ordine'
-2025-01-31T15:58:36.710+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T15:58:36.934+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-31T15:58:36.950+01:00  INFO 11404 --- [crazyZoo_back] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-02-03T18:10:31.262+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:10:31.311+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:10:31.795+01:00  WARN 2532 --- [crazyZoo_back] [restartedMain] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marcaController': Unsatisfied dependency expressed through field 'marS': Error creating bean with name 'marcaImplementation': Unsatisfied dependency expressed through field 'marR': Error creating bean with name 'IMarcaRepository' defined in com.betacom.cz.repositories.IMarcaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); Reason: Failed to create query for method public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); No property 'nome' found for type 'Marca'
+2025-02-03T18:10:31.796+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:10:31.804+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T18:10:31.827+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T18:10:31.845+01:00  INFO 2532 --- [crazyZoo_back] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-01-31T15:58:37.017+01:00 ERROR 11404 --- [crazyZoo_back] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2025-02-03T18:10:31.894+01:00 ERROR 2532 --- [crazyZoo_back] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'com.betacom.cz.models.Carrello.ordine' is 'mappedBy' a property named 'id_ordine' which does not exist in the target entity type 'com.betacom.cz.models.Ordine'
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.2.jar:6.2.2]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marcaController': Unsatisfied dependency expressed through field 'marS': Error creating bean with name 'marcaImplementation': Unsatisfied dependency expressed through field 'marR': Error creating bean with name 'IMarcaRepository' defined in com.betacom.cz.repositories.IMarcaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); Reason: Failed to create query for method public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); No property 'nome' found for type 'Marca'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.2.jar:6.2.2]
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.2.jar:6.2.2]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
-	at com.betacom.cz.CrazyZooBackApplication.main(CrazyZooBackApplication.java:10) ~[classes/:na]
+	at com.betacom.cz.CrazyZooBackApplication.main(CrazyZooBackApplication.java:15) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
-Caused by: org.hibernate.AnnotationException: Association 'com.betacom.cz.models.Carrello.ordine' is 'mappedBy' a property named 'id_ordine' which does not exist in the target entity type 'com.betacom.cz.models.Ordine'
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.targetProperty(OneToOneSecondPass.java:240) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.bindUnowned(OneToOneSecondPass.java:149) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.internal.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:128) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1842) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1800) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.2.jar:6.2.2]
-	... 17 common frames omitted
-
-2025-01-31T16:01:46.417+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 3804 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T16:01:46.422+01:00 DEBUG 3804 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T16:01:46.425+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T16:01:46.515+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T16:01:47.358+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T16:01:47.403+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
-2025-01-31T16:01:48.104+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T16:01:48.814+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30cc5086
-2025-01-31T16:01:48.818+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T16:01:48.926+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T16:01:49.066+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T16:01:49.134+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T16:01:49.706+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T16:01:49.967+01:00  WARN 3804 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T16:01:50.011+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 5.5.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-01-31T16:01:50.643+01:00 ERROR 3804 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.betacom.cz.models.Ordine.ordini' is 'mappedBy' a property named 'prodotti' which does not exist in the target entity 'com.betacom.cz.models.Ordine'
-2025-01-31T16:01:50.645+01:00  WARN 3804 --- [crazyZoo_back] [restartedMain] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.betacom.cz.models.Ordine.ordini' is 'mappedBy' a property named 'prodotti' which does not exist in the target entity 'com.betacom.cz.models.Ordine'
-2025-01-31T16:01:50.651+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T16:01:50.881+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-31T16:01:50.899+01:00  INFO 3804 --- [crazyZoo_back] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-01-31T16:01:50.948+01:00 ERROR 3804 --- [crazyZoo_back] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.betacom.cz.models.Ordine.ordini' is 'mappedBy' a property named 'prodotti' which does not exist in the target entity 'com.betacom.cz.models.Ordine'
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marcaImplementation': Unsatisfied dependency expressed through field 'marR': Error creating bean with name 'IMarcaRepository' defined in com.betacom.cz.repositories.IMarcaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); Reason: Failed to create query for method public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); No property 'nome' found for type 'Marca'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IMarcaRepository' defined in com.betacom.cz.repositories.IMarcaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); Reason: Failed to create query for method public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); No property 'nome' found for type 'Marca'
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307) ~[spring-beans-6.2.2.jar:6.2.2]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.2.jar:6.2.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.2.jar:6.2.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.2.jar:3.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.2.jar:3.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 38 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); Reason: Failed to create query for method public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); No property 'nome' found for type 'Marca'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:440) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.4.2.jar:3.4.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.2.jar:6.2.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.2.jar:6.2.2]
+	... 48 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.betacom.cz.repositories.IMarcaRepository.findByNome(java.lang.String); No property 'nome' found for type 'Marca'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107) ~[spring-data-jpa-3.4.2.jar:3.4.2]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128) ~[spring-data-jpa-3.4.2.jar:3.4.2]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:262) ~[spring-data-jpa-3.4.2.jar:3.4.2]
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	... 60 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'nome' found for type 'Marca'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:194) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:194) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702) ~[na:na]
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103) ~[spring-data-commons-3.4.2.jar:3.4.2]
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101) ~[spring-data-jpa-3.4.2.jar:3.4.2]
+	... 64 common frames omitted
+
+2025-02-03T18:12:45.058+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 16448 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:12:45.064+01:00 DEBUG 16448 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:12:45.070+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:12:45.180+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:12:46.351+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:12:46.537+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:12:47.362+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:12:47.960+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@116a99d6
+2025-02-03T18:12:47.969+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:12:48.117+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:12:48.279+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:12:48.380+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:12:49.074+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:12:49.307+01:00  WARN 16448 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-03T18:12:49.351+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T18:12:51.770+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:12:51.857+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:12:53.069+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T18:12:53.131+01:00  INFO 16448 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 9.056 seconds (process running for 10.386)
+2025-02-03T18:12:53.148+01:00  INFO 16448 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:12:53.156+01:00  INFO 16448 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T18:12:53.172+01:00  INFO 16448 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T18:15:56.853+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 14316 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:15:56.856+01:00 DEBUG 14316 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:15:56.858+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:15:56.932+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:15:58.054+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:15:58.218+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:15:59.160+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:15:59.766+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bc74a51
+2025-02-03T18:15:59.774+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:15:59.939+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:16:00.118+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:16:00.214+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:16:00.966+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:16:01.194+01:00  WARN 14316 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-03T18:16:01.242+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T18:16:03.682+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:16:03.760+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:16:04.825+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T18:16:04.900+01:00  INFO 14316 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 8.885 seconds (process running for 10.139)
+2025-02-03T18:16:04.918+01:00  INFO 14316 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:16:04.925+01:00  INFO 14316 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T18:16:04.939+01:00  INFO 14316 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T18:26:52.979+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 10900 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:26:52.983+01:00 DEBUG 10900 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:26:52.985+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:26:53.071+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:26:54.100+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:26:54.311+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:26:55.069+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:26:55.678+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53178d9
+2025-02-03T18:26:55.686+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:26:55.856+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:26:56.048+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:26:56.148+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:26:56.851+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:26:57.115+01:00  WARN 10900 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-03T18:26:57.163+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T18:26:59.582+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:26:59.651+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:27:00.729+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T18:27:00.827+01:00  INFO 10900 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 8.676 seconds (process running for 9.986)
+2025-02-03T18:27:00.849+01:00  INFO 10900 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:27:00.856+01:00  INFO 10900 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T18:27:00.869+01:00  INFO 10900 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T18:34:08.820+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 19616 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:34:08.823+01:00 DEBUG 19616 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:34:08.825+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:34:08.910+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:34:10.013+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:34:10.177+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:34:10.997+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:34:11.609+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21e91638
+2025-02-03T18:34:11.615+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:34:11.779+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:34:11.961+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:34:12.064+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:34:12.827+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:34:13.082+01:00  WARN 19616 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-03T18:34:13.136+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T18:34:15.472+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:34:15.548+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:34:16.638+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T18:34:16.690+01:00  INFO 19616 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 8.771 seconds (process running for 10.072)
+2025-02-03T18:34:16.703+01:00  INFO 19616 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:34:16.713+01:00  INFO 19616 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T18:34:16.729+01:00  INFO 19616 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T18:43:02.027+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 13492 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:43:02.030+01:00 DEBUG 13492 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:43:02.032+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:43:02.114+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:43:03.167+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:43:03.294+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:43:03.999+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:43:04.561+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d145f01
+2025-02-03T18:43:04.571+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:43:04.724+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:43:04.886+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:43:04.958+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:43:05.508+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:43:05.654+01:00  WARN 13492 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T18:43:05.657+01:00  WARN 13492 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T18:43:05.693+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T18:43:07.810+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:43:07.881+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:43:08.761+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T18:43:08.812+01:00  INFO 13492 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 7.605 seconds (process running for 9.051)
+2025-02-03T18:43:08.832+01:00  INFO 13492 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:43:08.839+01:00  INFO 13492 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T18:43:08.866+01:00  INFO 13492 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T18:45:48.515+01:00 ERROR 10884 --- [crazyZoo_back] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NoClassDefFoundError: jakarta/servlet/ServletException
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContextFactory.createContext(ServletWebServerApplicationContextFactory.java:52) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContextFactory.create(ServletWebServerApplicationContextFactory.java:47) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.DefaultApplicationContextFactory.getFromSpringFactories(DefaultApplicationContextFactory.java:70) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.DefaultApplicationContextFactory.create(DefaultApplicationContextFactory.java:50) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.createApplicationContext(SpringApplication.java:574) ~[spring-boot-3.4.2.jar:3.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.4.2.jar:3.4.2]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.2.jar:3.4.2]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.2.jar:3.4.2]
-	at com.betacom.cz.CrazyZooBackApplication.main(CrazyZooBackApplication.java:10) ~[classes/:na]
+	at com.betacom.cz.CrazyZooBackApplication.main(CrazyZooBackApplication.java:15) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.2.jar:3.4.2]
-Caused by: org.hibernate.AnnotationException: Collection 'com.betacom.cz.models.Ordine.ordini' is 'mappedBy' a property named 'prodotti' which does not exist in the target entity 'com.betacom.cz.models.Ordine'
-	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1638) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1652) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1613) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1604) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1842) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1800) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.6.5.Final.jar:6.6.5.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.2.jar:6.2.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.2.jar:6.2.2]
-	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: jakarta.servlet.ServletException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 12 common frames omitted
 
-2025-01-31T16:03:38.432+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 2472 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T16:03:38.435+01:00 DEBUG 2472 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T16:03:38.437+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T16:03:38.518+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T16:03:39.363+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T16:03:39.407+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
-2025-01-31T16:03:40.095+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T16:03:41.123+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ee457d0
-2025-01-31T16:03:41.130+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T16:03:41.271+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T16:03:41.418+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T16:03:41.486+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T16:03:42.005+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T16:03:42.298+01:00  WARN 2472 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T16:03:42.346+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-02-03T18:48:45.558+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15460 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T18:48:45.562+01:00 DEBUG 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T18:48:45.563+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T18:48:45.654+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T18:48:45.654+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03T18:48:47.256+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T18:48:47.426+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 4 JPA repository interfaces.
+2025-02-03T18:48:48.781+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T18:48:48.824+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T18:48:48.825+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T18:48:48.966+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T18:48:48.967+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3312 ms
+2025-02-03T18:48:49.239+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T18:48:49.937+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ff7bfc8
+2025-02-03T18:48:49.943+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T18:48:50.049+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T18:48:50.187+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T18:48:50.266+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T18:48:50.964+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T18:48:51.135+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T18:48:51.138+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T18:48:51.187+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
-	Database version: 5.5.5
+	Database version: 8.0
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-31T16:03:44.364+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-31T16:03:44.419+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:03:44.770+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-01-31T16:03:44.834+01:00  INFO 2472 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 7.154 seconds (process running for 8.466)
-2025-01-31T16:03:44.851+01:00  INFO 2472 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:03:44.858+01:00  INFO 2472 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T16:03:44.975+01:00  INFO 2472 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-31T16:08:03.413+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 8832 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T16:08:03.416+01:00 DEBUG 8832 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T16:08:03.418+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T16:08:03.509+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T16:08:04.366+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T16:08:04.412+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
-2025-01-31T16:08:05.075+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T16:08:05.804+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@694c5af1
-2025-01-31T16:08:05.807+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T16:08:05.917+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T16:08:06.060+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T16:08:06.151+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T16:08:06.695+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T16:08:06.958+01:00  WARN 8832 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T16:08:07.003+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2025-02-03T18:48:53.612+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T18:48:53.674+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T18:48:54.327+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T18:48:54.966+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T18:48:55.059+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1c88a949-8eea-4589-b412-8c4bc8dc91d3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T18:48:55.131+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T18:48:55.530+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T18:48:55.601+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T18:48:55.615+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 10.929 seconds (process running for 12.329)
+2025-02-03T18:52:30.539+01:00  INFO 15460 --- [crazyZoo_back] [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xd10x030xbdL,0xaa>0xb20xb7*0xebN0xbb0x070x140x110x940xd40xfb0xce5b0xfa0x02l0xd10xff0xed0xa10xe50xce0x03 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:406) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-02-03T18:55:41.451+01:00  INFO 15460 --- [crazyZoo_back] [http-nio-8080-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xb20x010x000x060xae0x030x03b0x050xc90xf50xe50xbb0xa20xea0x9e0xf5:0xc50x140x04,sS0x900x9er0xfbP0xcf0xf30xc80xb7/0xbaeG0xad0x8f ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:406) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-02-03T18:58:33.796+01:00  INFO 15460 --- [crazyZoo_back] [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T18:58:33.801+01:00  INFO 15460 --- [crazyZoo_back] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T18:58:33.841+01:00  INFO 15460 --- [crazyZoo_back] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 39 ms
+2025-02-03T19:03:12.558+01:00  INFO 15460 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-02-03T19:03:12.591+01:00  INFO 15460 --- [crazyZoo_back] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:03:12.615+01:00  INFO 15460 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:03:12.656+01:00  INFO 15460 --- [crazyZoo_back] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:12.716+01:00  INFO 15460 --- [crazyZoo_back] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T19:03:12.795+01:00  INFO 15460 --- [crazyZoo_back] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T19:03:13.255+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15460 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:03:13.255+01:00 DEBUG 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:03:13.255+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:03:13.729+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:03:13.761+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:03:14.068+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:03:14.073+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:03:14.074+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:03:14.135+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:03:14.136+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 876 ms
+2025-02-03T19:03:14.199+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-03T19:03:14.458+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a440715
+2025-02-03T19:03:14.459+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-03T19:03:14.484+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:03:14.495+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:03:14.539+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:03:14.545+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:03:14.545+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:03:14.546+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
 	Database driver: undefined/unknown
-	Database version: 5.5.5
+	Database version: 8.0
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-31T16:08:08.917+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-31T16:08:08.968+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:08:09.305+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-01-31T16:08:09.363+01:00  INFO 8832 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 6.782 seconds (process running for 8.467)
-2025-01-31T16:08:09.378+01:00  INFO 8832 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:08:09.386+01:00  INFO 8832 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T16:08:10.341+01:00  INFO 8832 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-31T16:21:30.518+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 4076 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T16:21:30.527+01:00 DEBUG 4076 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T16:21:30.537+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T16:21:30.643+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T16:21:31.653+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T16:21:31.695+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
-2025-01-31T16:21:32.424+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T16:21:33.126+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8466fe9
-2025-01-31T16:21:33.129+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T16:21:33.216+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T16:21:33.327+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T16:21:33.415+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T16:21:33.979+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T16:21:34.279+01:00  WARN 4076 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T16:21:34.311+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2025-02-03T19:03:14.964+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:03:14.976+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:15.146+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:03:15.353+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:03:15.382+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6b15794e-682f-4310-836e-11b24942f87c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:03:15.384+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:03:15.424+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:03:15.441+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:03:15.449+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 2.277 seconds (process running for 872.163)
+2025-02-03T19:03:15.453+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-03T19:03:28.779+01:00  INFO 15460 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-03T19:03:28.781+01:00  INFO 15460 --- [crazyZoo_back] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:03:28.786+01:00  INFO 15460 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:03:28.790+01:00  INFO 15460 --- [crazyZoo_back] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:28.792+01:00  INFO 15460 --- [crazyZoo_back] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-03T19:03:28.795+01:00  INFO 15460 --- [crazyZoo_back] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-03T19:03:28.929+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15460 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:03:28.929+01:00 DEBUG 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:03:28.929+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:03:29.326+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:03:29.368+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:03:29.612+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:03:29.613+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:03:29.614+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:03:29.707+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:03:29.708+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 775 ms
+2025-02-03T19:03:29.779+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-02-03T19:03:30.030+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20ce9345
+2025-02-03T19:03:30.031+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-02-03T19:03:30.052+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:03:30.064+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:03:30.124+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:03:30.130+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:03:30.131+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:03:30.134+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
 	Database driver: undefined/unknown
-	Database version: 5.5.5
+	Database version: 8.0
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-31T16:21:36.323+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-31T16:21:36.390+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:21:36.797+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-01-31T16:21:36.874+01:00  INFO 4076 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 7.147 seconds (process running for 8.939)
-2025-01-31T16:21:36.900+01:00  INFO 4076 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:21:36.913+01:00  INFO 4076 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T16:21:37.140+01:00  INFO 4076 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-31T16:33:52.752+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 8860 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T16:33:52.756+01:00 DEBUG 8860 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T16:33:52.761+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T16:33:52.885+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T16:33:53.984+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T16:33:54.037+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
-2025-01-31T16:33:55.115+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T16:33:56.286+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f896314
-2025-01-31T16:33:56.291+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T16:33:56.397+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T16:33:56.538+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T16:33:56.618+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T16:33:57.172+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T16:33:57.442+01:00  WARN 8860 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T16:33:57.478+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2025-02-03T19:03:30.664+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:03:30.679+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:30.808+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:03:30.830+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f0d289a9-eb20-4003-a1ce-8fee13b548cd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:03:30.833+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:03:31.084+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:03:31.120+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:03:31.141+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:03:31.145+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 2.282 seconds (process running for 887.859)
+2025-02-03T19:03:31.153+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-02-03T19:03:32.669+01:00  INFO 15460 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-03T19:03:32.672+01:00  INFO 15460 --- [crazyZoo_back] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:03:32.681+01:00  INFO 15460 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:03:32.686+01:00  INFO 15460 --- [crazyZoo_back] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:32.687+01:00  INFO 15460 --- [crazyZoo_back] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-02-03T19:03:32.703+01:00  INFO 15460 --- [crazyZoo_back] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-02-03T19:03:32.856+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15460 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:03:32.857+01:00 DEBUG 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:03:32.857+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:03:33.370+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:03:33.404+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:03:33.648+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:03:33.650+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:03:33.650+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:03:33.720+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:03:33.720+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 860 ms
+2025-02-03T19:03:33.773+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-02-03T19:03:34.025+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@281901b3
+2025-02-03T19:03:34.026+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-02-03T19:03:34.052+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:03:34.064+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:03:34.092+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:03:34.096+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:03:34.097+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:03:34.097+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
 	Database driver: undefined/unknown
-	Database version: 5.5.5
+	Database version: 8.0
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-31T16:33:59.680+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-31T16:33:59.737+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:34:00.187+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-01-31T16:34:00.258+01:00  INFO 8860 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 8.452 seconds (process running for 10.056)
-2025-01-31T16:34:00.278+01:00  INFO 8860 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:34:00.286+01:00  INFO 8860 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T16:34:00.298+01:00  INFO 8860 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-31T16:53:35.602+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 7380 (C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back\target\classes started by betacom in C:\Users\betacom\Desktop\academy\crazy-zoo-backend\crazyZoo_back)
-2025-01-31T16:53:35.606+01:00 DEBUG 7380 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
-2025-01-31T16:53:35.611+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-01-31T16:53:35.741+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-31T16:53:36.709+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-31T16:53:36.816+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 0 JPA repository interfaces.
-2025-01-31T16:53:37.587+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-31T16:53:38.339+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e4f1686
-2025-01-31T16:53:38.343+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-31T16:53:38.432+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-31T16:53:38.546+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-01-31T16:53:38.615+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-31T16:53:39.277+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-31T16:53:39.564+01:00  WARN 7380 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-01-31T16:53:39.612+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-02-03T19:03:34.337+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:03:34.344+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:34.466+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:03:34.485+01:00  WARN 15460 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1f882125-e069-489e-9b9b-5c6bd161ab13
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:03:34.487+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:03:34.702+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:03:34.760+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:03:34.790+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:03:34.795+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 1.997 seconds (process running for 891.509)
+2025-02-03T19:03:34.797+01:00  INFO 15460 --- [crazyZoo_back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-03T19:03:38.623+01:00  INFO 15460 --- [crazyZoo_back] [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-03T19:03:38.625+01:00  INFO 15460 --- [crazyZoo_back] [RMI TCP Connection(18)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:03:38.635+01:00  INFO 15460 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:03:38.650+01:00  INFO 15460 --- [crazyZoo_back] [RMI TCP Connection(18)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:03:38.651+01:00  INFO 15460 --- [crazyZoo_back] [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-02-03T19:03:38.656+01:00  INFO 15460 --- [crazyZoo_back] [RMI TCP Connection(18)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-02-03T19:04:01.796+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 17308 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:04:01.799+01:00 DEBUG 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:04:01.800+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:04:01.863+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T19:04:01.863+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03T19:04:03.043+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:04:03.167+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:04:04.083+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:04:04.106+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:04:04.106+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:04:04.188+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:04:04.189+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2325 ms
+2025-02-03T19:04:04.358+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T19:04:04.855+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b5a2faf
+2025-02-03T19:04:04.861+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T19:04:04.994+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:04:05.119+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T19:04:05.174+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:04:05.596+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:04:05.712+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:04:05.714+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:04:05.746+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
-	Database version: 5.5.5
+	Database version: 8.0
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-31T16:53:41.569+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-31T16:53:41.623+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:53:41.984+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-01-31T16:53:42.061+01:00  INFO 7380 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 7.278 seconds (process running for 9.764)
-2025-01-31T16:53:42.091+01:00  INFO 7380 --- [crazyZoo_back] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-31T16:53:42.099+01:00  INFO 7380 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-31T16:53:42.143+01:00  INFO 7380 --- [crazyZoo_back] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T19:04:07.627+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:04:07.674+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:04:08.375+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:04:08.436+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0051c8f8-e9ac-4a44-a557-d4c28edd6d6e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:04:08.474+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:04:09.136+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:04:09.349+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:04:09.436+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:04:09.456+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 8.371 seconds (process running for 9.727)
+2025-02-03T19:04:24.993+01:00  INFO 17308 --- [crazyZoo_back] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T19:04:24.994+01:00  INFO 17308 --- [crazyZoo_back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T19:04:24.996+01:00  INFO 17308 --- [crazyZoo_back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-03T19:09:37.877+01:00  INFO 17308 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-03T19:09:37.885+01:00  INFO 17308 --- [crazyZoo_back] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:09:37.896+01:00  INFO 17308 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:09:37.907+01:00  INFO 17308 --- [crazyZoo_back] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:09:37.915+01:00  INFO 17308 --- [crazyZoo_back] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T19:09:37.935+01:00  INFO 17308 --- [crazyZoo_back] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T19:09:38.097+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 17308 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:09:38.097+01:00 DEBUG 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:09:38.097+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:09:38.566+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:09:38.616+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:09:38.878+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:09:38.883+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:09:38.884+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:09:38.928+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:09:38.928+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 827 ms
+2025-02-03T19:09:38.978+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-03T19:09:39.236+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c71867d
+2025-02-03T19:09:39.237+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-03T19:09:39.263+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:09:39.277+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:09:39.316+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:09:39.321+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:09:39.322+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:09:39.323+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T19:09:39.789+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:09:39.802+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:09:39.991+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:09:40.008+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8d0b1106-4811-4c0d-8d08-b0efdb625ced
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:09:40.010+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:09:40.385+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:09:40.465+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:09:40.492+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:09:40.498+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 2.46 seconds (process running for 340.769)
+2025-02-03T19:09:40.501+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-03T19:10:03.508+01:00  INFO 17308 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-03T19:10:03.510+01:00  INFO 17308 --- [crazyZoo_back] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:10:03.517+01:00  INFO 17308 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:10:03.524+01:00  INFO 17308 --- [crazyZoo_back] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:10:03.526+01:00  INFO 17308 --- [crazyZoo_back] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-03T19:10:03.533+01:00  INFO 17308 --- [crazyZoo_back] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-03T19:10:03.688+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 17308 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:10:03.689+01:00 DEBUG 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:10:03.689+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:10:04.100+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:10:04.139+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:10:04.329+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:10:04.330+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:10:04.331+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:10:04.373+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:10:04.374+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
+2025-02-03T19:10:04.432+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-02-03T19:10:04.684+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a8df5f8
+2025-02-03T19:10:04.684+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-02-03T19:10:04.701+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:10:04.708+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:10:04.727+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:10:04.730+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:10:04.730+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:10:04.730+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T19:10:05.095+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:10:05.107+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:10:05.215+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:10:05.229+01:00  WARN 17308 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 852f836e-edf1-43f8-85f3-52b5cc4726a7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:10:05.230+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:10:05.471+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:10:05.518+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:10:05.545+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:10:05.550+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 1.929 seconds (process running for 365.821)
+2025-02-03T19:10:05.552+01:00  INFO 17308 --- [crazyZoo_back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-03T19:10:15.097+01:00  INFO 17308 --- [crazyZoo_back] [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-03T19:10:15.099+01:00  INFO 17308 --- [crazyZoo_back] [RMI TCP Connection(8)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:10:15.119+01:00  INFO 17308 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:10:15.124+01:00  INFO 17308 --- [crazyZoo_back] [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:10:15.125+01:00  INFO 17308 --- [crazyZoo_back] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-02-03T19:10:15.135+01:00  INFO 17308 --- [crazyZoo_back] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-02-03T19:10:21.479+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15312 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:10:21.481+01:00 DEBUG 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:10:21.482+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:10:21.539+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T19:10:21.539+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03T19:10:22.805+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:10:22.925+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:10:24.126+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:10:24.154+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:10:24.154+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:10:24.255+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:10:24.256+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2716 ms
+2025-02-03T19:10:24.462+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T19:10:24.970+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f7077c6
+2025-02-03T19:10:24.977+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T19:10:25.102+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:10:25.430+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T19:10:25.527+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:10:26.237+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:10:26.366+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:10:26.368+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:10:26.392+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T19:10:28.262+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:10:28.326+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:10:28.997+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:10:29.068+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 544aaf36-c514-413e-8135-ff8ee6faeafa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:10:29.109+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:10:30.006+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:10:30.241+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:10:30.334+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:10:30.351+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 9.727 seconds (process running for 10.917)
+2025-02-03T19:10:42.420+01:00  INFO 15312 --- [crazyZoo_back] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T19:10:42.420+01:00  INFO 15312 --- [crazyZoo_back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T19:10:42.422+01:00  INFO 15312 --- [crazyZoo_back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-03T19:11:46.780+01:00 DEBUG 15312 --- [crazyZoo_back] [http-nio-8080-exec-4] c.betacom.cz.controller.MarcaController  : Inizio creazione marca: Felix
+2025-02-03T19:11:46.975+01:00 DEBUG 15312 --- [crazyZoo_back] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.nome_marca 
+    from
+        marche m1_0 
+    where
+        m1_0.nome_marca=?
+2025-02-03T19:11:47.204+01:00 DEBUG 15312 --- [crazyZoo_back] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        marche
+        (nome_marca) 
+    values
+        (?)
+2025-02-03T19:11:47.330+01:00 DEBUG 15312 --- [crazyZoo_back] [http-nio-8080-exec-4] c.b.c.s.i.MarcaImplementation            : Marca 'Felix' creata con successo
+2025-02-03T19:16:11.061+01:00  INFO 15312 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-03T19:16:11.072+01:00  INFO 15312 --- [crazyZoo_back] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:16:11.080+01:00  INFO 15312 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:16:11.093+01:00  INFO 15312 --- [crazyZoo_back] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:16:11.104+01:00  INFO 15312 --- [crazyZoo_back] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T19:16:11.118+01:00  INFO 15312 --- [crazyZoo_back] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T19:16:11.292+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15312 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:16:11.292+01:00 DEBUG 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:16:11.293+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:16:11.866+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:16:11.902+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:16:12.280+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:16:12.287+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:16:12.287+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:16:12.357+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:16:12.358+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1059 ms
+2025-02-03T19:16:12.437+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-03T19:16:12.712+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35a6e9da
+2025-02-03T19:16:12.713+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-03T19:16:12.737+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:16:12.750+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:16:12.787+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:16:12.792+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:16:12.792+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:16:12.793+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T19:16:13.116+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:16:13.130+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:16:13.298+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:16:13.317+01:00  WARN 15312 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0fac3f8b-b91f-4fb8-9f6a-29631155ed9d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:16:13.319+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:16:13.684+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:16:13.762+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:16:13.799+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:16:13.805+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 2.584 seconds (process running for 354.37)
+2025-02-03T19:16:13.809+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-02-03T19:16:20.727+01:00  INFO 15312 --- [crazyZoo_back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-03T19:16:20.730+01:00  INFO 15312 --- [crazyZoo_back] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:16:20.742+01:00  INFO 15312 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:16:20.750+01:00  INFO 15312 --- [crazyZoo_back] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:16:20.752+01:00  INFO 15312 --- [crazyZoo_back] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-03T19:16:20.760+01:00  INFO 15312 --- [crazyZoo_back] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-03T19:16:20.925+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15312 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:16:20.925+01:00 DEBUG 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:16:20.926+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:16:21.459+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:16:21.529+01:00  INFO 15312 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:16:29.187+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 18336 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:16:29.190+01:00 DEBUG 18336 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:16:29.192+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:16:29.268+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T19:16:29.268+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03T19:16:31.039+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:16:31.254+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 196 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:16:32.975+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:16:33.002+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:16:33.003+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:16:33.120+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:16:33.122+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3853 ms
+2025-02-03T19:16:33.379+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T19:16:34.011+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c4df442
+2025-02-03T19:16:34.021+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T19:16:34.191+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:16:34.365+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T19:16:34.462+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:16:35.178+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:16:35.363+01:00  WARN 18336 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:16:35.368+01:00  WARN 18336 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:16:35.423+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T19:16:38.406+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:16:38.464+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:16:39.393+01:00  WARN 18336 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:16:39.487+01:00  WARN 18336 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1a72460f-b78c-4e95-9df0-3b7fd211d28f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:16:39.569+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:16:40.810+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:16:41.083+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:16:41.204+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:16:41.234+01:00  INFO 18336 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 13.093 seconds (process running for 14.678)
+2025-02-03T19:17:45.120+01:00  INFO 18336 --- [crazyZoo_back] [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xf20x010x000x060xee0x030x03I0xab0xd8)0xcc0xea0xe03J0xb50x040x020xf30xf60x8fT0xbb0xa10xd5 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:406) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-02-03T19:17:45.120+01:00  INFO 18336 --- [crazyZoo_back] [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x120x010x000x070x0e0x030x030x100x0c0x100x9f%0xed0xea0xfc0x1e0xa4;0x920x860xbe0xba0xee0xa5<R0x940xf6R0x9e70x840x870xe20x84J0xf5IQ ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:406) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-02-03T19:18:01.266+01:00  INFO 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T19:18:01.270+01:00  INFO 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T19:18:01.275+01:00  INFO 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-03T19:18:01.607+01:00 DEBUG 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] c.betacom.cz.controller.MarcaController  : Inizio creazione marca: Royal Canin
+2025-02-03T19:18:01.951+01:00 DEBUG 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.nome_marca 
+    from
+        marche m1_0 
+    where
+        m1_0.nome_marca=?
+2025-02-03T19:18:02.292+01:00 DEBUG 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        marche
+        (nome_marca) 
+    values
+        (?)
+2025-02-03T19:18:02.433+01:00 DEBUG 18336 --- [crazyZoo_back] [http-nio-8080-exec-6] c.b.c.s.i.MarcaImplementation            : Marca 'Royal Canin' creata con successo
+2025-02-03T19:26:37.977+01:00 DEBUG 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] c.betacom.cz.controller.MarcaController  : Inizio creazione marca: Purina
+2025-02-03T19:26:37.981+01:00 DEBUG 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.nome_marca 
+    from
+        marche m1_0 
+    where
+        m1_0.nome_marca=?
+2025-02-03T19:26:43.034+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6c4df442 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-02-03T19:26:48.047+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f0a84a7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-02-03T19:26:53.066+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3635c4c6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-02-03T19:26:58.075+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@ef0ae67 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-02-03T19:27:03.093+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@23032e21 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-02-03T19:27:08.097+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6cf578e4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-02-03T19:27:08.112+01:00  WARN 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08003
+2025-02-03T19:27:08.113+01:00 ERROR 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 30117ms (total=9, active=0, idle=9, waiting=0)
+2025-02-03T19:27:08.114+01:00 ERROR 18336 --- [crazyZoo_back] [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : No operations allowed after connection closed.
+2025-02-03T19:27:26.063+01:00  INFO 18336 --- [crazyZoo_back] [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-03T19:27:26.069+01:00  INFO 18336 --- [crazyZoo_back] [RMI TCP Connection(14)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-03T19:27:26.082+01:00  INFO 18336 --- [crazyZoo_back] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-03T19:27:26.096+01:00  INFO 18336 --- [crazyZoo_back] [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:27:26.107+01:00  INFO 18336 --- [crazyZoo_back] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-03T19:27:26.123+01:00  INFO 18336 --- [crazyZoo_back] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T19:27:51.322+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 16872 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T19:27:51.326+01:00 DEBUG 16872 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T19:27:51.328+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T19:27:51.410+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T19:27:51.411+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03T19:27:53.200+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T19:27:53.412+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 186 ms. Found 4 JPA repository interfaces.
+2025-02-03T19:27:55.326+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T19:27:55.370+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T19:27:55.370+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T19:27:55.561+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T19:27:55.562+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4149 ms
+2025-02-03T19:27:55.931+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T19:27:56.694+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25ee7067
+2025-02-03T19:27:56.707+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T19:27:56.906+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T19:27:57.189+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T19:27:57.289+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T19:27:58.183+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T19:27:58.410+01:00  WARN 16872 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-03T19:27:58.415+01:00  WARN 16872 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-02-03T19:27:58.473+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T19:28:01.546+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T19:28:01.628+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T19:28:02.434+01:00  WARN 16872 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T19:28:02.504+01:00  WARN 16872 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b876a0eb-78e2-40eb-9bf5-bf61a02ccffd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T19:28:02.599+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T19:28:03.807+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T19:28:04.143+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T19:28:04.279+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T19:28:04.305+01:00  INFO 16872 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 14.099 seconds (process running for 15.775)
+2025-02-03T19:28:21.678+01:00  INFO 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-03T19:28:21.679+01:00  INFO 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-03T19:28:21.684+01:00  INFO 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-02-03T19:28:21.967+01:00 DEBUG 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] c.betacom.cz.controller.MarcaController  : Inizio creazione marca: Purina
+2025-02-03T19:28:22.172+01:00 DEBUG 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.nome_marca 
+    from
+        marche m1_0 
+    where
+        m1_0.nome_marca=?
+2025-02-03T19:28:22.549+01:00 DEBUG 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        marche
+        (nome_marca) 
+    values
+        (?)
+2025-02-03T19:28:22.694+01:00 DEBUG 16872 --- [crazyZoo_back] [http-nio-8080-exec-1] c.b.c.s.i.MarcaImplementation            : Marca 'Purina' creata con successo

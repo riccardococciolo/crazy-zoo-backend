@@ -9,6 +9,6 @@ public interface UtenteServices {
 	void create (UtenteRequest req);
 	void update (UtenteRequest req, String email);
 	void delete (String email);
-	List<UtenteDTO> getAllUsers();
+	List<UtenteDTO> listAll();
 
 }
