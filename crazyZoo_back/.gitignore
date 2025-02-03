@@ -32,5 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 
-log.jpa
-
+#JPA
+jpa.log
+jpa.log.*
+*.log
+*.log.gz

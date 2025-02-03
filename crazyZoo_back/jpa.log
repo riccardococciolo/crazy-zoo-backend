@@ -2209,3 +2209,45 @@ This generated password is for development use only. Your security configuration
 2025-02-03T20:00:07.573+01:00  INFO 18232 --- [crazyZoo_back] [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-02-03T20:00:07.578+01:00  INFO 18232 --- [crazyZoo_back] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-03T20:00:07.588+01:00  INFO 18232 --- [crazyZoo_back] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-03T20:07:18.478+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Starting CrazyZooBackApplication using Java 22.0.2 with PID 15464 (C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back\target\classes started by dario in C:\Users\dario\Desktop\Academy\crazy-zoo-backend\crazyZoo_back)
+2025-02-03T20:07:18.480+01:00 DEBUG 15464 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-03T20:07:18.482+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-02-03T20:07:18.545+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03T20:07:18.545+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03T20:07:19.594+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03T20:07:19.692+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 4 JPA repository interfaces.
+2025-02-03T20:07:20.508+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-03T20:07:20.531+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-03T20:07:20.531+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-03T20:07:20.616+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-03T20:07:20.616+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2070 ms
+2025-02-03T20:07:20.790+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-03T20:07:21.250+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60fa2454
+2025-02-03T20:07:21.256+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-03T20:07:21.337+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-03T20:07:21.445+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-03T20:07:21.501+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-03T20:07:21.924+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03T20:07:22.117+01:00  WARN 15464 --- [crazyZoo_back] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-02-03T20:07:22.150+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-03T20:07:23.732+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-03T20:07:23.776+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03T20:07:24.254+01:00  WARN 15464 --- [crazyZoo_back] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-03T20:07:24.299+01:00  WARN 15464 --- [crazyZoo_back] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d220dab4-1a86-4a8d-b8d6-6ddf2bbdef32
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-03T20:07:24.336+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-03T20:07:25.011+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://51.75.30.167:3306/db_alordo'
+2025-02-03T20:07:25.157+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-03T20:07:25.213+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-03T20:07:25.230+01:00  INFO 15464 --- [crazyZoo_back] [restartedMain] com.betacom.cz.CrazyZooBackApplication   : Started CrazyZooBackApplication in 7.321 seconds (process running for 8.31)
