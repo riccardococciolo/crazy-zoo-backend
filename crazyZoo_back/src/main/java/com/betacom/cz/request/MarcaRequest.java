@@ -1,25 +1,23 @@
 package com.betacom.cz.request;
 
 public class MarcaRequest {
-	String nome_mamrca;
+	String nomeMarca;
 
-	public String getNome_mamrca() {
-		return nome_mamrca;
+	public String getNomeMarca() {
+		return nomeMarca;
 	}
 
-	public void setNome_mamrca(String nome_mamrca) {
-		this.nome_mamrca = nome_mamrca;
+	public void setNomeMarca(String nomeMarca) {
+		this.nomeMarca = nomeMarca;
 	}
 
-	public MarcaRequest(String nome_mamrca) {
+	public MarcaRequest(String nomeMarca) {
 		super();
-		this.nome_mamrca = nome_mamrca;
+		this.nomeMarca = nomeMarca;
 	}
 
 	public MarcaRequest() {
 		super();
 	}
 	
-	
-
 }
