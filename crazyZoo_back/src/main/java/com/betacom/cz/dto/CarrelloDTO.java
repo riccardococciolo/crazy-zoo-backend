@@ -1,6 +1,6 @@
 package com.betacom.cz.dto;
 
-public class CarelloDTO {
+public class CarrelloDTO {
 	
 	
 	private UtenteDTO utente;

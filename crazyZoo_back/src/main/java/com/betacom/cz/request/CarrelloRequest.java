@@ -1,6 +1,6 @@
 package com.betacom.cz.request;
 
-public class CarelloReq {
+public class CarrelloRequest {
 	Integer id_utente;
 
 	public Integer getId_utente() {
@@ -11,12 +11,12 @@ public class CarelloReq {
 		this.id_utente = id_utente;
 	}
 
-	public CarelloReq(Integer id_utente) {
+	public CarrelloRequest(Integer id_utente) {
 		super();
 		this.id_utente = id_utente;
 	}
 
-	public CarelloReq() {
+	public CarrelloRequest() {
 		super();
 	}
 	
