@@ -1,13 +1,12 @@
-package com.betacom.cz.dto;
+package com.betacom.cz.request;
 
-public class ProdottoDTO {
-	
+public class ProdottoRequest {
 	private Integer id;
 	private Double prezzo;
 	private Integer quantita;
 	private String titolo;
-	private AnimaleDTO animale;
-	private MarcaDTO marca;
+	private Integer animaleId;
+	private Integer marcaId;
 	
 	public Integer getId() {
 		return id;
@@ -33,29 +32,29 @@ public class ProdottoDTO {
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
 	}
-	public AnimaleDTO getAnimale() {
-		return animale;
+	public Integer getAnimaleId() {
+		return animaleId;
 	}
-	public void setAnimale(AnimaleDTO animale) {
-		this.animale = animale;
+	public void setAnimaleId(Integer animaleId) {
+		this.animaleId = animaleId;
 	}
-	public MarcaDTO getMarca() {
-		return marca;
+	public Integer getMarcaId() {
+		return marcaId;
 	}
-	public void setMarca(MarcaDTO marca) {
-		this.marca = marca;
+	public void setMarcaId(Integer marcaId) {
+		this.marcaId = marcaId;
 	}
-	
-	public ProdottoDTO(Integer id, Double prezzo, Integer quantita, String titolo, AnimaleDTO animale, MarcaDTO marca) {
+	public ProdottoRequest(Integer id, Double prezzo, Integer quantita, String titolo, Integer animaleId,
+			Integer marcaId) {
 		super();
 		this.id = id;
 		this.prezzo = prezzo;
 		this.quantita = quantita;
 		this.titolo = titolo;
-		this.animale = animale;
-		this.marca = marca;
+		this.animaleId = animaleId;
+		this.marcaId = marcaId;
 	}
-	public ProdottoDTO() {
+	public ProdottoRequest() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
