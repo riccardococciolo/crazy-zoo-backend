@@ -33,7 +33,8 @@ build/
 .vscode/
 
 #JPA
-jpa.log
-jpa.log.*
+log.jpa
 *.log
 *.log.gz
+*.log.*
+jpa.log*
