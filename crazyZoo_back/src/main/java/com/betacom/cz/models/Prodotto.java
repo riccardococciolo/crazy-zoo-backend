@@ -35,6 +35,10 @@ public class Prodotto {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_animale")
 	private Animale animale;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_tipologia")
+	private Tipologia tipologia;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_marca")
@@ -144,5 +148,15 @@ public class Prodotto {
 	public void setImmagini(List<Immagine> immagini) {
 		this.immagini = immagini;
 	}
+
+	public Tipologia getTipologia() {
+		return tipologia;
+	}
+
+	public void setTipologia(Tipologia tipologia) {
+		this.tipologia = tipologia;
+	}
+	
+	
 	
 }

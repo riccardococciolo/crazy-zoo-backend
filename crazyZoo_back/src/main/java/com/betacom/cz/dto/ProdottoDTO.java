@@ -8,6 +8,7 @@ public class ProdottoDTO {
 	private String titolo;
 	private AnimaleDTO animale;
 	private MarcaDTO marca;
+	private TipologiaDTO tipologia;
 	
 	//Getters&Setters
 	public Integer getId() {
@@ -57,9 +58,17 @@ public class ProdottoDTO {
 	public void setMarca(MarcaDTO marca) {
 		this.marca = marca;
 	}
-	
-	//Costruttori
-	public ProdottoDTO(Integer id, Double prezzo, Integer quantita, String titolo, AnimaleDTO animale, MarcaDTO marca) {
+
+	public TipologiaDTO getTipologia() {
+		return tipologia;
+	}
+
+	public void setTipologia(TipologiaDTO tipologia) {
+		this.tipologia = tipologia;
+	}
+
+	public ProdottoDTO(Integer id, Double prezzo, Integer quantita, String titolo, AnimaleDTO animale, MarcaDTO marca,
+			TipologiaDTO tipologia) {
 		super();
 		this.id = id;
 		this.prezzo = prezzo;
@@ -67,17 +76,20 @@ public class ProdottoDTO {
 		this.titolo = titolo;
 		this.animale = animale;
 		this.marca = marca;
-	}
-	
-	public ProdottoDTO() {
-		super();
+		this.tipologia = tipologia;
 	}
 
-	//toString
+	public ProdottoDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		return "ProdottoDTO [id=" + id + ", prezzo=" + prezzo + ", quantita=" + quantita + ", titolo=" + titolo
-				+ ", animale=" + animale + ", marca=" + marca + "]";
+				+ ", animale=" + animale + ", marca=" + marca + ", tipologia=" + tipologia + "]";
 	}
+	
+	
 		
 }
