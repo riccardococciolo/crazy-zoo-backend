@@ -9,13 +9,12 @@ create table prodotto_ordine (id_ordine integer not null, id_prodotto integer no
 create table recensioni (id integer not null auto_increment, id_prodotto integer, id_utente integer, valutazione integer not null, descrizione varchar(255), primary key (id)) engine=InnoDB;
 create table ruoli (id integer not null auto_increment, nome varchar(255) not null, primary key (id)) engine=InnoDB;
 create table tipologie (id integer not null auto_increment, nome varchar(255) not null, primary key (id)) engine=InnoDB;
-create table utenti (id integer not null auto_increment, id_ruolo integer, cellulare varchar(255) not null, cognome varchar(255) not null, email varchar(255) not null, nome varchar(255) not null, password varchar(255) not null, username varchar(255) not null, primary key (id)) engine=InnoDB;
+create table utenti (id integer not null auto_increment, id_ruolo integer not null, cellulare varchar(255) not null, cognome varchar(255) not null, email varchar(255) not null, nome varchar(255) not null, password varchar(255) not null, username varchar(255) not null, primary key (id)) engine=InnoDB;
 alter table carrelli add constraint UKb76ur59r6gp0hfcl450nh8ua1 unique (id_utente);
 alter table immagini add constraint UKtkl9y2cjq7e29ob7ukn5n984r unique (nome_immagine);
 alter table marche add constraint UKjdwx0jue9ujpy57t3mpacdt8l unique (nome_marca);
 alter table ordini add constraint UK47ulv8npe0ow92ncokvpjbugj unique (id_carrello);
 alter table ruoli add constraint UKbspdk840bmlv2r5twrarwcmlq unique (nome);
-alter table utenti add constraint UKghcko5wio115u70r211f0cftt unique (id_ruolo);
 alter table utenti add constraint UKosp6ju78vcf9vn2tblmb1ljgv unique (cellulare);
 alter table utenti add constraint UK9b90mk1nolf3ou90p42a93tjo unique (email);
 alter table utenti add constraint UKtn8mwk6h2wn28yyj7fco65gls unique (username);

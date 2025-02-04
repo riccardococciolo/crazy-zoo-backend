@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -57,9 +58,10 @@ public class Utente {
 			fetch = FetchType.EAGER)
 	private List<Recensione> recensioni;
 	
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "id_ruolo")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_ruolo", nullable = false)
 	private Ruolo ruolo;
+
 	
 	//Getters&Setters
 	public Integer getId() {
