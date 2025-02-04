@@ -8,6 +8,6 @@ public interface MarcaServices {
 
 	void create(MarcaRequest req);
 	void updateByName(MarcaRequest req, String nomeMarca);
-	void delete(String nomeMarca);
+	void deleteByName(String nomeMarca);
 	List<MarcaDTO> listAll();
 }
