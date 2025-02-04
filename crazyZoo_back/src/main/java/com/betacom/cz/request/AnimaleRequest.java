@@ -3,27 +3,40 @@ package com.betacom.cz.request;
 public class AnimaleRequest {
 	
 	private Integer id;
-	private String nomeAnimale;
+	private String nome;
 	
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getNomeAnimale() {
-		return nomeAnimale;
+	
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeAnimale(String nomeAnimale) {
-		this.nomeAnimale = nomeAnimale;
+	
+	public void setNomeAnimale(String nome) {
+		this.nome = nome;
 	}
-	public AnimaleRequest(Integer id, String nomeAnimale) {
+	
+	//Costruttori
+	public AnimaleRequest(Integer id, String nome) {
 		super();
 		this.id = id;
-		this.nomeAnimale = nomeAnimale;
+		this.nome = nome;
 	}
+	
 	public AnimaleRequest() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
+	//toString
+	@Override
+	public String toString() {
+		return "AnimaleRequest [id=" + id + ", nome=" + nome + "]";
+	}
+	
 }

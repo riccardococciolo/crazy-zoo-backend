@@ -3,26 +3,40 @@ package com.betacom.cz.dto;
 public class MarcaDTO {
 	
 	private Integer id;
-	private String nomeMarca;
+	private String nome                ;
+	
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getNomeMarca() {
-		return nomeMarca;
+	
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeMarca(String nomeMarca) {
-		this.nomeMarca = nomeMarca;
+	
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public MarcaDTO(Integer id, String nomeMarca) {
+	
+	//Costruttori
+	public MarcaDTO(Integer id, String nome) {
 		super();
 		this.id = id;
-		this.nomeMarca = nomeMarca;
+		this.nome = nome;
 	}
+	
 	public MarcaDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
+	//toString
+	@Override
+	public String toString() {
+		return "MarcaDTO [id=" + id + ", nome=" + nome + "]";
+	}	
+	
 }

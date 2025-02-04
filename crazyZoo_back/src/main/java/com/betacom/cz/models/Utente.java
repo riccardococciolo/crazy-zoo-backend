@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -62,6 +61,7 @@ public class Utente {
 	@JoinColumn(name = "id_ruolo")
 	private Ruolo ruolo;
 	
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -149,4 +149,5 @@ public class Utente {
 	public void setRuolo(Ruolo ruolo) {
 		this.ruolo = ruolo;
 	}
+	
 }

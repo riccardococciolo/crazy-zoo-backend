@@ -3,27 +3,39 @@ package com.betacom.cz.dto;
 public class AnimaleDTO {
 
 	private Integer id;
-	private String nomeAnimale;
+	private String nome;
 	
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getNomeAnimale() {
-		return nomeAnimale;
+	
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeAnimale(String nomeAnimale) {
-		this.nomeAnimale = nomeAnimale;
+	
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public AnimaleDTO(Integer id, String nomeAnimale) {
+	
+	//Costruttori
+	public AnimaleDTO(Integer id, String nome) {
 		super();
 		this.id = id;
-		this.nomeAnimale = nomeAnimale;
+		this.nome = nome;
 	}
 	public AnimaleDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
+	//toString
+	@Override
+	public String toString() {
+		return "AnimaleDTO [id=" + id + ", nome=" + nome + "]";
+	}
+	
 }

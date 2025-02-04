@@ -23,6 +23,7 @@ public class Ruolo {
 	@OneToOne(mappedBy = "ruolo")
 	private Utente utente;
 
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -46,4 +47,5 @@ public class Ruolo {
 	public void setUtente(Utente utente) {
 		this.utente = utente;
 	}
+	
 }

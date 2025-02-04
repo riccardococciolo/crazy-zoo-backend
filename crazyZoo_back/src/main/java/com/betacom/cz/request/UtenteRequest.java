@@ -2,6 +2,7 @@ package com.betacom.cz.request;
 
 public class UtenteRequest {
 	
+	private Integer id;
 	private String nome;
 	private String cognome;
 	private String username;
@@ -11,6 +12,14 @@ public class UtenteRequest {
 	private Integer ruoloID;
 	
 	//Getters&Setters
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -66,11 +75,11 @@ public class UtenteRequest {
 	public void setRuoloID(Integer ruoloID) {
 		this.ruoloID = ruoloID;
 	}
-
+	
 	//Costruttori
-	public UtenteRequest(String nome, String cognome, String username, String password, String email, String cellulare,
-			Integer ruoloID) {
+	public UtenteRequest(Integer id, String nome, String cognome, String username, String password, String email, String cellulare, Integer ruoloID) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
 		this.username = username;
@@ -79,15 +88,17 @@ public class UtenteRequest {
 		this.cellulare = cellulare;
 		this.ruoloID = ruoloID;
 	}
-
+	
 	public UtenteRequest() {
 		super();
 	}
 	
+	//toString
 	@Override
 	public String toString() {
-		return "UtenteRequest [nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", password="
-				+ password + ", email=" + email + ", cellulare=" + cellulare + ", ruoloID=" + ruoloID + "]";
+		return "UtenteRequest [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", username=" + username
+				+ ", password=" + password + ", email=" + email + ", cellulare=" + cellulare + ", ruoloID=" + ruoloID
+				+ "]";
 	}
-
+	
 }

@@ -1,7 +1,5 @@
 package com.betacom.cz.models;
 
-import org.hibernate.annotations.AnyDiscriminator;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -38,6 +36,7 @@ public class Recensione {
 	@JoinColumn(name = "id_utente")
 	private Utente utente;
 
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -77,4 +76,5 @@ public class Recensione {
 	public void setUtente(Utente utente) {
 		this.utente = utente;
 	}
+	
 }

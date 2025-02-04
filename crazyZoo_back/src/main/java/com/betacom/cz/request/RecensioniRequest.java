@@ -1,43 +1,74 @@
 package com.betacom.cz.request;
 
 public class RecensioniRequest {
-	private Integer id_prodotto;
-	private Integer id_utente;
+
+	private Integer id;
 	private Integer valutazione;
 	private String descrizione;
-	public Integer getId_prodotto() {
-		return id_prodotto;
+	private Integer prodottoID;
+	private Integer utenteID;
+	
+	//Getters&Setters
+	public Integer getId() {
+		return id;
 	}
-	public void setId_prodotto(Integer id_prodotto) {
-		this.id_prodotto = id_prodotto;
+	
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public Integer getId_utente() {
-		return id_utente;
-	}
-	public void setId_utente(Integer id_utente) {
-		this.id_utente = id_utente;
-	}
+	
 	public Integer getValutazione() {
 		return valutazione;
 	}
+	
 	public void setValutazione(Integer valutazione) {
 		this.valutazione = valutazione;
 	}
+	
 	public String getDescrizione() {
 		return descrizione;
 	}
+	
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-	public RecensioniRequest(Integer id_prodotto, Integer id_utente, Integer valutazione, String descrizione) {
+	
+	public Integer getProdottoID() {
+		return prodottoID;
+	}
+	
+	public void setProdottoID(Integer prodottoID) {
+		this.prodottoID = prodottoID;
+	}
+	
+	public Integer getUtenteID() {
+		return utenteID;
+	}
+	
+	public void setUtenteID(Integer utenteID) {
+		this.utenteID = utenteID;
+	}
+
+	//Costruttori
+	public RecensioniRequest(Integer id, Integer valutazione, String descrizione, Integer prodottoID,
+			Integer utenteID) {
 		super();
-		this.id_prodotto = id_prodotto;
-		this.id_utente = id_utente;
+		this.id = id;
 		this.valutazione = valutazione;
 		this.descrizione = descrizione;
+		this.prodottoID = prodottoID;
+		this.utenteID = utenteID;
 	}
+
 	public RecensioniRequest() {
 		super();
+	}
+
+	//toString
+	@Override
+	public String toString() {
+		return "RecensioniRequest [id=" + id + ", valutazione=" + valutazione + ", descrizione=" + descrizione
+				+ ", prodottoID=" + prodottoID + ", utenteID=" + utenteID + "]";
 	}
 	
 }

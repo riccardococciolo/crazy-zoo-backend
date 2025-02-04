@@ -9,6 +9,7 @@ public class RuoloDTO {
 	public Integer getId() {
 		return id;
 	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -22,16 +23,17 @@ public class RuoloDTO {
 	}
 	
 	//Costruttori
-	public RuoloDTO() {
-		super();
-	}
-	
 	public RuoloDTO(Integer id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
 	}
-
+	
+	public RuoloDTO() {
+		super();
+	}
+	
+	//toString
 	@Override
 	public String toString() {
 		return "RuoloDTO [id=" + id + ", nome=" + nome + "]";

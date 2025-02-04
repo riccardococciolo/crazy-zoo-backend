@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -65,6 +64,7 @@ public class Prodotto {
 			cascade = CascadeType.REMOVE)
 	private List<Immagine> immagini;
 
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -144,4 +144,5 @@ public class Prodotto {
 	public void setImmagini(List<Immagine> immagini) {
 		this.immagini = immagini;
 	}
+	
 }

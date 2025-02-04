@@ -3,7 +3,6 @@ package com.betacom.cz.services.implementations;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,68 +24,66 @@ public class MarcaImplementation implements MarcaServices{
 
 	@Override
 	@Transactional
-	public void create(MarcaRequest req) {
+	public void create(MarcaRequest req) throws Exception {
 
-		String nomeMarca = Optional.ofNullable(req)
-	            .map(MarcaRequest::getNomeMarca)
-	            .map(String::trim)
-	            .orElseThrow(() -> new IllegalArgumentException("Il nome della marca non può essere vuoto."));
+		Optional<Marca> m = marcaR.findByNomeMarca(req.getNome());
+							
+		if (m.isPresent())
+			throw new Exception("Marca esiste già");
+		
+		Marca marca = new Marca();		
+		marca.setNomeMarca(req.getNome());		
+		marcaR.save(marca);
 
-	    if (marcaR.findByNomeMarca(nomeMarca).isPresent()) {
-	        log.error("Tentativo di inserire marca duplicata: '{}'", nomeMarca);
-	        throw new IllegalArgumentException("La marca esiste già.");
-	    }
-
-	    Marca marca = new Marca();
-	    marca.setNomeMarca(nomeMarca);
-	    marcaR.save(marca);
-
-	    log.info("Marca '{}' creata con successo.", marca.getNomeMarca());
+	    log.info("Marca '{}' creata con successo.", req.getNome());
 	}
 
 	@Override
 	@Transactional
-	public void updateByName(MarcaRequest req, String nomeMarca) {
-
-		String nomeA = Optional.ofNullable(nomeMarca)
-	            .map(String::trim)
-	            .orElseThrow(() -> new IllegalArgumentException("Il nome della marca da aggiornare non può essere vuoto."));
-
-	    Marca marca = marcaR.findByNomeMarca(nomeA)
-	            .orElseThrow(() -> {
-	                log.error("Tentativo di aggiornare una marca inesistente: '{}'", nomeA);
-	                return new IllegalArgumentException("La marca non esiste.");
-	            });
-
-	    String nuovoNome = Optional.ofNullable(req)
-	            .map(MarcaRequest::getNomeMarca)
-	            .map(String::trim)
-	            .orElseThrow(() -> new IllegalArgumentException("Il nuovo nome della marca non può essere vuoto."));
-
-	    if (!nomeA.equals(nuovoNome) && marcaR.findByNomeMarca(nuovoNome).isPresent()) {
-	        throw new IllegalArgumentException("Esiste già una marca con questo nome.");
+	public void update(MarcaRequest req) throws Exception {
+	    
+	    Optional<Marca> m = marcaR.findById(req.getId());
+	    
+	    if (m.isEmpty()) {
+	        throw new Exception("Marca non trovata");
 	    }
 
-	    marca.setNomeMarca(nuovoNome);
-	    marcaR.save(marca);
+	    boolean isUpdated = false;
+	    
+	    Marca marca = m.get();
+	    
+	    if (req.getNome() != null && !req.getNome().trim().isEmpty()) {
+	        String nuovoNome = req.getNome().trim();
 
-	    log.info("Marca '{}' aggiornata con successo a '{}'.", nomeA, marca.getNomeMarca());
+	        Optional<Marca> mC = marcaR.findByNomeMarca(nuovoNome);
+	        if (mC.isPresent() && !mC.get().getId().equals(marca.getId())) {
+	            throw new Exception("Esiste già una marca con questo nome.");
+	        }
+
+	        marca.setNomeMarca(nuovoNome);
+	        isUpdated = true;
+	    }
+	    
+	    if (isUpdated) {
+	        marcaR.save(marca);
+	        log.info("Marca con ID '{}' aggiornata con successo a '{}'.", marca.getId(), marca.getNomeMarca());
+	    } else {
+	        log.warn("Nessuna modifica effettuata per la marca con ID '{}'", marca.getId());
+	    }
 	}
 
 	@Override
 	@Transactional
-	public void deleteByName(String nomeMarca) {
+	public void delete(MarcaRequest req) throws Exception {
 
-		String nomeE = Optional.ofNullable(nomeMarca)
-	            .map(String::trim)
-	            .orElseThrow(() -> new IllegalArgumentException("Il nome della marca da eliminare non può essere vuoto."));
+	    Optional<Marca> oMarca = marcaR.findById(req.getId());
 
-	    Marca marca = marcaR.findByNomeMarca(nomeE)
-	            .orElseThrow(() -> {
-	                log.error("Tentativo di eliminare una marca inesistente: '{}'", nomeE);
-	                return new IllegalArgumentException("La marca non esiste.");
-	            });
+	    if (oMarca.isEmpty()) {
+	        log.error("Tentativo di eliminare una marca inesistente");
+	        throw new Exception("Marca non trovata");
+	    }
 
+	    Marca marca = oMarca.get();
 	    marcaR.delete(marca);
 
 	    log.info("Marca '{}' eliminata con successo.", marca.getNomeMarca());
@@ -108,5 +105,21 @@ public class MarcaImplementation implements MarcaServices{
 	                 .map(m -> new MarcaDTO(m.getId(), m.getNomeMarca()))
 	                 .collect(Collectors.toList());
 	}
+
+	@Override
+	public MarcaDTO listByID(Integer id) {
+		
+		Optional<Marca> m = marcaR.findById(id);
+		
+	    if (m.isEmpty()) {
+	        log.error("Nessuna marca trovata nel database.");
+	        throw new IllegalStateException("Nessuna marca disponibile.");
+	    }
+	    
+	    return new MarcaDTO(m.get().getId(), m.get().getNomeMarca());
+		
+		
+	}
+	
 
 }

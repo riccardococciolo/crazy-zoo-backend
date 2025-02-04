@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -37,6 +36,7 @@ public class Ordine {
 					CascadeType.MERGE})
 	private List<Prodotto> prodotti;
 	
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -68,4 +68,5 @@ public class Ordine {
 	public void setProdotti(List<Prodotto> prodotti) {
 		this.prodotti = prodotti;
 	}
+	
 }

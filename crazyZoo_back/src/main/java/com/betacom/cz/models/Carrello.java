@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -39,7 +38,7 @@ public class Carrello {
 	inverseJoinColumns = @JoinColumn(name = "id_prodotto"))
 	private List<Prodotto> prodotti;
 
-
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -71,4 +70,5 @@ public class Carrello {
 	public void setProdotti(List<Prodotto> prodotti) {
 		this.prodotti = prodotti;
 	}
+	
 }

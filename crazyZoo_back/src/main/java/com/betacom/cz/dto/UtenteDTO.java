@@ -83,6 +83,7 @@ public class UtenteDTO {
 		super();
 	}
 	
+	//toString
 	@Override
 	public String toString() {
 		return "UtenteDTO [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", email="

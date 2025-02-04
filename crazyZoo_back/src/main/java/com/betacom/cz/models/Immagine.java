@@ -34,6 +34,7 @@ public class Immagine {
 	@JoinColumn(name = "id_prodotto")
 	private Prodotto prodotto;
 
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -73,4 +74,5 @@ public class Immagine {
 	public void setProdotto(Prodotto prodotto) {
 		this.prodotto = prodotto;
 	}
+	
 }
