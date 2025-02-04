@@ -1,0 +1,75 @@
+package com.betacom.cz.services.implementations;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.betacom.cz.models.Carrello;
+import com.betacom.cz.models.Utente;
+import com.betacom.cz.repositories.ICarrelloRepository;
+import com.betacom.cz.repositories.IUtenteRepository;
+import com.betacom.cz.request.CarrelloRequest;
+import com.betacom.cz.services.interfaces.CarrelloServices;
+@Service
+public class CarrelloImplementation implements CarrelloServices{
+	@Autowired
+	ICarrelloRepository carrR;
+	@Autowired
+	IUtenteRepository uttR;
+	
+
+	@Override
+	public void create(CarrelloRequest req) throws Exception {
+	    Optional<Utente> ut = uttR.findById(req.getUtenteID());
+	    
+	    if (ut.isEmpty()) {
+	        throw new Exception("Utente non trovato");
+	    }
+
+	    // Controllo se il carrello esiste già per quell'utente
+	    Optional<Carrello> existingCarrello = carrR.findByUtenteId(req.getUtenteID());
+	    if (existingCarrello.isPresent()) {
+	        throw new Exception("Carrello già esistente per l'utente con ID: " + req.getUtenteID());
+	    }
+
+	    // Creazione di un nuovo carrello se non esiste
+	    Carrello car = new Carrello();
+	    car.setUtente(ut.get());
+	    carrR.save(car);
+	}
+
+
+//	@Override
+//	public void update(CarrelloRequest req) throws Exception {
+//		 Optional<Utente> ut = uttR.findById(req.getUtenteID());
+//		    
+//		    if (ut.isEmpty()) {
+//		        throw new Exception("Utente non trovato");
+//		    }
+//		    Optional<Carrello> existingCarrello = carrR.findById(req.getId());
+//		    if (existingCarrello.isEmpty()) {
+//		        throw new Exception("Carrello non esistente");
+//		    }
+//		    Optional<Carrello> existinCarrello = carrR.findByUtenteId(req.getUtenteID());
+//		    if (existinCarrello.isPresent()) {
+//		        throw new Exception("Carrello già esistente per l'utente con ID: " + req.getUtenteID());
+//		    }
+//		    existingCarrello.get().setUtente(ut.get());
+//		    carrR.save(existingCarrello.get());
+//		    
+//		
+//	}
+
+	@Override
+	public void delete(CarrelloRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		Optional<Carrello> existingCarrello = carrR.findById(req.getId());
+		 if (existingCarrello.isEmpty()) {
+		        throw new Exception("Carrello non esistente");
+	    }
+		 carrR.delete(existingCarrello.get());
+		
+	}
+
+}
