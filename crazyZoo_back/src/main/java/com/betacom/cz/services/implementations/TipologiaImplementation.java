@@ -101,12 +101,12 @@ public class TipologiaImplementation implements TipologiaService{
 	}
 
 	@Override
-	public TipologiaDTO listByID(Integer id) {
+	public TipologiaDTO listByID(Integer id) throws Exception {
 		Optional<Tipologia> m = tipologiaR.findById(id);
 		
 	    if (m.isEmpty()) {
 	        log.error("Nessuna tipologia trovata nel database.");
-	        throw new IllegalStateException("Nessuna tpologia disponibile.");
+	        throw new Exception("Nessuna tpologia disponibile.");
 	    }
 	    
 	    return new TipologiaDTO(m.get().getId(), m.get().getNome());

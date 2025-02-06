@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 package com.betacom.cz.services.interfaces;
 
 import java.util.List;
@@ -12,7 +19,7 @@ public interface TipologiaService {
 	void delete(TipologiaRequest req) throws Exception;
 	
 	List<TipologiaDTO> listAll();
-	TipologiaDTO listByID(Integer id);
+	TipologiaDTO listByID(Integer id) throws Exception;
 	
 
 }
