@@ -1,5 +1,7 @@
 package com.betacom.cz.dto;
 
+import java.util.List;
+
 public class ProdottoDTO {
 	
 	private Integer id;
@@ -9,6 +11,7 @@ public class ProdottoDTO {
 	private AnimaleDTO animale;
 	private MarcaDTO marca;
 	private TipologiaDTO tipologia;
+	private List<ImmagineDTO> immagini;
 	
 	//Getters&Setters
 	public Integer getId() {
@@ -67,8 +70,10 @@ public class ProdottoDTO {
 		this.tipologia = tipologia;
 	}
 
+	
+
 	public ProdottoDTO(Integer id, Double prezzo, Integer quantita, String titolo, AnimaleDTO animale, MarcaDTO marca,
-			TipologiaDTO tipologia) {
+			TipologiaDTO tipologia, List<ImmagineDTO> immagini) {
 		super();
 		this.id = id;
 		this.prezzo = prezzo;
@@ -77,6 +82,15 @@ public class ProdottoDTO {
 		this.animale = animale;
 		this.marca = marca;
 		this.tipologia = tipologia;
+		this.immagini = immagini;
+	}
+
+	public List<ImmagineDTO> getImmagini() {
+		return immagini;
+	}
+
+	public void setImmagini(List<ImmagineDTO> immagini) {
+		this.immagini = immagini;
 	}
 
 	public ProdottoDTO() {
