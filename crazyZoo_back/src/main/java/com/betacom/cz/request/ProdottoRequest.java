@@ -1,5 +1,7 @@
 package com.betacom.cz.request;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ProdottoRequest {
 	
 	private Integer id;
@@ -9,6 +11,7 @@ public class ProdottoRequest {
 	private Integer animaleID;
 	private Integer marcaID;
 	private Integer tipologiaID;
+	private MultipartFile[] immagini;
 	public Integer getId() {
 		return id;
 	}
@@ -51,8 +54,14 @@ public class ProdottoRequest {
 	public void setTipologiaID(Integer tipologiaID) {
 		this.tipologiaID = tipologiaID;
 	}
+	public MultipartFile[] getImmagini() {
+		return immagini;
+	}
+	public void setImmagini(MultipartFile[] immagini) {
+		this.immagini = immagini;
+	}
 	public ProdottoRequest(Integer id, Double prezzo, Integer quantita, String titolo, Integer animaleID,
-			Integer marcaID, Integer tipologiaID) {
+			Integer marcaID, Integer tipologiaID, MultipartFile[] immagini) {
 		super();
 		this.id = id;
 		this.prezzo = prezzo;
@@ -61,9 +70,8 @@ public class ProdottoRequest {
 		this.animaleID = animaleID;
 		this.marcaID = marcaID;
 		this.tipologiaID = tipologiaID;
+		this.immagini = immagini;
 	}
-	
-	
 	public ProdottoRequest() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -71,7 +79,8 @@ public class ProdottoRequest {
 	@Override
 	public String toString() {
 		return "ProdottoRequest [id=" + id + ", prezzo=" + prezzo + ", quantita=" + quantita + ", titolo=" + titolo
-				+ ", animaleID=" + animaleID + ", marcaID=" + marcaID + ", tipologiaID=" + tipologiaID + "]";
+				+ ", animaleID=" + animaleID + ", marcaID=" + marcaID + ", tipologiaID=" + tipologiaID + ", immagini="
+				+ immagini + "]";
 	}
 	
 	

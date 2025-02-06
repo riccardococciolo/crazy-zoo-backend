@@ -1,5 +1,6 @@
 package com.betacom.cz.models;
 
+import java.util.ArrayList;
 import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -65,8 +66,9 @@ public class Prodotto {
 
 	@OneToMany(mappedBy = "prodotto",
 			fetch = FetchType.EAGER,
-			cascade = CascadeType.REMOVE)
-	private List<Immagine> immagini;
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
+	private List<Immagine> immagini = new ArrayList<>();;
 
 	//Getters&Setters
 	public Integer getId() {
@@ -143,6 +145,18 @@ public class Prodotto {
 
 	public List<Immagine> getImmagini() {
 		return immagini;
+	}
+	
+	public void addImmagine(Immagine immagine) {
+	    immagini.add(immagine);
+	    immagine.setProdotto(this);
+	}
+	
+	public void removeImmagine(Immagine immagine) {
+	    if (immagine != null && immagini.contains(immagine)) {
+	        immagini.remove(immagine);
+	        immagine.setProdotto(null);
+	    }
 	}
 
 	public void setImmagini(List<Immagine> immagini) {
