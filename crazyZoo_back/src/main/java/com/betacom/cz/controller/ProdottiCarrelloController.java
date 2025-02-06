@@ -33,5 +33,35 @@ public class ProdottiCarrelloController {
 		}
 		return r;
 	}
+	@PostMapping("/deletepbyid")
+	public ResponseBase deletepbyid(@RequestBody ProdottiCarrelloRequest req) {
+	
+
+
+		ResponseBase r = new ResponseBase();
+		r.setRc(true);
+		try {
+			prodS.deleteProdByIdInCarrello(req);
+		}catch(Exception e) {
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+	}
+	@PostMapping("/deletepincarrello")
+	public ResponseBase deleteprodottoallinc(@RequestBody ProdottiCarrelloRequest req) {
+	
+
+
+		ResponseBase r = new ResponseBase();
+		r.setRc(true);
+		try {
+			prodS.deleteAllProdInCarrello(req);
+		}catch(Exception e) {
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+	}
 
 }
