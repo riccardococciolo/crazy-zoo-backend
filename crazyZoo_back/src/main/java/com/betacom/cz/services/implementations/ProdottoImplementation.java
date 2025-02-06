@@ -74,6 +74,7 @@ public class ProdottoImplementation implements ProdottoServices {
 	    prodotto.setPrezzo(req.getPrezzo());
 	    prodotto.setTitolo(req.getTitolo());
 	    prodotto.setQuantita(req.getQuantita());
+	    prodotto.setDescrizione(req.getDescrizione());
 	  
 	    if (req.getImmagini() != null) {
             for (MultipartFile img : req.getImmagini()) {
@@ -104,6 +105,7 @@ public class ProdottoImplementation implements ProdottoServices {
 	    prodotto.setTitolo(req.getTitolo());
 	    prodotto.setPrezzo(req.getPrezzo());
 	    prodotto.setQuantita(req.getQuantita());
+	    prodotto.setDescrizione(req.getDescrizione());
 	        
 	    if (req.getImmagini() == null) {
 	       

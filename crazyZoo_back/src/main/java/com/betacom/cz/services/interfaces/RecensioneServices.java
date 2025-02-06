@@ -11,4 +11,5 @@ public interface RecensioneServices {
 	void delete(RecensioniRequest req) throws Exception;
 	
 	List<RecensioneDTO> listByProdotto(Integer id) throws Exception;
+	List<RecensioneDTO> listByUtente(Integer id) throws Exception;
 }
