@@ -8,8 +8,6 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -42,6 +40,8 @@ public class Utente {
 	@Column(unique = true,
 			nullable = false)
 	private String email;
+	
+	private Ruolo ruolo;
 
 	@OneToOne(mappedBy = "utente",
 			cascade = CascadeType.REMOVE,
@@ -57,11 +57,6 @@ public class Utente {
 			cascade = CascadeType.REMOVE,
 			fetch = FetchType.EAGER)
 	private List<Recensione> recensioni;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "id_ruolo", nullable = false)
-	private Ruolo ruolo;
-
 	
 	//Getters&Setters
 	public Integer getId() {
@@ -151,5 +146,4 @@ public class Utente {
 	public void setRuolo(Ruolo ruolo) {
 		this.ruolo = ruolo;
 	}
-	
 }

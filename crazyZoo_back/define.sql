@@ -63,12 +63,6 @@
         primary key (id)
     ) engine=InnoDB;
 
-    create table ruoli (
-        id integer not null auto_increment,
-        nome varchar(255) not null,
-        primary key (id)
-    ) engine=InnoDB;
-
     create table tipologie (
         id integer not null auto_increment,
         nome varchar(255) not null,
@@ -77,7 +71,7 @@
 
     create table utenti (
         id integer not null auto_increment,
-        id_ruolo integer not null,
+        ruolo tinyint,
         cellulare varchar(255) not null,
         cognome varchar(255) not null,
         email varchar(255) not null,
@@ -90,17 +84,11 @@
     alter table carrelli 
        add constraint UKb76ur59r6gp0hfcl450nh8ua1 unique (id_utente);
 
-    alter table immagini 
-       add constraint UKtkl9y2cjq7e29ob7ukn5n984r unique (nome_immagine);
-
     alter table marche 
        add constraint UKjdwx0jue9ujpy57t3mpacdt8l unique (nome_marca);
 
     alter table ordini 
        add constraint UK47ulv8npe0ow92ncokvpjbugj unique (id_carrello);
-
-    alter table ruoli 
-       add constraint UKbspdk840bmlv2r5twrarwcmlq unique (nome);
 
     alter table utenti 
        add constraint UKosp6ju78vcf9vn2tblmb1ljgv unique (cellulare);
@@ -175,8 +163,3 @@
        add constraint FK3qtralkbontl617niblqxy543 
        foreign key (id_utente) 
        references utenti (id);
-
-    alter table utenti 
-       add constraint FKbi49ap3lo5rw81w717618jrak 
-       foreign key (id_ruolo) 
-       references ruoli (id);

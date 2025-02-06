@@ -8,9 +8,8 @@ public class UtenteRequest {
 	private String username;
 	private String password;
 	private String email;
-	private String cellulare;
-	private Integer ruoloID;
-	
+	private String cellulare;	
+	private String ruolo;
 	//Getters&Setters
 	public Integer getId() {
 		return id;
@@ -68,16 +67,9 @@ public class UtenteRequest {
 		this.cellulare = cellulare;
 	}
 	
-	public Integer getRuoloID() {
-		return ruoloID;
-	}
 	
-	public void setRuoloID(Integer ruoloID) {
-		this.ruoloID = ruoloID;
-	}
-	
-	//Costruttori
-	public UtenteRequest(Integer id, String nome, String cognome, String username, String password, String email, String cellulare, Integer ruoloID) {
+	public UtenteRequest(Integer id, String nome, String cognome, String username, String password, String email,
+			String cellulare, String ruolo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -86,19 +78,17 @@ public class UtenteRequest {
 		this.password = password;
 		this.email = email;
 		this.cellulare = cellulare;
-		this.ruoloID = ruoloID;
+		this.ruolo = ruolo;
 	}
-	
+	public String getRuolo() {
+		return ruolo;
+	}
+
+	public void setRuolo(String ruolo) {
+		this.ruolo = ruolo;
+	}
+
 	public UtenteRequest() {
 		super();
 	}
-	
-	//toString
-	@Override
-	public String toString() {
-		return "UtenteRequest [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", username=" + username
-				+ ", password=" + password + ", email=" + email + ", cellulare=" + cellulare + ", ruoloID=" + ruoloID
-				+ "]";
-	}
-	
 }

@@ -51,10 +51,6 @@
        drop 
        foreign key FK3qtralkbontl617niblqxy543;
 
-    alter table utenti 
-       drop 
-       foreign key FKbi49ap3lo5rw81w717618jrak;
-
     drop table if exists animali;
 
     drop table if exists carrelli;
@@ -72,8 +68,6 @@
     drop table if exists prodotto_ordine;
 
     drop table if exists recensioni;
-
-    drop table if exists ruoli;
 
     drop table if exists tipologie;
 

@@ -8,7 +8,7 @@ public class UtenteDTO {
 	private String username;
 	private String email;
 	private String cellulare;
-	private RuoloDTO ruolo;
+	private String ruolo;
 	
 	//Getters&Setters
 	public Integer getId() {
@@ -58,17 +58,16 @@ public class UtenteDTO {
 	public void setCellulare(String cellulare) {
 		this.cellulare = cellulare;
 	}
-	
-	public RuoloDTO getRuolo() {
+	public String getRuolo() {
 		return ruolo;
 	}
-	
-	public void setRuolo(RuoloDTO ruolo) {
+
+	public void setRuolo(String ruolo) {
 		this.ruolo = ruolo;
 	}
 	
-	//Costruttori
-	public UtenteDTO(Integer id, String nome, String cognome, String username, String email, String cellulare, RuoloDTO ruolo) {
+	public UtenteDTO(Integer id, String nome, String cognome, String username, String email, String cellulare,
+			String ruolo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -78,7 +77,7 @@ public class UtenteDTO {
 		this.cellulare = cellulare;
 		this.ruolo = ruolo;
 	}
-	
+
 	public UtenteDTO() {
 		super();
 	}
@@ -87,7 +86,7 @@ public class UtenteDTO {
 	@Override
 	public String toString() {
 		return "UtenteDTO [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", username=" + username + ", email="
-				+ email + ", cellulare=" + cellulare + ", ruolo=" + ruolo + "]";
+				+ email + ", cellulare=" + cellulare + "]";
 	}
 	
 }
