@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -26,9 +27,9 @@ public class Carrello {
 	referencedColumnName = "id")
 	private Utente utente;
 
-	@OneToOne(mappedBy = "carrello",
+	@OneToMany(mappedBy = "carrello",
 			cascade = CascadeType.REMOVE)
-	private Ordine ordine;
+	private List<Ordine> ordini;
 
 	@ManyToMany(fetch = FetchType.EAGER,
 			cascade = {CascadeType.PERSIST,
@@ -54,13 +55,12 @@ public class Carrello {
 	public void setUtente(Utente utente) {
 		this.utente = utente;
 	}
-
-	public Ordine getOrdine() {
-		return ordine;
+	public List<Ordine> getOrdini() {
+		return ordini;
 	}
 
-	public void setOrdine(Ordine ordine) {
-		this.ordine = ordine;
+	public void setOrdini(List<Ordine> ordini) {
+		this.ordini = ordini;
 	}
 
 	public List<Prodotto> getProdotti() {

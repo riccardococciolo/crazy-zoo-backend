@@ -35,7 +35,9 @@ public class Utilities {
                 new TipologiaDTO(
                         prodotto.getTipologia().getId(),
                         prodotto.getTipologia().getNome()),
-                buildImmagineDTO(prodotto.getImmagini()) // Assicurati che buildImmagineDTO sia statico
+                buildImmagineDTO(prodotto.getImmagini()),
+                		prodotto.getDescrizione()
+                		// Assicurati che buildImmagineDTO sia statico
         );
     }
 

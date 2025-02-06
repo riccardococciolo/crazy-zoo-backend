@@ -12,6 +12,8 @@ public class ProdottoRequest {
 	private Integer marcaID;
 	private Integer tipologiaID;
 	private MultipartFile[] immagini;
+	private String descrizione;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -60,8 +62,15 @@ public class ProdottoRequest {
 	public void setImmagini(MultipartFile[] immagini) {
 		this.immagini = immagini;
 	}
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
 	public ProdottoRequest(Integer id, Double prezzo, Integer quantita, String titolo, Integer animaleID,
-			Integer marcaID, Integer tipologiaID, MultipartFile[] immagini) {
+			Integer marcaID, Integer tipologiaID, MultipartFile[] immagini, String descrizione) {
 		super();
 		this.id = id;
 		this.prezzo = prezzo;
@@ -71,6 +80,7 @@ public class ProdottoRequest {
 		this.marcaID = marcaID;
 		this.tipologiaID = tipologiaID;
 		this.immagini = immagini;
+		this.descrizione = descrizione;
 	}
 	public ProdottoRequest() {
 		super();

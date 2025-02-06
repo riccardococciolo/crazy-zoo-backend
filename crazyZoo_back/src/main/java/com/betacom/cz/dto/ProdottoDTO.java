@@ -12,6 +12,7 @@ public class ProdottoDTO {
 	private MarcaDTO marca;
 	private TipologiaDTO tipologia;
 	private List<ImmagineDTO> immagini;
+	private String descrizione;
 	
 	//Getters&Setters
 	public Integer getId() {
@@ -69,11 +70,16 @@ public class ProdottoDTO {
 	public void setTipologia(TipologiaDTO tipologia) {
 		this.tipologia = tipologia;
 	}
+	public String getDescrizione() {
+		return descrizione;
+	}
 
-	
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
 
 	public ProdottoDTO(Integer id, Double prezzo, Integer quantita, String titolo, AnimaleDTO animale, MarcaDTO marca,
-			TipologiaDTO tipologia, List<ImmagineDTO> immagini) {
+			TipologiaDTO tipologia, List<ImmagineDTO> immagini, String descrizione) {
 		super();
 		this.id = id;
 		this.prezzo = prezzo;
@@ -83,6 +89,7 @@ public class ProdottoDTO {
 		this.marca = marca;
 		this.tipologia = tipologia;
 		this.immagini = immagini;
+		this.descrizione = descrizione;
 	}
 
 	public List<ImmagineDTO> getImmagini() {

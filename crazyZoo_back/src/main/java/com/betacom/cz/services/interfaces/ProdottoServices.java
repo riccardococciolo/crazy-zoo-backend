@@ -12,7 +12,9 @@ public interface ProdottoServices {
 	
 	void delete(ProdottoRequest req) throws Exception;
 	
-	List<ProdottoDTO> list(Integer id, String titolo, Double prezzo, Integer quantita, String nomeAnimale, String nomeTipologia, String nomeMarca);
+	List<ProdottoDTO> list(Integer id, String titolo, Double prezzo, 
+			Integer quantita, String nomeAnimale, String nomeTipologia, 
+			String nomeMarca, String descrizione);
 	
 	ProdottoDTO listById(Integer id);
 }

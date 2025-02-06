@@ -156,8 +156,8 @@ public class ProdottoImplementation implements ProdottoServices {
 
 	@Override
 	public List<ProdottoDTO> list(Integer id, String titolo, Double prezzo, Integer quantita, String nomeAnimale,
-			String nomeTipologia, String nomeMarca) {
-		List<Prodotto> lP = proR.findByFilter(id, titolo, prezzo, quantita, nomeAnimale, nomeTipologia, nomeMarca);
+			String nomeTipologia, String nomeMarca, String descrizione) {
+		List<Prodotto> lP = proR.findByFilter(id, titolo, prezzo, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
 		
 		
 		return lP.stream()
@@ -175,7 +175,8 @@ public class ProdottoImplementation implements ProdottoServices {
 	                    new TipologiaDTO(
 	                    		p.getTipologia().getId(),
 	                    		p.getTipologia().getNome()),
-	                    buildImmagineDTO(p.getImmagini())
+	                    buildImmagineDTO(p.getImmagini()),
+	                    		p.getDescrizione()
 	            ))
 	            .collect(Collectors.toList());
 	}

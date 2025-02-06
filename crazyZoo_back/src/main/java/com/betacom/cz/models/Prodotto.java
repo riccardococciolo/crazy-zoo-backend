@@ -32,6 +32,9 @@ public class Prodotto {
 
 	@Column(nullable = false)
 	private Integer quantita;
+	
+	@Column(nullable = true)
+	private String descrizione;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_animale")
@@ -170,7 +173,12 @@ public class Prodotto {
 	public void setTipologia(Tipologia tipologia) {
 		this.tipologia = tipologia;
 	}
-	
-	
-	
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
 }

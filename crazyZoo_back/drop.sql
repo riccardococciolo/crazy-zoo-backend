@@ -1,74 +1,24 @@
-
-    alter table carrelli 
-       drop 
-       foreign key FKfoplh747w9xrdk0dkvcufdlwd;
-
-    alter table immagini 
-       drop 
-       foreign key FK8sbvuq1cghuuje5myr2qq22sp;
-
-    alter table ordini 
-       drop 
-       foreign key FKhbivki0jyp5vxnwd7rsu40qhj;
-
-    alter table ordini 
-       drop 
-       foreign key FKqj5n4mdh5tc9qkj7hx54mvgi4;
-
-    alter table prodotti 
-       drop 
-       foreign key FKrkjgi92odmn662nhgdbbtybfv;
-
-    alter table prodotti 
-       drop 
-       foreign key FKi8oxr29c5gmxa5q775w4oujt2;
-
-    alter table prodotti 
-       drop 
-       foreign key FK4492sphidnlggl70u0djk9qvk;
-
-    alter table prodotto_carrello 
-       drop 
-       foreign key FKe6uovqkjs180yo0qtyp7nm9b0;
-
-    alter table prodotto_carrello 
-       drop 
-       foreign key FKesl8f1wqs4l99vlekl9skd6rt;
-
-    alter table prodotto_ordine 
-       drop 
-       foreign key FKpyje3o5dfo8t6bw6r51wsbqwu;
-
-    alter table prodotto_ordine 
-       drop 
-       foreign key FKr3ctf7k9ss4m262vg461sed39;
-
-    alter table recensioni 
-       drop 
-       foreign key FK5wtirys8opmifrpgxxe3lla6q;
-
-    alter table recensioni 
-       drop 
-       foreign key FK3qtralkbontl617niblqxy543;
-
-    drop table if exists animali;
-
-    drop table if exists carrelli;
-
-    drop table if exists immagini;
-
-    drop table if exists marche;
-
-    drop table if exists ordini;
-
-    drop table if exists prodotti;
-
-    drop table if exists prodotto_carrello;
-
-    drop table if exists prodotto_ordine;
-
-    drop table if exists recensioni;
-
-    drop table if exists tipologie;
-
-    drop table if exists utenti;
+alter table carrelli drop foreign key FKfoplh747w9xrdk0dkvcufdlwd;
+alter table immagini drop foreign key FK8sbvuq1cghuuje5myr2qq22sp;
+alter table ordini drop foreign key FKhbivki0jyp5vxnwd7rsu40qhj;
+alter table ordini drop foreign key FKqj5n4mdh5tc9qkj7hx54mvgi4;
+alter table prodotti drop foreign key FKrkjgi92odmn662nhgdbbtybfv;
+alter table prodotti drop foreign key FKi8oxr29c5gmxa5q775w4oujt2;
+alter table prodotti drop foreign key FK4492sphidnlggl70u0djk9qvk;
+alter table prodotto_carrello drop foreign key FKe6uovqkjs180yo0qtyp7nm9b0;
+alter table prodotto_carrello drop foreign key FKesl8f1wqs4l99vlekl9skd6rt;
+alter table prodotto_ordine drop foreign key FKpyje3o5dfo8t6bw6r51wsbqwu;
+alter table prodotto_ordine drop foreign key FKr3ctf7k9ss4m262vg461sed39;
+alter table recensioni drop foreign key FK5wtirys8opmifrpgxxe3lla6q;
+alter table recensioni drop foreign key FK3qtralkbontl617niblqxy543;
+drop table if exists animali;
+drop table if exists carrelli;
+drop table if exists immagini;
+drop table if exists marche;
+drop table if exists ordini;
+drop table if exists prodotti;
+drop table if exists prodotto_carrello;
+drop table if exists prodotto_ordine;
+drop table if exists recensioni;
+drop table if exists tipologie;
+drop table if exists utenti;

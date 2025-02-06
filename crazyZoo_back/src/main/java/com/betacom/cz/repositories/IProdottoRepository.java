@@ -19,6 +19,7 @@ public interface IProdottoRepository extends JpaRepository<Prodotto, Integer> {
         @Param("quantita") Integer quantita,
         @Param("nomeAnimale") String nomeAnimale,
         @Param("nomeTipologia") String nomeTipologia,
-        @Param("nomeMarca") String nomeMarca
+        @Param("nomeMarca") String nomeMarca,
+        @Param("descrizione")String descrizione
     );
 }

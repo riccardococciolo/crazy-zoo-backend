@@ -21,9 +21,8 @@ public class Ordine {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@OneToOne
-	@JoinColumn(name = "id_carrello",
-				referencedColumnName = "id")
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_carrello")
 	private Carrello carrello;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
