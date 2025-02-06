@@ -9,33 +9,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.cz.dto.MarcaDTO;
-import com.betacom.cz.request.MarcaRequest;
+import com.betacom.cz.dto.TipologiaDTO;
+import com.betacom.cz.request.TipologiaRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
 import com.betacom.cz.response.ResponseObject;
-import com.betacom.cz.services.interfaces.MarcaServices;
+import com.betacom.cz.services.interfaces.TipologiaService;
 
 @RestController
-@RequestMapping("/rest/marche")
-
-public class MarcaController {
-	
+@RequestMapping("/rest/tipologie")
+public class TipologiaController 
+{
 	@Autowired
-	MarcaServices marcaS;
+	TipologiaService tipS;
 	
 	@Autowired
 	Logger log;
 	
 	@PostMapping("/create")
-	public ResponseBase create(@RequestBody MarcaRequest req) {
-		log.debug("Inizio creazione marca: {}", req.getNome());
+	public ResponseBase create(@RequestBody TipologiaRequest req) {
+		log.debug("Inizio creazione tipologia: {}", req.getNome());
 
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
-			marcaS.create(req);
+			tipS.create(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);
@@ -44,13 +43,13 @@ public class MarcaController {
 	}
 	
 	@PostMapping("/update")
-	public ResponseBase update(@RequestBody MarcaRequest req) {
+	public ResponseBase update(@RequestBody TipologiaRequest req) {
 		log.debug("Inizio update:");
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
-			marcaS.update(req);
+			tipS.update(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);
@@ -59,13 +58,13 @@ public class MarcaController {
 	}
 	
 	@PostMapping("/delete")
-	public ResponseBase delete(@RequestBody MarcaRequest req) {
+	public ResponseBase delete(@RequestBody TipologiaRequest req) {
 		log.debug("Inizio delete marca: {}", req.getNome());
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
-			marcaS.delete(req);
+			tipS.delete(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);
@@ -74,13 +73,13 @@ public class MarcaController {
 	}
 	
 	@GetMapping("/list")
-	public ResponseList<MarcaDTO> listAll() {
+	public ResponseList<TipologiaDTO> listAll() {
 		log.debug("Inizio listAll:");
 		
-		ResponseList<MarcaDTO> r = new ResponseList<MarcaDTO>();
+		ResponseList<TipologiaDTO> r = new ResponseList<TipologiaDTO>();
 		r.setRc(true);
 		try{
-			r.setDati(marcaS.listAll());
+			r.setDati(tipS.listAll());
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
@@ -90,13 +89,13 @@ public class MarcaController {
 	}
 	
 	@GetMapping("/listbyid")
-	public ResponseObject<MarcaDTO> listByID(@RequestParam Integer id) {
-		log.debug("Inizio listAll:");
+	public ResponseObject<TipologiaDTO> listByID(@RequestParam Integer id) {
+		log.debug("Inizio listById:");
 		
-		ResponseObject<MarcaDTO> r = new ResponseObject<MarcaDTO>();
+		ResponseObject<TipologiaDTO> r = new ResponseObject<TipologiaDTO>();
 		r.setRc(true);
 		try{
-			r.setDati(marcaS.listByID(id));
+			r.setDati(tipS.listByID(id));
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
@@ -104,5 +103,5 @@ public class MarcaController {
 		}
 		return r;
 	}
-	
+
 }
