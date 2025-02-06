@@ -22,7 +22,6 @@ public class OrdineController {
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody OrdineRequest req) {
-        log.info("Inizio creazione ordine per utente ID: {} e carrello ID: {}", req.getUtenteID());
 
 
 
@@ -30,6 +29,23 @@ public class OrdineController {
 		r.setRc(true);
 		try {
 			ordineS.create(req);
+		}catch(Exception e) {
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+	}
+	
+	
+	@PostMapping("/delete")
+	public ResponseBase delete(@RequestBody OrdineRequest req) {
+
+
+
+		ResponseBase r = new ResponseBase();
+		r.setRc(true);
+		try {
+			ordineS.delete(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);

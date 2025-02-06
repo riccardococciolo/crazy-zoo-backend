@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.models.Carrello;
 import com.betacom.cz.models.Ordine;
+import com.betacom.cz.models.Prodotto;
 import com.betacom.cz.models.Utente;
 import com.betacom.cz.repositories.ICarrelloRepository;
 import com.betacom.cz.repositories.IOrdineRepository;
@@ -57,9 +58,45 @@ public class OrdineImplementation implements OrdineServices{
 	}
 
 	@Override
-	public void delete(OrdineRequest req) {
-		// TODO Auto-generated method stub
+	@Transactional
+	public void delete(OrdineRequest req) throws Exception {
 		
+	    Optional<Ordine> optionalOrdine = ordineR.findById(req.getId());
+	    
+	    if (optionalOrdine.isEmpty()) {
+	        log.error("Ordine con ID '{}' non esiste", req.getId());
+	        throw new Exception("Ordine non trovato");
+	    }
+
+	    Ordine ordine = optionalOrdine.get();
+	    
+	    // 1️⃣ Rimuovere il legame tra Ordine e Prodotti nella relazione @ManyToMany
+	    if (!ordine.getProdotti().isEmpty()) {
+	        for (Prodotto prodotto : ordine.getProdotti()) {
+	            prodotto.getOrdini().remove(ordine);
+	        }
+	        ordine.getProdotti().clear();
+	    }
+	    
+	    // 2️⃣ Rimuovere il legame tra Carrello e Ordine
+	    Carrello carrello = ordine.getCarrello();
+	    if (carrello != null) {
+	        carrello.setOrdini(null);
+	        carrelloR.save(carrello);
+	    }
+	    
+	    // 3️⃣ Rimuovere il legame tra Utente e Ordine
+	    Utente utente = ordine.getUtente();
+	    if (utente != null) {
+	        utente.getOrdini().remove(ordine);
+	    }
+	    
+	    // 4️⃣ Eliminare l'ordine
+	    ordineR.delete(ordine);
+
+	    log.info("Ordine con ID '{}' eliminato con successo.", req.getId());
+
+
 	}
 
 	@Override
@@ -73,5 +110,4 @@ public class OrdineImplementation implements OrdineServices{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }
