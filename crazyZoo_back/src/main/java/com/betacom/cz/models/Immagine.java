@@ -19,7 +19,6 @@ public class Immagine {
 	private Integer id;
 	
 	@Column(name="nome_immagine",
-			unique = true,
 			nullable = false)
 	private String nomeImmagine;
 	
