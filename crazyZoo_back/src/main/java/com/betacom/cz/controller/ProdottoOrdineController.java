@@ -30,5 +30,33 @@ public class ProdottoOrdineController {
         }
         return r;
     }
+    
+    @PostMapping("/rimuovi-all")
+    public ResponseBase removeAll(@RequestBody ProdottoOrdineRequest reqPO) {
+        ResponseBase r = new ResponseBase();
+        try {
+        	prodottoOrdineS.removeAll(reqPO);
+            r.setRc(true);
+            r.setMsg("Prodotti rimosso dall'ordine con successo.");
+        } catch (Exception e) {
+            r.setRc(false);
+            r.setMsg(e.getMessage());
+        }
+        return r;
+    }
+    
+    @PostMapping("/rimuovi-byid")
+    public ResponseBase removeById(@RequestBody ProdottoOrdineRequest reqPO) {
+        ResponseBase r = new ResponseBase();
+        try {
+        	prodottoOrdineS.removeById(reqPO);
+            r.setRc(true);
+            r.setMsg("Prodotto rimosso dall'ordine con successo.");
+        } catch (Exception e) {
+            r.setRc(false);
+            r.setMsg(e.getMessage());
+        }
+        return r;
+    }
 
 }

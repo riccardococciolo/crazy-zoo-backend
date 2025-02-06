@@ -2,33 +2,22 @@ package com.betacom.cz.request;
 
 public class ProdottoOrdineRequest {
 	
-	private ProdottoRequest reqP;
-	private OrdineRequest reqO;
+	private Integer prodottoID;
+	private Integer ordineID;
+	public Integer getProdottoID() {
+		return prodottoID;
+	}
+	public void setProdottoID(Integer prodottoID) {
+		this.prodottoID = prodottoID;
+	}
+	public Integer getOrdineID() {
+		return ordineID;
+	}
+	public void setOrdineID(Integer ordineID) {
+		this.ordineID = ordineID;
+	}
 	
-	public ProdottoRequest getReqP() {
-		return reqP;
-	}
-	public void setReqP(ProdottoRequest reqP) {
-		this.reqP = reqP;
-	}
-	public OrdineRequest getReqO() {
-		return reqO;
-	}
-	public void setReqOs(OrdineRequest reqO) {
-		this.reqO = reqO;
-	}
-	public ProdottoOrdineRequest(ProdottoRequest reqP, OrdineRequest reqO) {
-		super();
-		this.reqP = reqP;
-		this.reqO = reqO;
-	}
-	public ProdottoOrdineRequest() {
-		super();
-	}
-	@Override
-	public String toString() {
-		return "ProdottoOrdineRequest [reqP=" + reqP + ", reqO=" + reqO + "]";
-	}
+	
 
 	
 	

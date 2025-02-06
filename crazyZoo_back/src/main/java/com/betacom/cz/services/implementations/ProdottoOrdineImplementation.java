@@ -27,12 +27,12 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 	@Transactional
 	public void aggiungiProdottoAOrdine(ProdottoOrdineRequest reqPO) {
 		
-		Optional<Prodotto> p = prodottoR.findById(reqPO.getReqP().getId());
+		Optional<Prodotto> p = prodottoR.findById(reqPO.getProdottoID());
 		if(p.isEmpty()) {
 			throw new NoSuchElementException("Prodotto non trovato");
 		}
 		
-		Optional<Ordine> o = ordineR.findById(reqPO.getReqO().getId());
+		Optional<Ordine> o = ordineR.findById(reqPO.getOrdineID());
 		if(o.isEmpty()) {
 			throw new NoSuchElementException("Ordine non trovato");
 		}
@@ -48,17 +48,22 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 	}
 
 	@Override
-	public void rimuoviProdottoDaOrdine(ProdottoOrdineRequest reqPO) {
+	public void removeAll(ProdottoOrdineRequest reqPO) {
 		
-		Optional<Prodotto> p = prodottoR.findById(reqPO.getReqP().getId());
-		if(p.isEmpty()) {
-			throw new NoSuchElementException("Prodotto non trovato");
-		}
-		
-		Optional<Ordine> o = ordineR.findById(reqPO.getReqO().getId());
+		Optional<Ordine> o = ordineR.findById(reqPO.getOrdineID());
 		if(o.isEmpty()) {
 			throw new NoSuchElementException("Ordine non trovato");
 		}
+		
+		for(Prodotto p : o.get().getProdotti()) {
+			p.getOrdini().remove(o.get());
+		}
+		
+		o.get().getProdotti().clear();
+		
+		prodottoR.saveAll(o.get().getProdotti());
+		
+		ordineR.save(o.get());
 		
 		
 	}
@@ -67,6 +72,31 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 	public List<Prodotto> listaProdottiInOrdine(ProdottoOrdineRequest reqPO) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void removeById(ProdottoOrdineRequest reqPO) {
+		
+		Optional<Ordine> o = ordineR.findById(reqPO.getOrdineID());
+		if(o.isEmpty()) {
+			throw new NoSuchElementException("Ordine non trovato");
+		}
+		
+		Optional<Prodotto> p = prodottoR.findById(reqPO.getProdottoID());
+		if(p.isEmpty()) {
+			throw new NoSuchElementException("prodotto non trovato");
+		}
+		
+		o.get().getProdotti().remove(p.get());
+		
+		p.get().getOrdini().remove(o.get());
+		
+		ordineR.save(o.get());
+		
+		prodottoR.save(p.get());
+		
+		
+		
 	}
 
 }
