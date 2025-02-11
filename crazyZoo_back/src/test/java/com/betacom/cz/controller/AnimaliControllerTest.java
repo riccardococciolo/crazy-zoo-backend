@@ -9,8 +9,10 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.betacom.cz.dto.AnimaleDTO;
 import com.betacom.cz.request.AnimaleRequest;
 import com.betacom.cz.response.ResponseBase;
+import com.betacom.cz.response.ResponseList;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -42,84 +44,76 @@ public class AnimaliControllerTest {
 		Assertions.assertThat(rB2.getRc()).isEqualTo(true);	
 	}
 	
-//	@Test
-//	@Order(2)
-//	public void listAll() {
-//		
-//		ResponseList<MacchinaDTO> rL = macC.listAll(); 
-//		
-//		Assertions.assertThat(rL.getRc()).isEqualTo(true);		
-//		Assertions.assertThat(rL.getDati().get(0).getTargaMacchina()).isEqualTo("EE777ZZ");		
-//	}
-//	
-//	@Test
-//	@Order(3)
-//	public void update() {
-//
-//		ResponseList<MacchinaDTO> responseList = macC.listAll();
-//
-//	    Assertions.assertThat(responseList.getRc()).isTrue();
-//	    Assertions.assertThat(responseList.getDati()).isNotEmpty();
-//
-//	    MacchinaDTO macchinaDaAggiornare = responseList.getDati().stream()
-//	        .filter(m -> "EE777ZZ".equals(m.getTargaMacchina()))
-//	        .findFirst()
-//	        .orElse(null);
-//	    Assertions.assertThat(macchinaDaAggiornare).isNotNull();
-//
-//	    VeicoloMacchinaReq reqVM = new VeicoloMacchinaReq();
-//	    reqVM.getReqV().setIdAlimentazione(1); 
-//	    reqVM.getReqV().setIdColore(2); 
-//	    reqVM.getReqV().setNumeroRuote(4);
-//	    reqVM.getReqV().setDataInserimento("22/01/2025"); 
-//	    reqVM.getReqV().setMarca("Fiat");
-//	    reqVM.getReqV().setTipoVeicolo("Macchina");
-//	    reqVM.getReqM().setNumeroPorte(4); 
-//	    reqVM.getReqM().setTargaMacchina("EE777ZZ"); 
-//	    reqVM.getReqM().setCcMacchina(180); 
-//	    
-//	    ResponseBase updateResponse = macC.update(reqVM, macchinaDaAggiornare.getTargaMacchina());
-//
-//	    Assertions.assertThat(updateResponse.getRc()).isTrue();
-//
-//	    ResponseList<MacchinaDTO> updatedResponseList = macC.listAll();
-//	    Assertions.assertThat(updatedResponseList.getRc()).isTrue();
-//
-//	    MacchinaDTO macchinaAggiornata = updatedResponseList.getDati().stream()
-//	        .filter(m -> "EE777ZZ".equals(m.getTargaMacchina()))
-//	        .findFirst()
-//	        .orElse(null);
-//	    Assertions.assertThat(macchinaAggiornata).isNotNull();
-//
-//	    Assertions.assertThat(macchinaAggiornata.getVeicolo().getColore().getNomeColore()).isEqualTo("Rosso");
-//	    Assertions.assertThat(macchinaAggiornata.getNumeroPorte()).isEqualTo(4);
-//	    Assertions.assertThat(macchinaAggiornata.getCcMacchina()).isEqualTo(180);
-//	}
-//	
-//	@Test
-//	@Order(4)
-//	public void delete() {
-//		
-//	    ResponseList<MacchinaDTO> rL = macC.listAll();
-//	    Assertions.assertThat(rL.getRc()).isTrue();
-//	    Assertions.assertThat(rL.getDati()).isNotEmpty();
-//
-//	    MacchinaDTO mC = rL.getDati().stream()
-//	        .filter(m -> "FF777ZZ".equals(m.getTargaMacchina()))
-//	        .findFirst()
-//	        .orElse(null);
-//	    Assertions.assertThat(mC).isNotNull();
-//
-//	    ResponseBase rB = macC.delete(mC.getVeicolo().getMacchina().getTargaMacchina());
-//	    Assertions.assertThat(rB.getRc()).isTrue();
-//
-//	    ResponseList<MacchinaDTO> postDeleteListResponse = macC.listAll();
-//	    Assertions.assertThat(postDeleteListResponse.getRc()).isTrue();
-//
-//	    MacchinaDTO macchinaDopoEliminazione = postDeleteListResponse.getDati().stream()
-//	        .filter(m -> "FF777ZZ".equals(m.getTargaMacchina()))
-//	        .findFirst()
-//	        .orElse(null);
-//	    Assertions.assertThat(macchinaDopoEliminazione).isNull();	
-//	}
+	@Test
+	@Order(2)
+	public void listAll() {
+		
+		ResponseList<AnimaleDTO> resList = animController.listAll(); 
+		
+		Assertions.assertThat(resList.getRc()).isEqualTo(true);		
+		Assertions.assertThat(resList.getDati().get(0).getNome()).isEqualTo("cane");		
+	}
+	
+	@Test
+	@Order(3)
+	public void update() {
+
+		ResponseList<AnimaleDTO> responseList = animController.listAll();
+
+	    Assertions.assertThat(responseList.getRc()).isTrue();
+	    Assertions.assertThat(responseList.getDati()).isNotEmpty();
+
+	    AnimaleDTO animaleDaAggiornare = responseList.getDati().stream()
+	        .filter(a -> "cane".equals(a.getNome()))
+	        .findFirst()
+	        .orElse(null);
+	    Assertions.assertThat(animaleDaAggiornare).isNotNull();
+
+	    AnimaleRequest reqAnimale = new AnimaleRequest();	
+	    reqAnimale.setNomeAnimale("gatto");
+	    
+	    ResponseBase updateResponse = animController.update(reqAnimale);
+
+	    Assertions.assertThat(updateResponse.getRc()).isTrue();
+
+	    ResponseList<AnimaleDTO> updatedResponseList = animController.listAll();
+	    Assertions.assertThat(updatedResponseList.getRc()).isTrue();
+
+	    AnimaleDTO animaleAggiornato = updatedResponseList.getDati().stream()
+	        .filter(a -> "cane".equals(a.getNome()))
+	        .findFirst()
+	        .orElse(null);
+	    Assertions.assertThat(animaleAggiornato).isNotNull();
+
+	    Assertions.assertThat(animaleAggiornato.getNome()).isEqualTo("topo");
+	}
+	
+	@Test
+	@Order(4)
+	public void delete() {
+		
+		AnimaleRequest reqAnimale = new AnimaleRequest();	
+		 
+	    ResponseList<AnimaleDTO> responseList = animController.listAll();
+	    Assertions.assertThat(responseList.getRc()).isTrue();
+	    Assertions.assertThat(responseList.getDati()).isNotEmpty();
+
+	    AnimaleDTO animaleDto = responseList.getDati().stream()
+	        .filter(a -> "cane".equals(a.getNome()))
+	        .findFirst()
+	        .orElse(null);
+	    Assertions.assertThat(animaleDto).isNotNull();
+
+	    ResponseBase resBase = animController.delete(reqAnimale);
+	    Assertions.assertThat(resBase.getRc()).isTrue();
+
+	    ResponseList<AnimaleDTO> postDeleteListResponse = animController.listAll();
+	    Assertions.assertThat(postDeleteListResponse.getRc()).isTrue();
+
+	    AnimaleDTO animaleDopoEliminazione = postDeleteListResponse.getDati().stream()
+	        .filter(a -> "cane".equals(a.getNome()))
+	        .findFirst()
+	        .orElse(null);
+	    Assertions.assertThat(animaleDopoEliminazione).isNull();	
+	}
 }
