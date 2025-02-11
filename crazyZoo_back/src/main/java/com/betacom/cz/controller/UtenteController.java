@@ -29,12 +29,14 @@ public class UtenteController
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody UtenteRequest req) {
-		log.debug("Inizio creazione Utente: {},{},{},{},{}", req.getNome(),
-												req.getCellulare(),
-												req.getEmail(),
-												req.getUsername(),
-												req.getRuolo());
-
+		log.debug("Inizio creazione Utente: {},{},{},{},{}", 
+				req.getNome(),
+				req.getCognome(),
+				req.getCellulare(),
+				req.getEmail(),
+				req.getUsername(),
+				req.getPassword(),
+				req.getRuolo());
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);

@@ -23,8 +23,8 @@ public class UtenteImplementation implements UtenteServices{
 	@Autowired
 	IUtenteRepository userR;
 	
-	@Autowired
-	ICarrelloRepository carR;
+//	@Autowired
+//	ICarrelloRepository carR;
 	
 	@Autowired
 	Logger log;
@@ -55,10 +55,8 @@ public class UtenteImplementation implements UtenteServices{
 			e.printStackTrace();
 		}
 		
-		u.setCarrello(null);
-		u.setOrdini(null);
-		u.setRecensioni(null);
-		
+		userR.save(u);
+		log.info("Utente '{}' creato con successo.", req.getUsername());
 	}
 
 	@Override

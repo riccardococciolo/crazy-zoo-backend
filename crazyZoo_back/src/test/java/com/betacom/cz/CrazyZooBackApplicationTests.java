@@ -7,12 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.betacom.cz.controller.AnimaliControllerTest;
 import com.betacom.cz.controller.MarcaControllerTest;
 import com.betacom.cz.controller.TipologiaControllerTest;
+import com.betacom.cz.controller.UtenteControllerTest;
 
 @Suite
 @SelectClasses({
 			  	AnimaliControllerTest.class,
 			  	MarcaControllerTest.class,
-			  	TipologiaControllerTest.class
+			  	TipologiaControllerTest.class,
+			  	UtenteControllerTest.class
 			  })
 
 @SpringBootTest
