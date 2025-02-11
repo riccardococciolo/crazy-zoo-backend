@@ -6,6 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class AnimaliControllerTest {
+public class UtenteControllerTest {
 
 }
