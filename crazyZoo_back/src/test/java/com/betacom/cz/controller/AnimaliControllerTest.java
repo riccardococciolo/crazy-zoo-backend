@@ -1,5 +1,8 @@
 package com.betacom.cz.controller;
 
+import java.util.Comparator;
+import java.util.List;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -14,7 +17,7 @@ import com.betacom.cz.request.AnimaleRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
 
-@SpringBootTest
+@SpringBootTest(properties = "spring.profiles.active=test")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AnimaliControllerTest {
 	
@@ -49,71 +52,92 @@ public class AnimaliControllerTest {
 	public void listAll() {
 		
 		ResponseList<AnimaleDTO> resList = animController.listAll(); 
-		
-		Assertions.assertThat(resList.getRc()).isEqualTo(true);		
+		Assertions.assertThat(resList.getRc()).isEqualTo(true);	
+//		 List<AnimaleDTO> rLsort = resList.getDati().stream()
+//                 .sorted(Comparator.comparing(AnimaleDTO::getId))
+//                 .toList();
 		Assertions.assertThat(resList.getDati().get(0).getNome()).isEqualTo("cane");		
 	}
 	
 	@Test
 	@Order(3)
-	public void update() {
+    public void update() {
 
-		ResponseList<AnimaleDTO> responseList = animController.listAll();
+        ResponseList<AnimaleDTO> rL = animController.listAll();
 
-	    Assertions.assertThat(responseList.getRc()).isTrue();
-	    Assertions.assertThat(responseList.getDati()).isNotEmpty();
+        Assertions.assertThat(rL.getRc()).isTrue();
+        Assertions.assertThat(rL.getDati()).isNotEmpty();
 
-	    AnimaleDTO animaleDaAggiornare = responseList.getDati().stream()
-	        .filter(a -> "cane".equals(a.getNome()))
-	        .findFirst()
-	        .orElse(null);
-	    Assertions.assertThat(animaleDaAggiornare).isNotNull();
+        AnimaleDTO animaleDaAggiornare = rL.getDati().stream()
+            .filter(m -> "cane".equals(m.getNome()))
+            .findFirst()
+            .orElse(null);
 
-	    AnimaleRequest reqAnimale = new AnimaleRequest();	
-	    reqAnimale.setNomeAnimale("gatto");
-	    
-	    ResponseBase updateResponse = animController.update(reqAnimale);
+        Assertions.assertThat(animaleDaAggiornare).isNotNull();
 
-	    Assertions.assertThat(updateResponse.getRc()).isTrue();
+        AnimaleRequest reqAnimale = new AnimaleRequest();
+        reqAnimale.setId(animaleDaAggiornare.getId()); 
+        reqAnimale.setNomeAnimale("cavallo"); 
 
-	    ResponseList<AnimaleDTO> updatedResponseList = animController.listAll();
-	    Assertions.assertThat(updatedResponseList.getRc()).isTrue();
+        ResponseBase uRB = animController.update(reqAnimale);
 
-	    AnimaleDTO animaleAggiornato = updatedResponseList.getDati().stream()
-	        .filter(a -> "cane".equals(a.getNome()))
-	        .findFirst()
-	        .orElse(null);
-	    Assertions.assertThat(animaleAggiornato).isNotNull();
+        Assertions.assertThat(uRB.getRc()).isTrue();
 
-	    Assertions.assertThat(animaleAggiornato.getNome()).isEqualTo("topo");
-	}
+        ResponseList<AnimaleDTO> uRL = animController.listAll();
+
+        Assertions.assertThat(uRL.getRc()).isTrue();
+
+        AnimaleDTO animaleAggiornato = uRL.getDati().stream()
+            .filter(m -> "cavallo".equals(m.getNome()))
+            .findFirst()
+            .orElse(null);
+
+        Assertions.assertThat(animaleAggiornato).isNotNull();
+        Assertions.assertThat(animaleAggiornato.getNome()).isEqualTo("cavallo");
+    }
 	
 	@Test
 	@Order(4)
-	public void delete() {
-		
-		AnimaleRequest reqAnimale = new AnimaleRequest();	
-		 
-	    ResponseList<AnimaleDTO> responseList = animController.listAll();
-	    Assertions.assertThat(responseList.getRc()).isTrue();
-	    Assertions.assertThat(responseList.getDati()).isNotEmpty();
+    public void delete() {
 
-	    AnimaleDTO animaleDto = responseList.getDati().stream()
-	        .filter(a -> "cane".equals(a.getNome()))
-	        .findFirst()
-	        .orElse(null);
-	    Assertions.assertThat(animaleDto).isNotNull();
+        //Recupera tutte le marche
+        ResponseList<AnimaleDTO> rL = animController.listAll();
 
-	    ResponseBase resBase = animController.delete(reqAnimale);
-	    Assertions.assertThat(resBase.getRc()).isTrue();
+        //Verifica che la lista sia popolata
+        Assertions.assertThat(rL.getRc()).isTrue();
+        Assertions.assertThat(rL.getDati()).isNotEmpty();
 
-	    ResponseList<AnimaleDTO> postDeleteListResponse = animController.listAll();
-	    Assertions.assertThat(postDeleteListResponse.getRc()).isTrue();
+        //Trova la marca da eliminare
+        AnimaleDTO animaleDaEliminare = rL.getDati().stream()
+            .filter(m -> "lemure".equals(m.getNome())) 
+            .findFirst()
+            .orElse(null);
 
-	    AnimaleDTO animaleDopoEliminazione = postDeleteListResponse.getDati().stream()
-	        .filter(a -> "cane".equals(a.getNome()))
-	        .findFirst()
-	        .orElse(null);
-	    Assertions.assertThat(animaleDopoEliminazione).isNull();	
-	}
+        //Verifica che esista la marca
+        Assertions.assertThat(animaleDaEliminare).isNotNull();
+
+        //Crea la richiesta di eliminazione
+        AnimaleRequest animaleReq = new AnimaleRequest();
+        animaleReq.setId(animaleDaEliminare.getId()); 
+
+        //Esegui il delete
+        ResponseBase uRB = animController.delete(animaleReq);
+
+        //Verifica che il delete sia andato a buon fine
+        Assertions.assertThat(uRB.getRc()).isTrue();
+
+        //Recupera nuovamente tutte le marche per verificare che sia stata eliminata
+        ResponseList<AnimaleDTO> uRL = animController.listAll();
+
+        Assertions.assertThat(uRL.getRc()).isTrue();
+
+        //Cerca la marca eliminata
+        AnimaleDTO animaleEliminato = uRL.getDati().stream()
+            .filter(m -> "lemure".equals(m.getNome())) 
+            .findFirst()
+            .orElse(null);
+
+        //Verifica che la marca eliminata NON esista più
+        Assertions.assertThat(animaleEliminato).isNull();
+    }
 }
