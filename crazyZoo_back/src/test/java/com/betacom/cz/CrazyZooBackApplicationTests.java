@@ -6,13 +6,13 @@ import org.junit.platform.suite.api.Suite;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.betacom.cz.controller.AnimaliControllerTest;
 import com.betacom.cz.controller.MarcaControllerTest;
-import com.betacom.cz.controller.TipologiaController;
+import com.betacom.cz.controller.TipologiaControllerTest;
 
 @Suite
 @SelectClasses({
 			  	AnimaliControllerTest.class,
 			  	MarcaControllerTest.class,
-			  	TipologiaController.class
+			  	TipologiaControllerTest.class
 			  })
 
 @SpringBootTest

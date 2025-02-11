@@ -30,7 +30,7 @@ public class TipologiaControllerTest {
 		ResponseBase rB = tipologiaC.create(reqT);
 		
 		TipologiaRequest reqT2 = new TipologiaRequest();
-		reqT.setNome("Cibo umido");
+		reqT2.setNome("Cibo umido");
 		ResponseBase rB2 = tipologiaC.create(reqT2);
 			
 		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
