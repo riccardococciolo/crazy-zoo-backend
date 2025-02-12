@@ -9,10 +9,13 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.dto.UtenteDTO;
+import com.betacom.cz.request.ProdottiCarrelloRequest;
 import com.betacom.cz.request.UtenteRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
+import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -85,6 +88,15 @@ public class UtenteControllerTest {
 	
 	@Test
 	@Order(3)
+	public void listById() {
+		ResponseObject<UtenteDTO> rB = utController.listByID(1);
+		
+		Assertions.assertThat(rB).isNotNull();
+		Assertions.assertThat(rB.getRc()).isEqualTo(true);
+	}
+	
+	@Test
+	@Order(4)
 	public void delete() {
 
 	    // Recupera la lista di utenti

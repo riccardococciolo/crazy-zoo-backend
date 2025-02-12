@@ -100,15 +100,13 @@ public class UtenteImplementation implements UtenteServices{
 		Optional<Utente> u = userR.findById(id);
 		if(u.isEmpty())
 			throw new Exception("Nessun user trovato......");
-		 return (UtenteDTO) u.stream()
-                 .map(m -> new UtenteDTO(m.getId(), 
-                		 m.getNome(), 
-                		 m.getCognome(), 
-                		 m.getUsername(),
-                		 m.getEmail(), 
-                		 m.getCellulare(), 
-                		 m.getRuolo()+"" ))
-                 .collect(Collectors.toList());
+		 return new UtenteDTO(u.get().getId(), 
+                		 u.get().getNome(), 
+                		 u.get().getCognome(), 
+                		 u.get().getUsername(),
+                		 u.get().getEmail(), 
+                		 u.get().getCellulare(), 
+                		 u.get().getRuolo()+"" );
 	}
 	
 

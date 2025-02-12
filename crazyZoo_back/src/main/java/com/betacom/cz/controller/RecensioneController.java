@@ -60,7 +60,7 @@ public class RecensioneController {
 		ResponseList<RecensioneDTO> r = new ResponseList<RecensioneDTO>();
 		r.setRc(true);
 		try{
-			r.setDati(recS.listByUtente(id));
+			r.setDati(recS.listByProdotto(id));
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
