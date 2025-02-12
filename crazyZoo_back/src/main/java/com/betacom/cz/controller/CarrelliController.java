@@ -1,19 +1,19 @@
 package com.betacom.cz.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.cz.repositories.ICarrelloRepository;
 import com.betacom.cz.request.CarrelloRequest;
-import com.betacom.cz.request.MarcaRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.services.interfaces.CarrelloServices;
 
 @RestController
 @RequestMapping("/rest/carrelli")
+@CrossOrigin(origins = "${url_api}")
 public class CarrelliController {
 	
 	@Autowired

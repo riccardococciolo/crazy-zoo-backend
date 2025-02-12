@@ -1,6 +1,7 @@
 package com.betacom.cz.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import com.betacom.cz.services.interfaces.ProdottiCarrelloServices;
 
 @RestController
 @RequestMapping("/rest/prodcarr")
+@CrossOrigin(origins = "${url_api}")
 public class ProdottiCarrelloController {
 	@Autowired
 	ProdottiCarrelloServices prodS;

@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import com.betacom.cz.services.interfaces.ProdottoServices;
 
 @RestController
 @RequestMapping("/rest/prodotto")
+@CrossOrigin(origins = "${url_api}")
 public class ProdottoController {
 	
 	@Autowired

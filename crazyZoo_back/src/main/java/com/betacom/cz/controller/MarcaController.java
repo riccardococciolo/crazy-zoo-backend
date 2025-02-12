@@ -19,7 +19,7 @@ import com.betacom.cz.services.interfaces.MarcaServices;
 
 @RestController
 @RequestMapping("/rest/marche")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "${url_api}")
 public class MarcaController {
 	
 	@Autowired
