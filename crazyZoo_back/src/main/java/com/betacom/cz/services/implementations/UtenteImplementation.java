@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.models.Ruolo;
 import com.betacom.cz.models.Utente;
-import com.betacom.cz.repositories.ICarrelloRepository;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.UtenteRequest;
 import com.betacom.cz.services.interfaces.UtenteServices;
@@ -102,7 +101,13 @@ public class UtenteImplementation implements UtenteServices{
 		if(u.isEmpty())
 			throw new Exception("Nessun user trovato......");
 		 return (UtenteDTO) u.stream()
-                 .map(m -> new UtenteDTO(m.getId(), m.getNome(), m.getCognome(), m.getUsername(), m.getEmail(), m.getCellulare(), m.getRuolo()+"" ))
+                 .map(m -> new UtenteDTO(m.getId(), 
+                		 m.getNome(), 
+                		 m.getCognome(), 
+                		 m.getUsername(),
+                		 m.getEmail(), 
+                		 m.getCellulare(), 
+                		 m.getRuolo()+"" ))
                  .collect(Collectors.toList());
 	}
 	

@@ -25,8 +25,8 @@ import com.betacom.cz.controller.UtenteControllerTest;
 			  	ImmagineControllerTest.class,
 			  	UtenteControllerTest.class,
 			  	RecensioneControllerTest.class,
-			  	OrdineControllerTest.class,
 			  	CarrelliControllerTest.class,
+			  	OrdineControllerTest.class,
 			  	ProdottoOrdineControllerTest.class,
 			  	ProdottiCarrelloControllerTest.class
 			  })

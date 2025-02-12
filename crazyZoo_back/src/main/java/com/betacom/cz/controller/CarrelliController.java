@@ -1,15 +1,20 @@
 package com.betacom.cz.controller;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.cz.repositories.ICarrelloRepository;
+import com.betacom.cz.dto.AnimaleDTO;
+import com.betacom.cz.dto.CarrelloDTO;
+import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.request.CarrelloRequest;
-import com.betacom.cz.request.MarcaRequest;
 import com.betacom.cz.response.ResponseBase;
+import com.betacom.cz.response.ResponseList;
 import com.betacom.cz.services.interfaces.CarrelloServices;
 
 @RestController
@@ -18,6 +23,9 @@ public class CarrelliController {
 	
 	@Autowired
 	CarrelloServices carrS;
+	
+	@Autowired
+	Logger log;
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody CarrelloRequest req) {
@@ -41,6 +49,38 @@ public class CarrelliController {
 		try {
 			carrS.delete(req);
 		}catch(Exception e) {
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+	}
+	
+	@GetMapping("/listbyid")
+	public ResponseList<ProdottoDTO> listByID(@RequestParam Integer id) {
+	
+		
+		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
+		r.setRc(true);
+		try{
+			r.setDati(carrS.listProdotto(id));
+		} catch (Exception e) {
+			
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+	}
+	
+	@GetMapping("/listAll")
+	public ResponseList<CarrelloDTO> listAll() {
+		log.debug("Inizio listAll:");
+		
+		ResponseList<CarrelloDTO> r = new ResponseList<CarrelloDTO>();
+		r.setRc(true);
+		try{
+			r.setDati(carrS.listAll());
+		} catch (Exception e) {
+			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
