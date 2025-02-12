@@ -52,8 +52,21 @@ public class UtenteControllerTest {
 		
 		ResponseBase rB2 = utController.create(reqUtente2);
 		
+		UtenteRequest reqUtente3 = new UtenteRequest();
+		
+		reqUtente3.setNome("Svetlana");
+		reqUtente3.setCognome("Bianchi");
+		reqUtente3.setCellulare("388321456");
+		reqUtente3.setEmail("svetlanaB@gmail.com");
+		reqUtente3.setPassword("passwordSvetlana");
+		reqUtente3.setUsername("Svetti");
+		reqUtente3.setRuolo("CLIENTE");
+		
+		ResponseBase rB3 = utController.create(reqUtente3);
+		
 		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
-		Assertions.assertThat(rB2.getRc()).isEqualTo(true);	
+		Assertions.assertThat(rB2.getRc()).isEqualTo(true);
+		Assertions.assertThat(rB3.getRc()).isEqualTo(true);
 	}
 	
 	@Test

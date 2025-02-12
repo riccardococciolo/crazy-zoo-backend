@@ -5,7 +5,11 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import static com.betacom.cz.utils.Utilities.mapToProdottoDTOList;
+
+import com.betacom.cz.dto.CarrelloDTO;
 import com.betacom.cz.dto.OrdineDTO;
+import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.models.Carrello;
 import com.betacom.cz.models.Ordine;
 import com.betacom.cz.models.Prodotto;
@@ -106,8 +110,32 @@ public class OrdineImplementation implements OrdineServices{
 	}
 
 	@Override
-	public OrdineDTO listById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public OrdineDTO listById(Integer id) throws Exception {
+		Optional<Ordine> m = ordineR.findById(id);
+		
+	    if (m.isEmpty()) {
+	        log.error("Nessuna ordine trovata nel database.");
+	        throw new Exception("Nessuna ordine disponibile.");
+	    }
+	    
+	    return new OrdineDTO(
+	    		m.get().getId(),
+	    		new CarrelloDTO(m.get().getCarrello().getId(),
+	    				new UtenteDTO( m.get().getId(), 
+	    						m.get().getUtente().getNome(), 
+	    						m.get().getUtente().getCognome(), 
+	    						m.get().getUtente().getUsername(),
+	    						m.get().getUtente().getEmail(), 
+	    						m.get().getUtente().getCellulare(), 
+	    						m.get().getUtente().getRuolo()+"")),
+	    		new UtenteDTO(
+	    				m.get().getId(), 
+	    				m.get().getUtente().getNome(), 
+	    				m.get().getUtente().getCognome(), 
+	    				m.get().getUtente().getUsername(),
+	    				m.get().getUtente().getEmail(), 
+	    				m.get().getUtente().getCellulare(), 
+	    				m.get().getUtente().getRuolo()+""),
+	    		mapToProdottoDTOList(m.get().getProdotti()));
 	}
 }

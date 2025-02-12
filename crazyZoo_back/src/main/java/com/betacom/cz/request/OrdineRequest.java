@@ -5,7 +5,7 @@ public class OrdineRequest {
 	
 
 	private Integer id;
-//	private Integer carrelloID;
+	private Integer carrelloID;
 	private Integer utenteID;
 	
 	public Integer getId() {
@@ -14,12 +14,12 @@ public class OrdineRequest {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-//	public Integer getCarrelloID() {
-//		return carrelloID;
-//	}
-//	public void setCarrelloID(Integer carrelloID) {
-//		this.carrelloID = carrelloID;
-//	}
+	public Integer getCarrelloID() {
+		return carrelloID;
+	}
+	public void setCarrelloID(Integer carrelloID) {
+		this.carrelloID = carrelloID;
+	}
 	public Integer getUtenteID() {
 		return utenteID;
 	}
