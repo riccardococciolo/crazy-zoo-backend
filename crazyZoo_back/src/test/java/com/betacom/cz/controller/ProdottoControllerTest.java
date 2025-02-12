@@ -1,5 +1,8 @@
 package com.betacom.cz.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -12,6 +15,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 import com.betacom.cz.dto.ProdottoDTO;
+import com.betacom.cz.models.Immagine;
+import com.betacom.cz.repositories.IImmagineRepository;
 import com.betacom.cz.request.ProdottoRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
@@ -24,12 +29,14 @@ public class ProdottoControllerTest {
 	ProdottoController prodC;
 	
 	@Autowired
+	IImmagineRepository imgR;
+	
+	@Autowired
 	Logger log;
 	
 	@Test
 	@Order(1)
 	public void create() {
-	    
 	    //Creazione del primo prodotto
 	    ProdottoRequest reqP1 = new ProdottoRequest();        
 	    reqP1.setPrezzo(9.99);
@@ -40,20 +47,33 @@ public class ProdottoControllerTest {
 	    reqP1.setTipologiaID(2);
 	    reqP1.setDescrizione("Prodotto bello");
 
-	    //Simula un'immagine finta
+	    // Simula un'immagine finta
 	    MockMultipartFile mockImage1 = new MockMultipartFile(
 	        "file", "test1.jpg", "image/jpeg", "fake image content".getBytes()
 	    );
 
 	    MultipartFile[] immaginiArray1 = { mockImage1 };
 	    reqP1.setImmagini(immaginiArray1); 
-	    
-	    //Chiamata al controller per il primo prodotto
+
+	    // Chiamata al controller per il primo prodotto
 	    ResponseEntity<ResponseBase> rE1 = prodC.create(reqP1);
 	    ResponseBase rB1 = rE1.getBody();
 
 	    Assertions.assertThat(rB1).isNotNull();
 	    Assertions.assertThat(rB1.getRc()).isTrue();
+
+	    //Verifica che l'immagine sia stata salvata correttamente
+	    List<Immagine> immaginiSalvate = imgR.findAll();
+	    System.out.println("Numero di immagini salvate: " + immaginiSalvate.size());
+
+	    //Stampa i dettagli delle immagini salvate
+	    for (Immagine img : immaginiSalvate) {
+	        System.out.println("Immagine salvata: ID = " + img.getId() + ", Nome = " + img.getNomeImmagine());
+	    }
+
+	    //Assicurati che almeno un'immagine sia presente
+	    Assertions.assertThat(immaginiSalvate).isNotEmpty();
+	    Assertions.assertThat(immaginiSalvate.get(0).getNomeImmagine()).isEqualTo("test1.jpg");
 
 	    //Creazione del secondo prodotto (per il delete)
 	    ProdottoRequest reqP2 = new ProdottoRequest();        
@@ -72,14 +92,28 @@ public class ProdottoControllerTest {
 
 	    MultipartFile[] immaginiArray2 = { mockImage2 };
 	    reqP2.setImmagini(immaginiArray2); 
-	    
+
 	    //Chiamata al controller per il secondo prodotto
 	    ResponseEntity<ResponseBase> rE2 = prodC.create(reqP2);
 	    ResponseBase rB2 = rE2.getBody();
 
 	    Assertions.assertThat(rB2).isNotNull();
 	    Assertions.assertThat(rB2.getRc()).isTrue();
+
+	    //Verifica che ora ci siano 2 immagini salvate
+	    List<Immagine> immaginiDopoSecondoSalvataggio = imgR.findAll();
+	    System.out.println("Numero di immagini dopo secondo salvataggio: " + immaginiDopoSecondoSalvataggio.size());
+
+	    //Verifica che le immagini abbiano i nomi corretti
+	    List<String> nomiImmaginiSalvate = immaginiDopoSecondoSalvataggio.stream()
+	        .map(Immagine::getNomeImmagine)
+	        .collect(Collectors.toList());
+
+	    Assertions.assertThat(nomiImmaginiSalvate).containsExactlyInAnyOrder("test1.jpg", "test2.jpg");
 	}
+
+	
+
 	
 	@Test
 	@Order(2)

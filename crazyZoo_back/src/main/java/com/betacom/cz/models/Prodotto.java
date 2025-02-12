@@ -71,7 +71,7 @@ public class Prodotto {
 			fetch = FetchType.EAGER,
 			cascade = CascadeType.ALL,
 			orphanRemoval = true)
-	private List<Immagine> immagini = new ArrayList<>();;
+	private List<Immagine> immagini = new ArrayList<>();
 
 	//Getters&Setters
 	public Integer getId() {
