@@ -1,8 +1,5 @@
 package com.betacom.cz.controller;
 
-import java.util.Comparator;
-import java.util.List;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -11,7 +8,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import com.betacom.cz.dto.AnimaleDTO;
 import com.betacom.cz.request.AnimaleRequest;
 import com.betacom.cz.response.ResponseBase;

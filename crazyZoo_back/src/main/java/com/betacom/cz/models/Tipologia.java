@@ -2,10 +2,8 @@ package com.betacom.cz.models;
 
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,9 +19,7 @@ public class Tipologia {
 	@Column (name = "nome", nullable = false)
 	private String nome;
 	
-	@OneToMany(mappedBy = "tipologia",
-			fetch = FetchType.EAGER,
-			cascade = CascadeType.REMOVE)
+	@OneToMany(mappedBy = "tipologia")
 	private List<Prodotto> prodotti;
 
 	public Integer getId() {
@@ -50,6 +46,4 @@ public class Tipologia {
 		this.prodotti = prodotti;
 	}
 	
-	
-
 }

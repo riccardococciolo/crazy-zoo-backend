@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -24,8 +23,7 @@ public class Animale {
 	private String nomeAnimale;
 
 	@OneToMany(mappedBy = "animale",
-			fetch = FetchType.EAGER,
-			cascade = CascadeType.REMOVE)
+			fetch = FetchType.EAGER)
 	private List<Prodotto> prodotti;
 
 	//Getters&Setters

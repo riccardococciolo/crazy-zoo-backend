@@ -50,6 +50,7 @@ public class ProdottoImplementation implements ProdottoServices {
 
 	@Override
 	public void create(ProdottoRequest req) throws Exception {
+		
 		if (req.getTitolo() == null)
 			throw new Exception("Il titolo è necessario");
 		
@@ -63,10 +64,8 @@ public class ProdottoImplementation implements ProdottoServices {
 		
 		Optional<Marca> marca = marR.findById(req.getMarcaID());
 	            
-
 	    Optional<Tipologia> tipologia = tipR.findById(req.getTipologiaID());
-	        
-	    
+	            
 	    Prodotto prodotto = new Prodotto();
 	    prodotto.setAnimale(animale.get());
 	    prodotto.setMarca(marca.get());
@@ -85,6 +84,7 @@ public class ProdottoImplementation implements ProdottoServices {
                         immagine.setData(img.getBytes());
                         immagine.setTipoFile(img.getContentType());
                         prodotto.addImmagine(immagine);
+                        
                     } catch (Exception e) {
                         throw new Exception("Errore nel salvataggio dell'immagine " + img.getOriginalFilename(), e);
                     }

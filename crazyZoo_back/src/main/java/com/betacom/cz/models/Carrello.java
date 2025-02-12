@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -27,13 +26,10 @@ public class Carrello {
 	referencedColumnName = "id")
 	private Utente utente;
 
-	@OneToMany(mappedBy = "carrello",
-			cascade = CascadeType.REMOVE)
+	@OneToMany(mappedBy = "carrello")
 	private List<Ordine> ordini;
 
-	@ManyToMany(fetch = FetchType.EAGER,
-			cascade = {CascadeType.PERSIST,
-					CascadeType.MERGE})
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "prodotto_carrello", 
 	joinColumns = @JoinColumn(name = "id_carrello"),
 	inverseJoinColumns = @JoinColumn(name = "id_prodotto"))

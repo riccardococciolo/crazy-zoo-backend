@@ -84,6 +84,7 @@ public class MarcaImplementation implements MarcaServices{
 	    }
 
 	    Marca marca = oMarca.get();
+	    marca.getProdotti().clear();
 	    marcaR.delete(marca);
 
 	    log.info("Marca '{}' eliminata con successo.", marca.getNomeMarca());

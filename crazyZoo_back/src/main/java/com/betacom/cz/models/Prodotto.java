@@ -2,6 +2,7 @@ package com.betacom.cz.models;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -49,19 +50,14 @@ public class Prodotto {
 	private Marca marca;
 
 	@OneToMany(mappedBy = "prodotto",
-			fetch = FetchType.EAGER,
-			cascade = CascadeType.REMOVE)
+			fetch = FetchType.EAGER)
 	private List<Recensione> recensioni;
 
 	@ManyToMany(mappedBy = "prodotti",
-			fetch = FetchType.EAGER,
-			cascade = {CascadeType.PERSIST,
-					CascadeType.MERGE})
+			fetch = FetchType.EAGER)
 	private List<Carrello> carrelli;
 
-	@ManyToMany(fetch = FetchType.EAGER,
-			cascade = {CascadeType.PERSIST,
-					CascadeType.MERGE})
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "prodotto_ordine", 
 	joinColumns = @JoinColumn(name = "id_prodotto"),
 	inverseJoinColumns = @JoinColumn(name = "id_ordine"))

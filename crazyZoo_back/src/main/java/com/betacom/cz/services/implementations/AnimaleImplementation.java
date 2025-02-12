@@ -3,19 +3,13 @@ package com.betacom.cz.services.implementations;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.betacom.cz.dto.AnimaleDTO;
-import com.betacom.cz.dto.MarcaDTO;
 import com.betacom.cz.models.Animale;
-import com.betacom.cz.models.Marca;
 import com.betacom.cz.repositories.IAnimaleRepository;
-import com.betacom.cz.repositories.IMarcaRepository;
 import com.betacom.cz.request.AnimaleRequest;
-import com.betacom.cz.request.MarcaRequest;
 import com.betacom.cz.services.interfaces.AnimaleServices;
 
 import jakarta.transaction.Transactional;

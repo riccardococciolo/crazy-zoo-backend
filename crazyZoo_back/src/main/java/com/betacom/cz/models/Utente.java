@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -44,17 +43,14 @@ public class Utente {
 	private Ruolo ruolo;
 
 	@OneToOne(mappedBy = "utente",
-			cascade = CascadeType.REMOVE,
 			fetch = FetchType.EAGER)
 	private Carrello carrello;
 	
 	@OneToMany(mappedBy = "utente",
-			cascade = CascadeType.REMOVE,
 			fetch = FetchType.EAGER)
 	private List<Ordine> ordini;
 	
 	@OneToMany(mappedBy = "utente",
-			cascade = CascadeType.REMOVE,
 			fetch = FetchType.EAGER)
 	private List<Recensione> recensioni;
 	
