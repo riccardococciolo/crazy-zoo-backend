@@ -4,6 +4,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,7 +20,8 @@ public class Tipologia {
 	@Column (name = "nome", nullable = false)
 	private String nome;
 	
-	@OneToMany(mappedBy = "tipologia")
+	@OneToMany(mappedBy = "tipologia",
+				fetch = FetchType.LAZY)
 	private List<Prodotto> prodotti;
 
 	public Integer getId() {
