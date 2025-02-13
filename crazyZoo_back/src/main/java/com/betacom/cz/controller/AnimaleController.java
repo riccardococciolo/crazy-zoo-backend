@@ -74,7 +74,7 @@ public class AnimaleController {
 		return r;
 	}
 	
-	@GetMapping("/list")
+	@GetMapping("/listall")
 	public ResponseList<AnimaleDTO> listAll() {
 		log.debug("Inizio listAll:");
 		
@@ -105,4 +105,5 @@ public class AnimaleController {
 		}
 		return r;
 	}
+	
 }

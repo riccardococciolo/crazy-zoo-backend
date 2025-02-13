@@ -13,6 +13,7 @@ import com.betacom.cz.dto.MarcaDTO;
 import com.betacom.cz.request.MarcaRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
+import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -54,6 +55,15 @@ public class MarcaControllerTest {
 	
 	@Test
 	@Order(3)
+	public void listByID() {
+		ResponseObject<MarcaDTO> rObj = marcaC.listByID(1);
+		
+		Assertions.assertThat(rObj.getRc()).isEqualTo(true);
+		Assertions.assertThat(rObj).isNotNull();
+	}
+	
+	@Test
+	@Order(4)
 	public void update() {
 		
 	    //Recupera tutte le marche
@@ -100,7 +110,7 @@ public class MarcaControllerTest {
 	}
 	
 	@Test
-	@Order(4)
+	@Order(5)
 	public void delete() {
 	    
 	    //Recupera tutte le marche

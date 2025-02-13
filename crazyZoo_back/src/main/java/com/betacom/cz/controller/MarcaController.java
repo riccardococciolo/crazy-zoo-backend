@@ -74,7 +74,7 @@ public class MarcaController {
 		return r;
 	}
 	
-	@GetMapping("/list")
+	@GetMapping("/listall")
 	public ResponseList<MarcaDTO> listAll() {
 		log.debug("Inizio listAll:");
 		
