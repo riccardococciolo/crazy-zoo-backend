@@ -23,7 +23,7 @@ public class Animale {
 	private String nomeAnimale;
 
 	@OneToMany(mappedBy = "animale",
-			fetch = FetchType.EAGER)
+			fetch = FetchType.LAZY)
 	private List<Prodotto> prodotti;
 
 	//Getters&Setters

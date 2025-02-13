@@ -85,6 +85,7 @@ public class AnimaleImplementation implements AnimaleServices {
 	    }
 
 	    Animale animaleObj = animaleList.get();
+	    animaleObj.getProdotti().clear();
 	    animaleR.delete(animaleObj);
 
 	    log.info("Animale '{}' eliminato con successo.", animaleObj.getNomeAnimale());
