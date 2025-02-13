@@ -8,13 +8,11 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import com.betacom.cz.dto.CarrelloDTO;
 import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.request.CarrelloRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
-import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

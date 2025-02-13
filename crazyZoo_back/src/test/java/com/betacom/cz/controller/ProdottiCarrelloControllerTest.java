@@ -7,11 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import com.betacom.cz.dto.AnimaleDTO;
 import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.repositories.IImmagineRepository;
-import com.betacom.cz.request.AnimaleRequest;
 import com.betacom.cz.request.ProdottiCarrelloRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
