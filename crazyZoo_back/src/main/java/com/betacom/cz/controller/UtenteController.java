@@ -67,7 +67,7 @@ public class UtenteController
 	}
 	
 	
-	@GetMapping("/list")
+	@GetMapping("/listall")
 	public ResponseList<UtenteDTO> listAll() {
 		log.debug("Inizio listAll:");
 		

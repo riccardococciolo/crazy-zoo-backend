@@ -74,7 +74,7 @@ public class TipologiaController
 		return r;
 	}
 	
-	@GetMapping("/list")
+	@GetMapping("/listall")
 	public ResponseList<TipologiaDTO> listAll() {
 		log.debug("Inizio listAll:");
 		

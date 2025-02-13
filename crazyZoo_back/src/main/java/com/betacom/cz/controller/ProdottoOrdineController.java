@@ -12,14 +12,14 @@ import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.services.interfaces.ProdottoOrdineServices;
 
 @RestController
-@RequestMapping("/prodotto-ordine")
+@RequestMapping("/rest/prodottoordine")
 @CrossOrigin(origins = "${url_api}")
 public class ProdottoOrdineController {
 
     @Autowired
     private ProdottoOrdineServices prodottoOrdineS;
 
-    @PostMapping("/aggiungi")
+    @PostMapping("/addprodottotoordine")
     public ResponseBase aggiungiProdottoAOrdine(@RequestBody ProdottoOrdineRequest reqPO) {
         ResponseBase r = new ResponseBase();
         try {
@@ -33,7 +33,7 @@ public class ProdottoOrdineController {
         return r;
     }
     
-    @PostMapping("/rimuovi-all")
+    @PostMapping("/deleteall")
     public ResponseBase removeAll(@RequestBody ProdottoOrdineRequest reqPO) {
         ResponseBase r = new ResponseBase();
         try {
@@ -47,7 +47,7 @@ public class ProdottoOrdineController {
         return r;
     }
     
-    @PostMapping("/rimuovi-byid")
+    @PostMapping("/deletebyid")
     public ResponseBase removeById(@RequestBody ProdottoOrdineRequest reqPO) {
         ResponseBase r = new ResponseBase();
         try {

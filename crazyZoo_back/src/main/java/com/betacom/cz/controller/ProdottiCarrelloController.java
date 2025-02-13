@@ -22,8 +22,8 @@ public class ProdottiCarrelloController {
 	ProdottiCarrelloServices prodS;
 	
 	
-	@PostMapping("/addc")
-	public ResponseBase addCarrello(@RequestBody ProdottiCarrelloRequest req) {
+	@PostMapping("/addprodottotocarrello")
+	public ResponseBase addProdottoToCarrello(@RequestBody ProdottiCarrelloRequest req) {
 	
 
 
@@ -38,7 +38,7 @@ public class ProdottiCarrelloController {
 		return r;
 	}
 	
-	@GetMapping("/listbyidcarrello")
+	@GetMapping("/listpbyidcarrello")
 	public ResponseList<ProdottoDTO> listByIdCarrello(@RequestBody ProdottiCarrelloRequest req){
 		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
 		r.setRc(true);

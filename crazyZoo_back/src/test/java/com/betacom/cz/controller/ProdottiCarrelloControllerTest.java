@@ -32,7 +32,7 @@ public class ProdottiCarrelloControllerTest {
 	    	
 		ProdottiCarrelloRequest prodCarReq = new ProdottiCarrelloRequest(1, 1);
 		
-		ResponseBase rB = pcController.addCarrello(prodCarReq);
+		ResponseBase rB = pcController.addProdottoToCarrello(prodCarReq);
 		
 		Assertions.assertThat(rB).isNotNull();
 		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
