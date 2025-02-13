@@ -12,6 +12,7 @@ import com.betacom.cz.dto.AnimaleDTO;
 import com.betacom.cz.request.AnimaleRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
+import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest(properties = "spring.profiles.active=test")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -57,6 +58,15 @@ public class AnimaliControllerTest {
 	
 	@Test
 	@Order(3)
+	public void listById() {
+		ResponseObject<AnimaleDTO> rO = animController.listByID(1);
+		
+		Assertions.assertThat(rO).isNotNull();
+		Assertions.assertThat(rO.getRc()).isEqualTo(true);
+	}
+	
+	@Test
+	@Order(4)
     public void update() {
 
         ResponseList<AnimaleDTO> rL = animController.listAll();
@@ -93,7 +103,7 @@ public class AnimaliControllerTest {
     }
 	
 	@Test
-	@Order(4)
+	@Order(5)
     public void delete() {
 
         //Recupera tutte le marche

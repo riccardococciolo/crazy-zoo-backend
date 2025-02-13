@@ -13,6 +13,7 @@ import com.betacom.cz.dto.TipologiaDTO;
 import com.betacom.cz.request.TipologiaRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
+import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -54,6 +55,15 @@ public class TipologiaControllerTest {
 	
 	@Test
 	@Order(3)
+	public void listById() {
+		ResponseObject<TipologiaDTO> rO = tipologiaC.listByID(1);
+		
+		Assertions.assertThat(rO).isNotNull();
+		Assertions.assertThat(rO.getRc()).isEqualTo(true);
+	}
+	
+	@Test
+	@Order(4)
 	public void update() {
 		
 	    //Recupera tutte le tipologie
@@ -100,7 +110,7 @@ public class TipologiaControllerTest {
 	}
 	
 	@Test
-	@Order(4)
+	@Order(5)
 	public void delete() {
 	    
 	    //Recupera tutte le tipologie

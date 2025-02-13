@@ -8,10 +8,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.dto.UtenteDTO;
-import com.betacom.cz.request.ProdottiCarrelloRequest;
 import com.betacom.cz.request.UtenteRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
