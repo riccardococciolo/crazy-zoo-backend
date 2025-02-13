@@ -10,9 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.betacom.cz.dto.CarrelloDTO;
+import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.request.CarrelloRequest;
 import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseList;
+import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -54,9 +56,19 @@ public class CarrelliControllerTest {
 
 	    Assertions.assertThat(resList.getDati().get(0).getId()).isEqualTo(1);		
 	}
-	
 	@Test
 	@Order(3)
+	public void listbyid() {
+	    
+		ResponseList<ProdottoDTO> resList = carController.listByID(1); 
+
+	    Assertions.assertThat(resList.getRc()).isEqualTo(true);	
+
+	   // Assertions.assertThat(resList.getDati().get(0).getId()).isEqualTo(2);		
+	}
+	
+	@Test
+	@Order(4)
 	public void delete() 
 	{
 	    ResponseList<CarrelloDTO> rL = carController.listAll();
