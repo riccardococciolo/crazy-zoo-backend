@@ -1,4 +1,4 @@
-package com.betacom.cz.dto;
+package com.betacom.cz;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +8,15 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import com.betacom.cz.dto.AnimaleDTO;
+import com.betacom.cz.dto.CarrelloDTO;
+import com.betacom.cz.dto.MarcaDTO;
+import com.betacom.cz.dto.OrdineDTO;
+import com.betacom.cz.dto.ProdottoDTO;
+import com.betacom.cz.dto.RecensioneDTO;
+import com.betacom.cz.dto.TipologiaDTO;
+import com.betacom.cz.dto.UtenteDTO;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

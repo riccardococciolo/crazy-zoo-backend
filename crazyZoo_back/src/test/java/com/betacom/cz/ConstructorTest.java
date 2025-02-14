@@ -1,4 +1,4 @@
-package com.betacom.cz.constructor;
+package com.betacom.cz;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
