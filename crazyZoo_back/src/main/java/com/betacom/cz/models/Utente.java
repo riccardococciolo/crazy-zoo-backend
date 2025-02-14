@@ -45,13 +45,13 @@ public class Utente {
 	private Ruolo ruolo;
 
 	@OneToOne(mappedBy = "utente",
-			fetch = FetchType.LAZY,
+			fetch = FetchType.EAGER,
 			cascade = CascadeType.ALL,
 			orphanRemoval = true)
 	private Carrello carrello;
 	
 	@OneToMany(mappedBy = "utente",
-			fetch = FetchType.LAZY,
+			fetch = FetchType.EAGER,
 			cascade = CascadeType.ALL,
 			orphanRemoval = true)
 	private List<Ordine> ordini;

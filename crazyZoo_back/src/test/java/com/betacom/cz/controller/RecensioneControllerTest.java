@@ -52,56 +52,59 @@ public class RecensioneControllerTest {
     @Test
     @Order(3)
     public void listByUtente() {
-        //Recupero recensioni per l'utente con ID 1
+        // Recupera le recensioni per l'utente con ID 1
         ResponseList<RecensioneDTO> response = recensioneC.listByUtente(1);
 
-        //Verifica che il recupero sia andato a buon fine
+        System.out.println("Response Rc: " + response.getRc());
+        System.out.println("Numero recensioni trovate: " + (response.getDati() != null ? response.getDati().size() : "null"));
+
+        
         Assertions.assertThat(response).isNotNull();
         Assertions.assertThat(response.getRc()).isTrue();
-        Assertions.assertThat(response.getDati()).isNotEmpty(); 
+        Assertions.assertThat(response.getDati()).isNotEmpty();
     }
-    
-	@Test
-	@Order(4)
-	public void delete() {
 
-	    //Recupera la lista di recensioni
-	    ResponseList<RecensioneDTO> rL = recensioneC.listByUtente(1);
+    @Test
+    @Order(4)
+    public void delete() {
+        // Recupera la lista di recensioni per il prodotto con ID 1
+        ResponseList<RecensioneDTO> rL = recensioneC.listByProdotto(1);
 
-	    //Verifica che la lista non sia vuota e che la risposta sia valida
-	    Assertions.assertThat(rL.getRc()).isTrue();
-	    Assertions.assertThat(rL.getDati()).isNotEmpty();
+        // Verifica che la lista non sia vuota e che la risposta sia valida
+        Assertions.assertThat(rL.getRc()).isTrue();
+        Assertions.assertThat(rL.getDati()).isNotEmpty();
 
-	    //Trova l'utente da eliminare
-	    RecensioneDTO recensioneDaEliminare = rL.getDati().stream()
-	        .filter(r -> "marione".equals(r.getUtente().getUsername())) 
-	        .findFirst()
-	        .orElse(null);
+        // Trova la recensione da eliminare (la prima disponibile)
+        RecensioneDTO recensioneDaEliminare = rL.getDati().stream()
+            .findFirst()
+            .orElse(null);
 
-	    Assertions.assertThat(recensioneDaEliminare).isNotNull();
+        // Assicuriamoci che esista
+        Assertions.assertThat(recensioneDaEliminare).isNotNull();
 
-	    //Crea una richiesta di eliminazione con l'ID della recensione da eliminare
-	    RecensioniRequest reqR = new RecensioniRequest();
-	    reqR.setId(recensioneDaEliminare.getId()); 
+        // Crea una richiesta di eliminazione con l'ID della recensione
+        RecensioniRequest reqR = new RecensioniRequest();
+        reqR.setId(recensioneDaEliminare.getId());
 
-	    //Elimina la recensione
-	    ResponseBase uRB = recensioneC.delete(reqR);
-	    Assertions.assertThat(uRB.getRc()).isTrue();
+        // Elimina la recensione
+        ResponseBase uRB = recensioneC.delete(reqR);
+        Assertions.assertThat(uRB.getRc()).isTrue();
 
-	    //Recupera nuovamente la lista per verificare l'eliminazione
-	    ResponseList<RecensioneDTO> uRL = recensioneC.listByUtente(1);
+        // Recupera nuovamente la lista delle recensioni per verificare che sia stata eliminata
+        ResponseList<RecensioneDTO> uRL = recensioneC.listByProdotto(1);
 
-	    Assertions.assertThat(uRL.getRc()).isTrue();
+        Assertions.assertThat(uRL.getRc()).isTrue();
 
-	    //Verifica che l'utente eliminato non sia più nella lista
-	    RecensioneDTO recensioneEliminato = uRL.getDati().stream()
-	        .filter(r -> "marione".equals(r.getUtente().getUsername())) 
-	        .findFirst()
-	        .orElse(null);
+        // Verifica che la recensione eliminata non sia più nella lista
+        RecensioneDTO recensioneEliminata = uRL.getDati().stream()
+            .filter(r -> r.getId().equals(recensioneDaEliminare.getId()))
+            .findFirst()
+            .orElse(null);
 
-	    //La recensione dovrebbe essere nullo, indicando che è stato eliminato
-	    Assertions.assertThat(recensioneEliminato).isNull();
-	}
+        // Deve essere null, indicando che è stata eliminata
+        Assertions.assertThat(recensioneEliminata).isNull();
+    }
+
 
 
     

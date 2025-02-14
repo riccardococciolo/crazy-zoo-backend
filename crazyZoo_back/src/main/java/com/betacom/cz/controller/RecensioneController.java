@@ -53,7 +53,7 @@ public class RecensioneController {
 		return r;
 	}
 	
-	@GetMapping("/listByProdotto")
+	@GetMapping("/listbyprodotto")
 	public ResponseList<RecensioneDTO> listByProdotto(@RequestParam Integer id) {
 		log.debug("Inizio listByProdotto:");
 		
@@ -69,7 +69,7 @@ public class RecensioneController {
 		return r;
 	}
 	
-	@GetMapping("/listByUtente")
+	@GetMapping("/listbyutente")
 	public ResponseList<RecensioneDTO> listByUtente(@RequestParam Integer id) {
 		log.debug("Inizio listById:");
 		

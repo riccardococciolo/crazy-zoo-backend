@@ -17,6 +17,9 @@ import com.betacom.cz.repositories.IRecensioneRepository;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.RecensioniRequest;
 import com.betacom.cz.services.interfaces.RecensioneServices;
+
+import jakarta.transaction.Transactional;
+
 import static com.betacom.cz.utils.Utilities.mapToProdottoDTO;
 @Service
 public class RecensioneImplementation implements RecensioneServices{
@@ -43,11 +46,18 @@ public class RecensioneImplementation implements RecensioneServices{
 		    
 		    if (utente.isEmpty()) {
 		        throw new Exception("Utente non trovato");
+		    } 
+		    
+		    List<Recensione> rec = recR.findAll();
+
+		    //Verifica se esiste già una recensione per lo stesso utente e prodotto
+		    boolean recensioneEsistente = rec.stream()
+		    		.anyMatch(r -> r.getUtente().getId().equals(req.getUtenteID()) &&
+		    				r.getProdotto().getId().equals(req.getProdottoID()));
+
+		    if (recensioneEsistente) {
+		    	throw new Exception("Recensione già esistente per questo prodotto da questo utente.");
 		    }
-//		    Optional<Recensione> recensioneObj = recR.findById(req.getId());
-//		    if (recensioneObj.isPresent()) {
-//		        throw new Exception("Recensione già avvenuta");
-//		    }
 
 		    Recensione recensione = new Recensione();
 		    recensione.setDescrizione(req.getDescrizione());
@@ -58,9 +68,11 @@ public class RecensioneImplementation implements RecensioneServices{
 		}
 
 		@Override
+		@Transactional
 		public void delete(RecensioniRequest req) throws Exception {
-			// TODO Auto-generated method stub
+			
 			Optional<Recensione> recensioneObj = recR.findById(req.getId());
+			
 			 if (recensioneObj.isEmpty()) {
 			        throw new Exception("Recensione non esistente");
 		    }
@@ -69,6 +81,7 @@ public class RecensioneImplementation implements RecensioneServices{
 		}
 
 		@Override
+		@Transactional
 		public List<RecensioneDTO> listByProdotto(Integer id) throws Exception {
 			Optional<Prodotto> prodotto = prodR.findById(id);
 			if (prodotto.isEmpty()) {
@@ -94,11 +107,13 @@ public class RecensioneImplementation implements RecensioneServices{
 		}
 		
 		@Override
+		@Transactional
 		public List<RecensioneDTO> listByUtente(Integer id) throws Exception {
 			Optional<Utente> utente = utR.findById(id);
 			if (utente.isEmpty()) {
 				throw new Exception("Utente non trovato");
 			}
+			
 			List<Recensione> recensioni = utente.get().getRecensioni();
 			return recensioni.stream()
 					.map(r -> new RecensioneDTO(

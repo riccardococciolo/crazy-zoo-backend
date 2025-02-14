@@ -50,7 +50,9 @@ public class Prodotto {
 	private Marca marca;
 
 	@OneToMany(mappedBy = "prodotto",
-			fetch = FetchType.EAGER)
+			fetch = FetchType.LAZY,
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
 	private List<Recensione> recensioni;
 
 	@ManyToMany(mappedBy = "prodotti",
