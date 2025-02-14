@@ -1,6 +1,8 @@
 package com.betacom.cz.models;
 
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -43,15 +45,21 @@ public class Utente {
 	private Ruolo ruolo;
 
 	@OneToOne(mappedBy = "utente",
-			fetch = FetchType.EAGER)
+			fetch = FetchType.LAZY,
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
 	private Carrello carrello;
 	
 	@OneToMany(mappedBy = "utente",
-			fetch = FetchType.EAGER)
+			fetch = FetchType.LAZY,
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
 	private List<Ordine> ordini;
 	
 	@OneToMany(mappedBy = "utente",
-			fetch = FetchType.EAGER)
+			fetch = FetchType.LAZY,
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
 	private List<Recensione> recensioni;
 	
 	//Getters&Setters
