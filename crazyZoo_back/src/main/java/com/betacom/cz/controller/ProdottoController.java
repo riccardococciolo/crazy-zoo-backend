@@ -77,14 +77,14 @@ public class ProdottoController {
 	}
 	
 	@GetMapping("/listbyfilter")
-	public ResponseList<ProdottoDTO> list(Integer id, String titolo, Double prezzo, Integer quantita, String nomeAnimale,
+	public ResponseList<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, Integer quantita, String nomeAnimale,
 			String nomeTipologia, String nomeMarca, String descrizione) {
 		log.debug("Inizio list:");
 		
 		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
 		r.setRc(true);
 		try{
-			r.setDati(proS.list(id, titolo, prezzo, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione));
+			r.setDati(proS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione));
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());

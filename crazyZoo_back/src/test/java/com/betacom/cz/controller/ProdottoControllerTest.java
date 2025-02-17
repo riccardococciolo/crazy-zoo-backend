@@ -120,7 +120,7 @@ public class ProdottoControllerTest {
 	public void listByFilter() {
 	    
 	    //Recupera il prodotto usando il filtro per titolo
-	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null);
+	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
 
 	    //Verifica che la chiamata sia andata a buon fine
 	    Assertions.assertThat(rL.getRc()).isTrue();
@@ -145,7 +145,7 @@ public class ProdottoControllerTest {
 	public void update() {
 
 	    //Recupera il prodotto da aggiornare tramite listByFilter
-	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null);
+	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
 	    
 	    //Verifica che la lista non sia vuota e che il prodotto esista
 	    Assertions.assertThat(rL.getRc()).isTrue();
@@ -177,7 +177,7 @@ public class ProdottoControllerTest {
 	    Assertions.assertThat(rB.getRc()).isTrue();
 
 	    //Recupera di nuovo il prodotto aggiornato
-	    ResponseList<ProdottoDTO> rLUpdated = prodC.list(null, "ProdottoAggiornato", null, null, null, null, null, null);
+	    ResponseList<ProdottoDTO> rLUpdated = prodC.list(null, "ProdottoAggiornato", null, null, null, null, null, null, null);
 	    
 	    //Verifica che la lista non sia vuota e che il prodotto aggiornato esista
 	    Assertions.assertThat(rLUpdated.getRc()).isTrue();
@@ -198,7 +198,7 @@ public class ProdottoControllerTest {
 	public void delete() {
 
 	    //Recupera un prodotto esistente per eliminarlo
-	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoDaEliminare", null, null, null, null, null, null);
+	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoDaEliminare", null, null, null, null, null, null, null);
 	    
 	    //Verifica che la lista sia popolata
 	    Assertions.assertThat(rL.getRc()).isTrue();
@@ -230,7 +230,7 @@ public class ProdottoControllerTest {
 	    Assertions.assertThat(response.getRc()).isTrue();
 
 	    //Controlla che il prodotto non esista più nella lista
-	    ResponseList<ProdottoDTO> rLAfterDelete = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null);
+	    ResponseList<ProdottoDTO> rLAfterDelete = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
 
 	    Assertions.assertThat(rLAfterDelete.getDati()).doesNotContain(prodottoDaEliminare);
 	}

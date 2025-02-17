@@ -15,7 +15,8 @@ public interface IProdottoRepository extends JpaRepository<Prodotto, Integer> {
     List<Prodotto> findByFilter(
         @Param("id") Integer id,
         @Param("titolo") String titolo,
-        @Param("prezzo") Double prezzo,
+        @Param("prezzoMin") Double prezzoMin,
+        @Param("prezzoMax") Double prezzoMax,
         @Param("quantita") Integer quantita,
         @Param("nomeAnimale") String nomeAnimale,
         @Param("nomeTipologia") String nomeTipologia,

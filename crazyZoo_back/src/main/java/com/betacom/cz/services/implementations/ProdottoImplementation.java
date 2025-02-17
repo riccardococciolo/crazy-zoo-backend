@@ -100,8 +100,16 @@ public class ProdottoImplementation implements ProdottoServices {
 	public void update(ProdottoRequest req) throws Exception {
 		Prodotto prodotto = proR.findById(req.getId())
 	            .orElseThrow(() -> new Exception("Prodotto non trovato con id: " + req.getId()));
+		
+		Optional<Animale> animale = aniR.findById(req.getAnimaleID());
+		
+		Optional<Marca> marca = marR.findById(req.getMarcaID());
+	            
+	    Optional<Tipologia> tipologia = tipR.findById(req.getTipologiaID());
 	    
-	   
+		prodotto.setAnimale(animale.get());
+	    prodotto.setMarca(marca.get());
+	    prodotto.setTipologia(tipologia.get());
 	    prodotto.setTitolo(req.getTitolo());
 	    prodotto.setPrezzo(req.getPrezzo());
 	    prodotto.setQuantita(req.getQuantita());
@@ -157,9 +165,9 @@ public class ProdottoImplementation implements ProdottoServices {
 	}
 
 	@Override
-	public List<ProdottoDTO> list(Integer id, String titolo, Double prezzo, Integer quantita, String nomeAnimale,
+	public List<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, Integer quantita, String nomeAnimale,
 			String nomeTipologia, String nomeMarca, String descrizione) {
-		List<Prodotto> lP = proR.findByFilter(id, titolo, prezzo, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
+		List<Prodotto> lP = proR.findByFilter(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
 		
 		
 		return lP.stream()
