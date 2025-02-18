@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.betacom.cz.dto.LoginDTO;
+import com.betacom.cz.dto.RegisterDTO;
 import com.betacom.cz.request.LoginRequest;
 import com.betacom.cz.request.UtenteRequest;
-import com.betacom.cz.response.ResponseBase;
 import com.betacom.cz.response.ResponseObject;
 import com.betacom.cz.services.interfaces.AuthServices;
 import com.betacom.cz.services.interfaces.UtenteServices;
@@ -26,12 +26,13 @@ public class AuthController {
 	UtenteServices utenteS;
 	
     @PostMapping("/register")
-    public ResponseBase register(@RequestBody UtenteRequest request) {
-        ResponseBase response = new ResponseBase();
+    public ResponseObject<RegisterDTO> register(@RequestBody UtenteRequest request) {
+    	ResponseObject<RegisterDTO> response = new ResponseObject<>();
+    	
         response.setRc(true);
-        
+   
         try {
-            authS.registerUser(request);
+            response.setDati(authS.registerUser(request));
             response.setMsg("User registered successfully");
         } catch (Exception e) {
             response.setRc(false);

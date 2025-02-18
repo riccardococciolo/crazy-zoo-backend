@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.betacom.cz.dto.LoginDTO;
+import com.betacom.cz.dto.RegisterDTO;
 import com.betacom.cz.models.Utente;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.LoginRequest;
@@ -30,13 +31,17 @@ public class AuthImplementation implements AuthServices {
 	Jwt jwt;
 
 	@Override
-	public void registerUser(UtenteRequest req) {
+	public RegisterDTO registerUser(UtenteRequest req) {
 	    try {
 	        //Creazione dell'utente tramite il metodo create()
 	        utenteS.create(req);
 	    } catch (Exception e) {
 	        throw new RuntimeException("Registration failed: " + e.getMessage());
 	    }
+	    Optional <Utente> utente = utenteR.findByEmail(req.getEmail());
+	    
+	    return new RegisterDTO(utente.get().getId());
+
 	}
 
 	@Override
@@ -54,8 +59,14 @@ public class AuthImplementation implements AuthServices {
 	        //Creazione DTO per la risposta
 	        LoginDTO loginDTO = new LoginDTO();
 	        loginDTO.setToken(token);
-	        loginDTO.setUsername(utente.get().getUsername());
 	        loginDTO.setRole(utente.get().getRuolo().toString());
+	        
+	        loginDTO.setId(utente.get().getId());
+	        loginDTO.setNome(utente.get().getNome());
+	        loginDTO.setCognome(utente.get().getCognome());
+	        loginDTO.setUsername(utente.get().getUsername());
+	        loginDTO.setEmail(utente.get().getEmail());
+	        loginDTO.setCellulare(utente.get().getCellulare());
 
 	        response.setRc(true);
 	        response.setMsg("Login successful");
