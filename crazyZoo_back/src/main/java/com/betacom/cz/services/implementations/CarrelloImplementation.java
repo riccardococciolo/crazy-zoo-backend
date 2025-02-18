@@ -5,11 +5,9 @@ import static com.betacom.cz.utils.Utilities.mapToProdottoDTOList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.betacom.cz.dto.CarrelloDTO;
 import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.dto.UtenteDTO;
@@ -21,8 +19,8 @@ import com.betacom.cz.repositories.IProdottoRepository;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.CarrelloRequest;
 import com.betacom.cz.services.interfaces.CarrelloServices;
-
 import jakarta.transaction.Transactional;
+
 @Service
 public class CarrelloImplementation implements CarrelloServices{
 	@Autowired

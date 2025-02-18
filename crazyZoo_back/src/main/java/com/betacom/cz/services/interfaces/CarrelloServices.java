@@ -6,7 +6,6 @@ import com.betacom.cz.dto.CarrelloDTO;
 import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.request.CarrelloRequest;
 
-
 public interface CarrelloServices {
 	void create(CarrelloRequest req) throws Exception;
 	

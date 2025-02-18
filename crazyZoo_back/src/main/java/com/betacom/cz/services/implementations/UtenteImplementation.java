@@ -3,11 +3,10 @@ package com.betacom.cz.services.implementations;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.models.Ruolo;
 import com.betacom.cz.models.Utente;
@@ -28,35 +27,45 @@ public class UtenteImplementation implements UtenteServices{
 	@Autowired
 	Logger log;
 	
+	@Autowired
+	PasswordEncoder pwdEncoder;
+	
 	@Override
 	public void create(UtenteRequest req) throws Exception {
-		
-		Optional<Utente> user = userR.findByEmail(req.getEmail());
-		Optional<Utente> userName = userR.findByUsername(req.getUsername());
-		
-		if(user.isPresent() && userName.isPresent())
-			throw new Exception("Utente gia esistente nel DataBase!");
-		
-		Utente u = new Utente();
-		u.setNome(req.getNome());
-		u.setCognome(req.getCognome());
-		u.setUsername(req.getUsername());
-		u.setPassword(req.getPassword());
-		u.setCellulare(req.getCellulare());
-		u.setEmail(req.getEmail());
-		
-		Ruolo r = Ruolo.valueOf(req.getRuolo());
-		
-		try {
-			u.setRuolo(r);
-		} catch (Exception e) {
-			log.debug("Ruolo inserito non valido...... ");
-			e.printStackTrace();
-		}
-		
-		userR.save(u);
-		log.info("Utente '{}' creato con successo.", req.getUsername());
+
+	    Optional<Utente> userByEmail = userR.findByEmail(req.getEmail());
+	    Optional<Utente> userByUsername = userR.findByUsername(req.getUsername());
+
+	    if (userByEmail.isPresent() || userByUsername.isPresent()) {
+	        throw new Exception("Utente già esistente nel database!");
+	    }
+
+	    Utente u = new Utente();
+	    u.setNome(req.getNome());
+	    u.setCognome(req.getCognome());
+	    u.setUsername(req.getUsername());
+
+	    //Crittografia della password prima di salvarla
+	    u.setPassword(pwdEncoder.encode(req.getPassword()));
+
+	    u.setCellulare(req.getCellulare());
+	    u.setEmail(req.getEmail());
+
+	    //Imposta CLIENTE come ruolo predefinito se il ruolo non è specificato o non valido
+	    Ruolo ruolo = Ruolo.CLIENTE;
+	    if (req.getRuolo() != null) {
+	        try {
+	            ruolo = Ruolo.valueOf(req.getRuolo().toUpperCase()); 
+	        } catch (IllegalArgumentException e) {
+	            log.warn("Ruolo specificato non valido, impostato di default a CLIENTE");
+	        }
+	    }
+	    
+	    u.setRuolo(ruolo);
+
+	    userR.save(u);
 	}
+
 
 	@Override
 	public void delete(UtenteRequest req) throws Exception {

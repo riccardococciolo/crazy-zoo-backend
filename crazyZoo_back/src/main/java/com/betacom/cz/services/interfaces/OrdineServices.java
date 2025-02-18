@@ -1,7 +1,6 @@
 package com.betacom.cz.services.interfaces;
 
 import java.util.List;
-
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.request.OrdineRequest;
 

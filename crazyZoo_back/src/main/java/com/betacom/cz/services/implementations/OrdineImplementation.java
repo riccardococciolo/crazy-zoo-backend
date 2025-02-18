@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import static com.betacom.cz.utils.Utilities.mapToProdottoDTOList;
-
 import com.betacom.cz.dto.CarrelloDTO;
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.dto.UtenteDTO;

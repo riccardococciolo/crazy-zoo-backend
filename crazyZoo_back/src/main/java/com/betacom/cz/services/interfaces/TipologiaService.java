@@ -1,14 +1,6 @@
-
-
-
-
-
-
-
 package com.betacom.cz.services.interfaces;
 
 import java.util.List;
-
 import com.betacom.cz.dto.TipologiaDTO;
 import com.betacom.cz.request.TipologiaRequest;
 

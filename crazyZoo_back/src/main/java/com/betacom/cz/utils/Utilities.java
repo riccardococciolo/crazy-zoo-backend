@@ -2,7 +2,6 @@ package com.betacom.cz.utils;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import com.betacom.cz.dto.AnimaleDTO;
 import com.betacom.cz.dto.ImmagineDTO;
 import com.betacom.cz.dto.MarcaDTO;
@@ -12,14 +11,15 @@ import com.betacom.cz.models.Immagine;
 import com.betacom.cz.models.Prodotto;
 
 public class Utilities {
-	  // Metodo statico per trasformare una lista di Prodotto in una lista di ProdottoDTO
+	
+	//Metodo statico per trasformare una lista di Prodotto in una lista di ProdottoDTO
     public static List<ProdottoDTO> mapToProdottoDTOList(List<Prodotto> prodotti) {
         return prodotti.stream()
                 .map(h ->mapToProdottoDTO(h))
                 .collect(Collectors.toList());
     }
 
-    // Metodo statico per trasformare un singolo Prodotto in un ProdottoDTO
+    //Metodo statico per trasformare un singolo Prodotto in un ProdottoDTO
     public static ProdottoDTO mapToProdottoDTO(Prodotto prodotto) {
         return new ProdottoDTO(
                 prodotto.getId(),

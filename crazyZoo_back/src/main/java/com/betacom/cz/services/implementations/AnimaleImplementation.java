@@ -11,7 +11,6 @@ import com.betacom.cz.models.Animale;
 import com.betacom.cz.repositories.IAnimaleRepository;
 import com.betacom.cz.request.AnimaleRequest;
 import com.betacom.cz.services.interfaces.AnimaleServices;
-
 import jakarta.transaction.Transactional;
 
 @Service
