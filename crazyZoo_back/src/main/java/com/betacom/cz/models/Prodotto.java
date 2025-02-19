@@ -179,4 +179,6 @@ public class Prodotto {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
+	
+	
 }

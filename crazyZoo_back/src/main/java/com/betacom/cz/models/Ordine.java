@@ -31,6 +31,7 @@ public class Ordine {
 			fetch = FetchType.EAGER)
 	private List<Prodotto> prodotti;
 	
+	
 	//Getters&Setters
 	public Integer getId() {
 		return id;
@@ -63,5 +64,22 @@ public class Ordine {
 	public void setProdotti(List<Prodotto> prodotti) {
 		this.prodotti = prodotti;
 	}
+	
+	
+	public void addProdtto(Prodotto prodotto) {
+	    prodotti.add(prodotto);
+	    prodotto.getOrdini().add(this);
+	}
+	
+//	public void removeImmagine(Immagine immagine) {
+//	    if (immagine != null && immagini.contains(immagine)) {
+//	        immagini.remove(immagine);
+//	        immagine.setProdotto(null);
+//	    }
+//	}
+
+
+	
+	
 	
 }

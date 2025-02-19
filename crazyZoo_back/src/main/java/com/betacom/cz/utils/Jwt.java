@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Jwt {
 
-    private static final String SECRET = "0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF"; // Almeno 32 caratteri
+    private static final String SECRET = "0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF";
     private final Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET));
 
     public String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1 ora di validità
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) //1h
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }

@@ -17,8 +17,16 @@ public class ProdottoOrdineRequest {
 		this.ordineID = ordineID;
 	}
 	
+	public ProdottoOrdineRequest(Integer prodottoID, Integer ordineID) {
+		super();
+		this.prodottoID = prodottoID;
+		this.ordineID = ordineID;
+	}
+	public ProdottoOrdineRequest() {
+		super();
+	}
 	
-
+	
 	
 	
 

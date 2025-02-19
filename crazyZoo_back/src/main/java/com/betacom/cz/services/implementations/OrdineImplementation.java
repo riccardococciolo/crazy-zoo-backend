@@ -15,9 +15,13 @@ import com.betacom.cz.models.Prodotto;
 import com.betacom.cz.models.Utente;
 import com.betacom.cz.repositories.ICarrelloRepository;
 import com.betacom.cz.repositories.IOrdineRepository;
+import com.betacom.cz.repositories.IProdottoRepository;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.OrdineRequest;
+import com.betacom.cz.request.ProdottoOrdineRequest;
 import com.betacom.cz.services.interfaces.OrdineServices;
+import com.betacom.cz.services.interfaces.ProdottoOrdineServices;
+
 import jakarta.transaction.Transactional;
 
 @Service
@@ -34,31 +38,67 @@ public class OrdineImplementation implements OrdineServices{
 	
 	@Autowired
 	Logger log;
+	
+	@Autowired
+	ProdottoOrdineServices prodordS;
+	
+	@Autowired
+	IProdottoRepository prodottoR;
 
 	@Override
 	@Transactional
 	public void create(OrdineRequest req) throws Exception {
-		
-		Optional<Utente> u = utenteR.findById(req.getUtenteID());
-		if(u.isEmpty()) {
-			log.error("Utente non esiste");
-			throw new Exception("Utente non esiste");
-		}
+	    
+	    Optional<Utente> u = utenteR.findById(req.getUtenteID());
+	    if (u.isEmpty()) {
+	        log.error("Utente non esiste");
+	        throw new Exception("Utente non esiste");
+	    }
 	    Utente utente = u.get();
 	    
 	    Carrello carrello = utente.getCarrello();
-		
-		Ordine ordine = new Ordine();
-		
-		ordine.setCarrello(carrello);
 
-		ordine.setUtente(utente);
-		
-		ordineR.save(ordine);
-		
-	    log.info("Ordine creato con successo per l'utente {} con il carrello {}", utente.getId(), carrello.getId());
-		
+	    // Controllo se il carrello è vuoto
+	    if (carrello.getProdotti().isEmpty()) {
+	        log.warn("Il carrello dell'utente {} è vuoto, impossibile creare l'ordine", utente.getId());
+	        throw new Exception("Il carrello è vuoto");
+	    }
+
+	    // Controllo e aggiornamento della quantità dei prodotti
+	    for (Prodotto p : carrello.getProdotti()) {
+        if (p.getQuantita() > 0) {
+            p.setQuantita(p.getQuantita() - 1);
+	        } else {
+	            log.error("Prodotto {} non disponibile in magazzino", p.getTitolo());
+	            throw new Exception("Prodotto " + p.getTitolo() + " non disponibile in magazzino");
+	        }
+	    }
+
+	    // Salvare l'aggiornamento delle quantità nel DB
+	    prodottoR.saveAll(carrello.getProdotti());
+
+	    // Creazione dell'ordine
+	    Ordine ordine = new Ordine();
+	    ordine.setCarrello(carrello);
+	    ordine.setUtente(utente);
+
+	    // Salvataggio dell'ordine nel database
+	    ordine = ordineR.save(ordine);
+	    Integer id = ordine.getId(); // ID dell'ordine salvato
+
+	    // Associare ogni prodotto all'ordine
+	    for (Prodotto p : carrello.getProdotti()) {
+	        prodordS.aggiungiProdottoAOrdine(new ProdottoOrdineRequest(p.getId(), id));
+	    }
+
+	    // Rimuovere i prodotti dal carrello dopo la creazione dell'ordine
+	    carrello.getProdotti().clear();
+	    carrelloR.save(carrello); // Assicurarsi che l'aggiornamento sia persistente
+
+	    log.info("Ordine creato con successo. ID Ordine: {}, Utente: {}, Carrello: {}", id, utente.getId(), carrello.getId());
 	}
+
+
 
 	@Override
 	@Transactional
