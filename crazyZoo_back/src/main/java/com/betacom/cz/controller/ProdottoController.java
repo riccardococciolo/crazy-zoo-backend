@@ -2,6 +2,8 @@ package com.betacom.cz.controller;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.cz.dto.ProdottoDTO;
@@ -76,20 +79,20 @@ public class ProdottoController {
 		return ResponseEntity.ok(r);
 	}
 	
-	@GetMapping("/listbyfilter")
-	public ResponseList<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, Integer quantita, String nomeAnimale,
-			String nomeTipologia, String nomeMarca, String descrizione) {
-		log.debug("Inizio list:");
-		
-		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
-		r.setRc(true);
-		try{
-			r.setDati(proS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione));
-		} catch (Exception e) {
-			log.error(e.getMessage());
-			r.setMsg(e.getMessage());
-			r.setRc(false);
-		}
-		return r;
-	}
+    @GetMapping("/listbyfilter")
+    public ResponseEntity<Page<ProdottoDTO>> list(
+            @RequestParam(required = false) Integer id,
+            @RequestParam(required = false) String titolo,
+            @RequestParam(required = false) Double prezzoMin,
+            @RequestParam(required = false) Double prezzoMax,
+            @RequestParam(required = false) Integer quantita,
+            @RequestParam(required = false) String nomeAnimale,
+            @RequestParam(required = false) String nomeTipologia,
+            @RequestParam(required = false) String nomeMarca,
+            @RequestParam(required = false) String descrizione,
+            Pageable pageable) {
+
+        Page<ProdottoDTO> page = proS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione, pageable);
+        return ResponseEntity.ok(page);
+    }
 }

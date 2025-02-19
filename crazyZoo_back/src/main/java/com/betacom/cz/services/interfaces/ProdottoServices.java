@@ -1,6 +1,7 @@
 package com.betacom.cz.services.interfaces;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.request.ProdottoRequest;
 
@@ -11,9 +12,9 @@ public interface ProdottoServices {
 	
 	void delete(ProdottoRequest req) throws Exception;
 	
-	List<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, 
+	Page<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, 
 			Integer quantita, String nomeAnimale, String nomeTipologia, 
-			String nomeMarca, String descrizione);
+			String nomeMarca, String descrizione, Pageable pageable);
 	
 	ProdottoDTO listById(Integer id);
 }
