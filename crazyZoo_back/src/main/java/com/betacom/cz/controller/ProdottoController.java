@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.betacom.cz.dto.ProdottoDTO;
 import com.betacom.cz.request.ProdottoRequest;
 import com.betacom.cz.response.ResponseBase;
-import com.betacom.cz.response.ResponseList;
 import com.betacom.cz.services.interfaces.ProdottoServices;
 
 @RestController

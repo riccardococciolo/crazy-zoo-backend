@@ -68,21 +68,30 @@ public class ProdottiCarrelloImplementation implements ProdottiCarrelloServices{
 	@Override
 	@Transactional
 	public void deleteProdByIdInCarrello(ProdottiCarrelloRequest req) throws Exception {
-		Optional<Prodotto> prod = prodR.findById(req.getId_prodotti());
-		if(prod.isEmpty()) {
-			throw new Exception("Prodotto non trovato");
-		}
-		Optional<Carrello> carrello = carR.findById(req.getId_carrello());
-		if(carrello.isEmpty()) {
-			throw new Exception("Carrello non trovato");
-		}
-		prod.get().getCarrelli().remove(carrello.get());
-		carrello.get().getProdotti().remove(prod.get());
-		carR.save(carrello.get());
-		prodR.save(prod.get());
-		
-		
+	    Optional<Prodotto> prodOpt = prodR.findById(req.getId_prodotti());
+	    if (prodOpt.isEmpty()) {
+	        throw new Exception("Prodotto non trovato");
+	    }
+
+	    Optional<Carrello> carrelloOpt = carR.findById(req.getId_carrello());
+	    if (carrelloOpt.isEmpty()) {
+	        throw new Exception("Carrello non trovato");
+	    }
+
+	    Prodotto prod = prodOpt.get();
+	    Carrello carrello = carrelloOpt.get();
+
+	    // Cerca la prima istanza del prodotto nella lista prodotti del carrello
+	    boolean removed = carrello.getProdotti().remove(prod);
+
+	    if (!removed) {
+	        throw new Exception("Prodotto non trovato nel carrello");
+	    }
+
+	    // Salva il carrello aggiornato
+	    carR.save(carrello);
 	}
+
 	@Override
 	public List<ProdottoDTO> listByIdcarrello(ProdottiCarrelloRequest req) throws Exception {
 		Optional<Carrello> carrello = carR.findById(req.getId_carrello());

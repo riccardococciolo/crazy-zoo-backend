@@ -11,6 +11,7 @@ public class LoginDTO {
 	private String username;
 	private String email;
 	private String cellulare;
+	private Integer carrelloID;
     
     //Getters&Setters
 	public String getToken() {
@@ -75,6 +76,15 @@ public class LoginDTO {
 
 	public void setCellulare(String cellulare) {
 		this.cellulare = cellulare;
+	}
+
+	public Integer getCarrelloID() {
+		return carrelloID;
+	}
+
+	public void setCarrelloID(Integer carrelloID) {
+		this.carrelloID = carrelloID;
 	}     
 
+	
 }

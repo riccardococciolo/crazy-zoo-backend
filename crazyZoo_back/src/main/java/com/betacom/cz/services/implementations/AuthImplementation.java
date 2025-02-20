@@ -67,7 +67,9 @@ public class AuthImplementation implements AuthServices {
 	        loginDTO.setUsername(utente.get().getUsername());
 	        loginDTO.setEmail(utente.get().getEmail());
 	        loginDTO.setCellulare(utente.get().getCellulare());
-
+	        loginDTO.setCarrelloID(utente.get().getCarrello().getId());
+	        
+	        ;
 	        response.setRc(true);
 	        response.setMsg("Login successful");
 	        response.setDati(loginDTO);
