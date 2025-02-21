@@ -19,11 +19,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
-                .anyRequest().permitAll() // 🔹 Rende tutte le API accessibili senza autenticazione
+                .anyRequest().permitAll() 
             )
-            .csrf(csrf -> csrf.disable()) // 🔹 Disabilita la protezione CSRF per testare le API
-            .formLogin(form -> form.disable()) // 🔹 Disabilita il login via form
-            .httpBasic(httpBasic -> httpBasic.disable()); // 🔹 Disabilita l'autenticazione di base
+            .csrf(csrf -> csrf.disable()) //api
+            .formLogin(form -> form.disable()) 
+            .httpBasic(httpBasic -> httpBasic.disable()); 
 
         return http.build();
     }
