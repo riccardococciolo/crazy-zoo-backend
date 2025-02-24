@@ -1,5 +1,7 @@
 package com.betacom.cz.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -78,6 +80,23 @@ public class ProdottoController {
 	}
 	
     @GetMapping("/listbyfilter")
+    public ResponseEntity<List<ProdottoDTO>> list(
+            @RequestParam(required = false) Integer id,
+            @RequestParam(required = false) String titolo,
+            @RequestParam(required = false) Double prezzoMin,
+            @RequestParam(required = false) Double prezzoMax,
+            @RequestParam(required = false) Integer quantita,
+            @RequestParam(required = false) String nomeAnimale,
+            @RequestParam(required = false) String nomeTipologia,
+            @RequestParam(required = false) String nomeMarca,
+            @RequestParam(required = false) String descrizione) 
+    {
+
+        List<ProdottoDTO> lP = proS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
+        return ResponseEntity.ok(lP);
+    }
+	
+    @GetMapping("/listbyfilterpage")
     public ResponseEntity<Page<ProdottoDTO>> list(
             @RequestParam(required = false) Integer id,
             @RequestParam(required = false) String titolo,

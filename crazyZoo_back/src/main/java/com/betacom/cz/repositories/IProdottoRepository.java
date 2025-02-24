@@ -13,8 +13,9 @@ import com.betacom.cz.models.Prodotto;
 
 @Repository
 public interface IProdottoRepository extends JpaRepository<Prodotto, Integer> {
+	
 	@Query(name = "prodotto.selectByFilter")
-    Page<Prodotto> findByFilter(
+    Page<Prodotto> findByFilterPage(
         @Param("id") Integer id,
         @Param("titolo") String titolo,
         @Param("prezzoMin") Double prezzoMin,
@@ -25,6 +26,20 @@ public interface IProdottoRepository extends JpaRepository<Prodotto, Integer> {
         @Param("nomeMarca") String nomeMarca,
         @Param("descrizione")String descrizione,
         Pageable pageable
+
+    );
+	
+	@Query(name = "prodotto.selectByFilter")
+    List<Prodotto> findByFilter(
+        @Param("id") Integer id,
+        @Param("titolo") String titolo,
+        @Param("prezzoMin") Double prezzoMin,
+        @Param("prezzoMax") Double prezzoMax,
+        @Param("quantita") Integer quantita,
+        @Param("nomeAnimale") String nomeAnimale,
+        @Param("nomeTipologia") String nomeTipologia,
+        @Param("nomeMarca") String nomeMarca,
+        @Param("descrizione")String descrizione
 
     );
 }

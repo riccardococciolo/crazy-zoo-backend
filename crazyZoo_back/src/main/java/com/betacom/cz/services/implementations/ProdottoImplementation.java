@@ -1,6 +1,9 @@
 package com.betacom.cz.services.implementations;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -166,7 +169,7 @@ public class ProdottoImplementation implements ProdottoServices {
 	public Page<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, Integer quantita, String nomeAnimale,
 			String nomeTipologia, String nomeMarca, String descrizione, Pageable pageable) {
 		
-		Page<Prodotto> pP = proR.findByFilter(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione, pageable);
+		Page<Prodotto> pP = proR.findByFilterPage(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione, pageable);
 		
 		
 	    return pP.map(p -> new ProdottoDTO(
@@ -181,5 +184,25 @@ public class ProdottoImplementation implements ProdottoServices {
 	            p.getDescrizione()
 	        ));
 	}
+
+	@Override
+	public List<ProdottoDTO> list(Integer id, String titolo, Double prezzoMin, Double prezzoMax, Integer quantita,
+	        String nomeAnimale, String nomeTipologia, String nomeMarca, String descrizione) {
+
+	    List<Prodotto> lP = proR.findByFilter(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
+
+	    return lP.stream().map(p -> new ProdottoDTO(
+	            p.getId(),
+	            p.getPrezzo(),
+	            p.getQuantita(),
+	            p.getTitolo(),
+	            new AnimaleDTO(p.getAnimale().getId(), p.getAnimale().getNomeAnimale()),
+	            new MarcaDTO(p.getMarca().getId(), p.getMarca().getNomeMarca()),
+	            new TipologiaDTO(p.getTipologia().getId(), p.getTipologia().getNome()),
+	            buildImmagineDTO(p.getImmagini()),
+	            p.getDescrizione()
+	    )).collect(Collectors.toList());
+	}
+
 
 }
