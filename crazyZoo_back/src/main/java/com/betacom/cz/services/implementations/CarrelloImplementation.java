@@ -52,6 +52,7 @@ public class CarrelloImplementation implements CarrelloServices{
 	    // Creazione di un nuovo carrello se non esiste
 	    Carrello car = new Carrello();
 	    car.setUtente(ut.get());
+	    //utente.setCarrello(car)
 	    carrR.save(car);
 	}
 

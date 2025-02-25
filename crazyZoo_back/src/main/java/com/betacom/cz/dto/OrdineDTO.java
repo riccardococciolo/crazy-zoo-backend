@@ -10,10 +10,19 @@ public class OrdineDTO {
 	private CarrelloDTO carrello;
 	private UtenteDTO utente;
 	private List<ProdottoDTO> prodotti;
+	private Double totale;
+	
 	
 	//Getters&Setters
+	
 	public Integer getId() {
 		return id;
+	}
+	public Double getTotale() {
+		return totale;
+	}
+	public void setTotale(Double totale) {
+		this.totale = totale;
 	}
 	public void setId(Integer id) {
 		this.id = id;
@@ -38,12 +47,13 @@ public class OrdineDTO {
 	}
 	
 	//Costruttori
-	public OrdineDTO(Integer id, CarrelloDTO carrello, UtenteDTO utente, List<ProdottoDTO> prodotti) {
+	public OrdineDTO(Integer id, CarrelloDTO carrello, UtenteDTO utente, List<ProdottoDTO> prodotti, Double totale) {
 		super();
 		this.id = id;
 		this.carrello = carrello;
 		this.utente = utente;
 		this.prodotti = prodotti;
+		this.totale = totale;
 	}
 	
 	public OrdineDTO() {

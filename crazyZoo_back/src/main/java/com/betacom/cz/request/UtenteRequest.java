@@ -10,6 +10,12 @@ public class UtenteRequest {
 	private String email;
 	private String cellulare;	
 	private String ruolo;
+	private String via;
+	private String civico;
+	private String cap;
+	private String citta;
+	
+	
 	//Getters&Setters
 	public Integer getId() {
 		return id;
@@ -68,6 +74,57 @@ public class UtenteRequest {
 	}
 	
 	
+	
+	
+	public String getVia() {
+		return via;
+	}
+
+	public void setVia(String via) {
+		this.via = via;
+	}
+
+	public String getCivico() {
+		return civico;
+	}
+
+	public void setCivico(String civico) {
+		this.civico = civico;
+	}
+
+	public String getCap() {
+		return cap;
+	}
+
+	public void setCap(String cap) {
+		this.cap = cap;
+	}
+
+	public String getCitta() {
+		return citta;
+	}
+
+	public void setCitta(String citta) {
+		this.citta = citta;
+	}
+
+	public UtenteRequest(Integer id, String nome, String cognome, String username, String password, String email,
+			String cellulare, String ruolo, String via, String civico, String cap, String citta) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.cellulare = cellulare;
+		this.ruolo = ruolo;
+		this.via = via;
+		this.civico = civico;
+		this.cap = cap;
+		this.citta = citta;
+	}
+
 	public UtenteRequest(Integer id, String nome, String cognome, String username, String password, String email,
 			String cellulare, String ruolo) {
 		super();

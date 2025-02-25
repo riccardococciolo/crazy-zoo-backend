@@ -37,12 +37,18 @@ public class Utente {
 	@Column(unique = true,
 			nullable = false)
 	private String cellulare;
-	
+		
 	@Column(unique = true,
 			nullable = false)
 	private String email;
 	
 	private Ruolo ruolo;
+	
+	@OneToOne(mappedBy = "utente",
+			fetch = FetchType.EAGER,
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
+	private Indirizzo indirizzo;
 
 	@OneToOne(mappedBy = "utente",
 			fetch = FetchType.EAGER,
@@ -150,4 +156,14 @@ public class Utente {
 	public void setRuolo(Ruolo ruolo) {
 		this.ruolo = ruolo;
 	}
+
+	public Indirizzo getIndirizzo() {
+		return indirizzo;
+	}
+
+	public void setIndirizzo(Indirizzo indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+	
+	
 }

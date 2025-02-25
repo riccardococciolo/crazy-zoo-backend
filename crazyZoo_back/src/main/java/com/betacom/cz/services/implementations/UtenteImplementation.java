@@ -7,7 +7,10 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.betacom.cz.dto.IndirizzoDTO;
 import com.betacom.cz.dto.UtenteDTO;
+import com.betacom.cz.models.Indirizzo;
 import com.betacom.cz.models.Ruolo;
 import com.betacom.cz.models.Utente;
 import com.betacom.cz.repositories.IUtenteRepository;
@@ -62,6 +65,15 @@ public class UtenteImplementation implements UtenteServices{
 	    }
 	    
 	    u.setRuolo(ruolo);
+	    
+	    Indirizzo i = new Indirizzo();
+	    i.setUtente(u);
+	    i.setVia(req.getVia());
+	    i.setCivico(req.getCivico());
+	    i.setCap(req.getCap());
+	    i.setCitta(req.getCitta());
+	    
+	    u.setIndirizzo(i);
 
 	    userR.save(u);
 	}
@@ -115,7 +127,11 @@ public class UtenteImplementation implements UtenteServices{
                 		 u.get().getUsername(),
                 		 u.get().getEmail(), 
                 		 u.get().getCellulare(), 
-                		 u.get().getRuolo()+"" );
+                		 u.get().getRuolo()+"",
+                		 new IndirizzoDTO(u.get().getIndirizzo().getVia(), 
+                				 		  u.get().getIndirizzo().getCivico(), 
+                				 		  u.get().getIndirizzo().getCap(), 
+                				 		  u.get().getIndirizzo().getCitta()));
 	}
 	
 

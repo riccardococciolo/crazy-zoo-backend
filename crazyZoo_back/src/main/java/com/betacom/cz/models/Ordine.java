@@ -1,6 +1,8 @@
 package com.betacom.cz.models;
 
 import java.util.List;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -31,7 +33,19 @@ public class Ordine {
 			fetch = FetchType.EAGER)
 	private List<Prodotto> prodotti;
 	
+	@Column(nullable = false)
+	private Double totale;
 	
+	
+	
+	public Double getTotale() {
+		return totale;
+	}
+
+	public void setTotale(Double totale) {
+		this.totale = totale;
+	}
+
 	//Getters&Setters
 	public Integer getId() {
 		return id;

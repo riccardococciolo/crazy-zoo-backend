@@ -10,5 +10,6 @@ public interface OrdineServices {
     void delete(OrdineRequest req) throws Exception;  
     List<OrdineDTO> listAll();         
     OrdineDTO listById(Integer id)throws Exception;  
+    List<OrdineDTO> listByIdUtente(Integer id) throws Exception;
 
 }

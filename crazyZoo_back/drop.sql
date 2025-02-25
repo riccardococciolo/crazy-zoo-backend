@@ -1,5 +1,6 @@
 alter table carrelli drop foreign key FKfoplh747w9xrdk0dkvcufdlwd;
 alter table immagini drop foreign key FK8sbvuq1cghuuje5myr2qq22sp;
+alter table indirizzo drop foreign key FKa0is096fox2nthcxafye4bl76;
 alter table ordini drop foreign key FKhbivki0jyp5vxnwd7rsu40qhj;
 alter table ordini drop foreign key FKqj5n4mdh5tc9qkj7hx54mvgi4;
 alter table prodotti drop foreign key FKrkjgi92odmn662nhgdbbtybfv;
@@ -14,6 +15,7 @@ alter table recensioni drop foreign key FK3qtralkbontl617niblqxy543;
 drop table if exists animali;
 drop table if exists carrelli;
 drop table if exists immagini;
+drop table if exists indirizzo;
 drop table if exists marche;
 drop table if exists ordini;
 drop table if exists prodotti;

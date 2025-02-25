@@ -1,5 +1,7 @@
 package com.betacom.cz.dto;
 
+import com.betacom.cz.models.Indirizzo;
+
 public class UtenteDTO {
 	
 	private Integer id;
@@ -9,6 +11,7 @@ public class UtenteDTO {
 	private String email;
 	private String cellulare;
 	private String ruolo;
+	private IndirizzoDTO indirizzo;
 	
 	//Getters&Setters
 	public Integer getId() {
@@ -66,6 +69,16 @@ public class UtenteDTO {
 		this.ruolo = ruolo;
 	}
 	
+	
+	
+	public IndirizzoDTO getIndirizzo() {
+		return indirizzo;
+	}
+
+	public void setIndirizzoDTO(IndirizzoDTO indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+
 	public UtenteDTO(Integer id, String nome, String cognome, String username, String email, String cellulare,
 			String ruolo) {
 		super();
@@ -76,6 +89,21 @@ public class UtenteDTO {
 		this.email = email;
 		this.cellulare = cellulare;
 		this.ruolo = ruolo;
+	}
+	
+	
+
+	public UtenteDTO(Integer id, String nome, String cognome, String username, String email, String cellulare,
+			String ruolo, IndirizzoDTO indirizzo) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.username = username;
+		this.email = email;
+		this.cellulare = cellulare;
+		this.ruolo = ruolo;
+		this.indirizzo = indirizzo;
 	}
 
 	public UtenteDTO() {

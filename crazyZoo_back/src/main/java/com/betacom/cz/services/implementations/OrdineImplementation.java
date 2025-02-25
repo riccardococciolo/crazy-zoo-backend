@@ -2,14 +2,18 @@ package com.betacom.cz.services.implementations;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import static com.betacom.cz.utils.Utilities.mapToProdottoDTOList;
 import com.betacom.cz.dto.CarrelloDTO;
+import com.betacom.cz.dto.IndirizzoDTO;
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.models.Carrello;
+import com.betacom.cz.models.Indirizzo;
 import com.betacom.cz.models.Ordine;
 import com.betacom.cz.models.Prodotto;
 import com.betacom.cz.models.Utente;
@@ -63,10 +67,11 @@ public class OrdineImplementation implements OrdineServices{
 	        log.warn("Il carrello dell'utente {} è vuoto, impossibile creare l'ordine", utente.getId());
 	        throw new Exception("Il carrello è vuoto");
 	    }
-
+	     Double tot = 0.00;
 	    // Controllo e aggiornamento della quantità dei prodotti
 	    for (Prodotto p : carrello.getProdotti()) {
         if (p.getQuantita() > 0) {
+        	tot += p.getPrezzo();
             p.setQuantita(p.getQuantita() - 1);
 	        } else {
 	            log.error("Prodotto {} non disponibile in magazzino", p.getTitolo());
@@ -79,6 +84,7 @@ public class OrdineImplementation implements OrdineServices{
 
 	    // Creazione dell'ordine
 	    Ordine ordine = new Ordine();
+	    ordine.setTotale(tot);
 	    ordine.setCarrello(carrello);
 	    ordine.setUtente(utente);
 
@@ -144,9 +150,37 @@ public class OrdineImplementation implements OrdineServices{
 
 	@Override
 	public List<OrdineDTO> listAll() {
-		// TODO Auto-generated method stub
-		return null;
+	    List<Ordine> lO = ordineR.findAll();
+	    
+	    return lO.stream().map(m -> new OrdineDTO(
+	        m.getId(),
+	        new CarrelloDTO(m.getCarrello().getId(),
+	            new UtenteDTO(m.getUtente().getId(), 
+	                m.getUtente().getNome(), 
+	                m.getUtente().getCognome(), 
+	                m.getUtente().getUsername(),
+	                m.getUtente().getEmail(), 
+	                m.getUtente().getCellulare(), 
+	                m.getUtente().getRuolo()+"")),
+	        new UtenteDTO(
+	            m.getUtente().getId(), 
+	            m.getUtente().getNome(), 
+	            m.getUtente().getCognome(), 
+	            m.getUtente().getUsername(),
+	            m.getUtente().getEmail(), 
+	            m.getUtente().getCellulare(), 
+	            m.getUtente().getRuolo()+"",
+	            new IndirizzoDTO(m.getUtente().getIndirizzo().getVia(), 
+	                             m.getUtente().getIndirizzo().getCivico(),
+	                             m.getUtente().getIndirizzo().getCap(), 
+	                             m.getUtente().getIndirizzo().getCitta())),
+	        mapToProdottoDTOList(m.getProdotti()),
+	        m.getTotale()
+	    )).collect(Collectors.toList());
 	}
+
+
+
 
 	@Override
 	public OrdineDTO listById(Integer id) throws Exception {
@@ -167,14 +201,58 @@ public class OrdineImplementation implements OrdineServices{
 	    						m.get().getUtente().getEmail(), 
 	    						m.get().getUtente().getCellulare(), 
 	    						m.get().getUtente().getRuolo()+"")),
-	    		new UtenteDTO(
+	    		new UtenteDTO(	    		
 	    				m.get().getId(), 
 	    				m.get().getUtente().getNome(), 
 	    				m.get().getUtente().getCognome(), 
 	    				m.get().getUtente().getUsername(),
 	    				m.get().getUtente().getEmail(), 
 	    				m.get().getUtente().getCellulare(), 
-	    				m.get().getUtente().getRuolo()+""),
-	    		mapToProdottoDTOList(m.get().getProdotti()));
+	    				m.get().getUtente().getRuolo()+"",
+	    				new IndirizzoDTO(m.get().getUtente().getIndirizzo().getVia(), 
+	    								 m.get().getUtente().getIndirizzo().getCivico(),
+	    								 m.get().getUtente().getIndirizzo().getCap(), 
+	    								 m.get().getUtente().getIndirizzo().getCitta())),
+	    		mapToProdottoDTOList(m.get().getProdotti()),m.get().getTotale());
+	}
+
+
+
+	@Override
+	public List<OrdineDTO> listByIdUtente(Integer id) throws Exception {
+		
+		List<Ordine> lO = ordineR.findByUtente_Id(id);
+		
+	    if (lO.isEmpty()) {
+	        log.error("Nessuna ordine trovato nel database.");
+	        throw new Exception("Nessuna ordine disponibile.");
+	    }
+		
+		return lO.stream().map(m -> new OrdineDTO(
+		        m.getId(),
+		        new CarrelloDTO(m.getCarrello().getId(),
+		            new UtenteDTO(m.getUtente().getId(), 
+		                m.getUtente().getNome(), 
+		                m.getUtente().getCognome(), 
+		                m.getUtente().getUsername(),
+		                m.getUtente().getEmail(), 
+		                m.getUtente().getCellulare(), 
+		                m.getUtente().getRuolo()+"")),
+		        new UtenteDTO(
+		            m.getUtente().getId(), 
+		            m.getUtente().getNome(), 
+		            m.getUtente().getCognome(), 
+		            m.getUtente().getUsername(),
+		            m.getUtente().getEmail(), 
+		            m.getUtente().getCellulare(), 
+		            m.getUtente().getRuolo()+"",
+		            new IndirizzoDTO(m.getUtente().getIndirizzo().getVia(), 
+		                             m.getUtente().getIndirizzo().getCivico(),
+		                             m.getUtente().getIndirizzo().getCap(), 
+		                             m.getUtente().getIndirizzo().getCitta())),
+		        mapToProdottoDTOList(m.getProdotti()),
+		        m.getTotale()
+		    )).collect(Collectors.toList());
+		
 	}
 }
