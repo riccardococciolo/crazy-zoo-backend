@@ -1,7 +1,5 @@
 package com.betacom.cz.dto;
 
-import com.betacom.cz.models.Indirizzo;
-
 public class UtenteDTO {
 	
 	private Integer id;

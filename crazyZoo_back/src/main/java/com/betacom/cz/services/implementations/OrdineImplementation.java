@@ -3,7 +3,6 @@ package com.betacom.cz.services.implementations;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,6 @@ import com.betacom.cz.dto.IndirizzoDTO;
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.models.Carrello;
-import com.betacom.cz.models.Indirizzo;
 import com.betacom.cz.models.Ordine;
 import com.betacom.cz.models.Prodotto;
 import com.betacom.cz.models.Utente;
@@ -25,7 +23,6 @@ import com.betacom.cz.request.OrdineRequest;
 import com.betacom.cz.request.ProdottoOrdineRequest;
 import com.betacom.cz.services.interfaces.OrdineServices;
 import com.betacom.cz.services.interfaces.ProdottoOrdineServices;
-
 import jakarta.transaction.Transactional;
 
 @Service
