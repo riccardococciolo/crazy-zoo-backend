@@ -33,6 +33,13 @@ public class ProdottiCarrelloControllerTest {
 		
 		Assertions.assertThat(rB).isNotNull();
 		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
+		
+		ProdottiCarrelloRequest prodCarReq2 = new ProdottiCarrelloRequest(3, 1);
+		
+		ResponseBase rB2 = pcController.addProdottoToCarrello(prodCarReq2);
+		
+		Assertions.assertThat(rB2).isNotNull();
+		Assertions.assertThat(rB2.getRc()).isEqualTo(true);	
 	}
 	
 	@Test
@@ -64,5 +71,27 @@ public class ProdottiCarrelloControllerTest {
 		Assertions.assertThat(rB).isNotNull();
 		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
 
+	}
+	
+	@Test
+	@Order(5)
+	public void addCarrelloBis() {
+	    	
+		ProdottiCarrelloRequest prodCarReq = new ProdottiCarrelloRequest(1, 1);
+		
+		ResponseBase rB = pcController.addProdottoToCarrello(prodCarReq);
+		
+		Assertions.assertThat(rB).isNotNull();
+		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
+		
+		
+		ProdottiCarrelloRequest prodCarReq2 = new ProdottiCarrelloRequest(1, 3);
+		
+		ResponseBase rB2 = pcController.addProdottoToCarrello(prodCarReq2);
+		
+		Assertions.assertThat(rB2).isNotNull();
+		Assertions.assertThat(rB2.getRc()).isEqualTo(true);	
+		
+		
 	}
 }

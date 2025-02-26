@@ -2,7 +2,6 @@ package com.betacom.cz.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -19,7 +18,6 @@ import com.betacom.cz.models.Immagine;
 import com.betacom.cz.repositories.IImmagineRepository;
 import com.betacom.cz.request.ProdottoRequest;
 import com.betacom.cz.response.ResponseBase;
-import com.betacom.cz.response.ResponseList;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -120,17 +118,23 @@ public class ProdottoControllerTest {
 	public void listByFilter() {
 	    
 	    //Recupera il prodotto usando il filtro per titolo
-	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
+	    ResponseEntity<List<ProdottoDTO>> rE = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
 
 	    //Verifica che la chiamata sia andata a buon fine
-	    Assertions.assertThat(rL.getRc()).isTrue();
+	    Assertions.assertThat(rE.getStatusCode().is2xxSuccessful()).isTrue();
 	    
-	    //Verifica che il prodotto sia stato trovato
-	    Assertions.assertThat(rL.getDati()).isNotEmpty();
+	    //Ottieni il body della risposta
+	    List<ProdottoDTO> prodotti = rE.getBody();
+
+	    //Verifica che il body non sia nullo
+	    Assertions.assertThat(prodotti).isNotNull();
+
+	    //Verifica che la lista di prodotti non sia vuota
+	    Assertions.assertThat(prodotti).isNotEmpty();
 
 	    //Trova il primo prodotto che corrisponde al filtro
-	    ProdottoDTO prodottoTrovato = rL.getDati().stream().findFirst().orElse(null);
-	    
+	    ProdottoDTO prodottoTrovato = prodotti.stream().findFirst().orElse(null);
+
 	    //Verifica che il prodotto trovato non sia null
 	    Assertions.assertThat(prodottoTrovato).isNotNull();
 
@@ -145,94 +149,157 @@ public class ProdottoControllerTest {
 	public void update() {
 
 	    //Recupera il prodotto da aggiornare tramite listByFilter
-	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
+	    ResponseEntity<List<ProdottoDTO>> rE = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
 	    
-	    //Verifica che la lista non sia vuota e che il prodotto esista
-	    Assertions.assertThat(rL.getRc()).isTrue();
-	    Assertions.assertThat(rL.getDati()).isNotEmpty();
+	    // Verifica che la risposta HTTP sia valida
+	    Assertions.assertThat(rE.getStatusCode().is2xxSuccessful()).isTrue();
 
-	    //Trova il primo prodotto che corrisponde al filtro
-	    ProdottoDTO prodottoDaAggiornare = rL.getDati().stream().findFirst().orElse(null);
-	    
-	    //Verifica che il prodotto esista
+	    // Estrai la lista di prodotti
+	    List<ProdottoDTO> prodotti = rE.getBody();
+
+	    // Verifica che la lista non sia vuota
+	    Assertions.assertThat(prodotti).isNotNull().isNotEmpty();
+
+	    // Trova il primo prodotto che corrisponde al filtro
+	    ProdottoDTO prodottoDaAggiornare = prodotti.stream().findFirst().orElse(null);
+
+	    // Verifica che il prodotto esista
 	    Assertions.assertThat(prodottoDaAggiornare).isNotNull();
-	    
-	    //Crea una richiesta di update con i nuovi valori
+
+	    // Crea una richiesta di update con i nuovi valori
 	    ProdottoRequest reqP = new ProdottoRequest();
-	    reqP.setId(prodottoDaAggiornare.getId()); 
-	    reqP.setPrezzo(15.99); 
-	    reqP.setQuantita(10);    
-	    reqP.setTitolo("ProdottoAggiornato"); 
+	    reqP.setId(prodottoDaAggiornare.getId());
+	    reqP.setPrezzo(15.99);
+	    reqP.setQuantita(10);
+	    reqP.setTitolo("ProdottoAggiornato");
 	    reqP.setAnimaleID(prodottoDaAggiornare.getAnimale().getId());
 	    reqP.setMarcaID(prodottoDaAggiornare.getMarca().getId());
 	    reqP.setTipologiaID(prodottoDaAggiornare.getTipologia().getId());
 	    reqP.setDescrizione("Nuova descrizione aggiornata");
 
-	    //Esegui l'update
-	    ResponseEntity<ResponseBase> rE = prodC.update(reqP);
+	    // Esegui l'update
+	    ResponseEntity<ResponseBase> updateResponse = prodC.update(reqP);
 
-	    //Verifica che l'update sia andato a buon fine
-	    ResponseBase rB = rE.getBody();
-	    Assertions.assertThat(rB).isNotNull();
-	    Assertions.assertThat(rB.getRc()).isTrue();
+	    // Verifica che l'update sia andato a buon fine
+	    Assertions.assertThat(updateResponse.getStatusCode().is2xxSuccessful()).isTrue();
 
-	    //Recupera di nuovo il prodotto aggiornato
-	    ResponseList<ProdottoDTO> rLUpdated = prodC.list(null, "ProdottoAggiornato", null, null, null, null, null, null, null);
-	    
-	    //Verifica che la lista non sia vuota e che il prodotto aggiornato esista
-	    Assertions.assertThat(rLUpdated.getRc()).isTrue();
-	    Assertions.assertThat(rLUpdated.getDati()).isNotEmpty();
+	    ResponseBase responseBody = updateResponse.getBody();
+	    Assertions.assertThat(responseBody).isNotNull();
+	    Assertions.assertThat(responseBody.getRc()).isTrue();
 
-	    //Trova il prodotto aggiornato
-	    ProdottoDTO prodottoAggiornato = rLUpdated.getDati().stream().findFirst().orElse(null);
-	    
-	    //Verifica che il prodotto aggiornato abbia i nuovi valori
+	    // Recupera di nuovo il prodotto aggiornato
+	    ResponseEntity<List<ProdottoDTO>> updatedResponseEntity = prodC.list(null, "ProdottoAggiornato", null, null, null, null, null, null, null);
+
+	    // Verifica che la risposta sia valida
+	    Assertions.assertThat(updatedResponseEntity.getStatusCode().is2xxSuccessful()).isTrue();
+
+	    // Estrai la lista di prodotti aggiornati
+	    List<ProdottoDTO> prodottiAggiornati = updatedResponseEntity.getBody();
+
+	    // Verifica che la lista non sia vuota
+	    Assertions.assertThat(prodottiAggiornati).isNotNull().isNotEmpty();
+
+	    // Trova il prodotto aggiornato
+	    ProdottoDTO prodottoAggiornato = prodottiAggiornati.stream().findFirst().orElse(null);
+
+	    // Verifica che il prodotto aggiornato abbia i nuovi valori
 	    Assertions.assertThat(prodottoAggiornato).isNotNull();
 	    Assertions.assertThat(prodottoAggiornato.getTitolo()).isEqualTo("ProdottoAggiornato");
 	    Assertions.assertThat(prodottoAggiornato.getPrezzo()).isEqualTo(15.99);
-	    Assertions.assertThat(prodottoAggiornato.getQuantita()).isEqualTo(10);
+	    Assertions.assertThat(prodottoAggiornato.getQuantita()).isEqualTo(10);	
 	}
 	
 	@Test
 	@Order(4)
 	public void delete() {
 
-	    //Recupera un prodotto esistente per eliminarlo
-	    ResponseList<ProdottoDTO> rL = prodC.list(null, "ProdottoDaEliminare", null, null, null, null, null, null, null);
-	    
-	    //Verifica che la lista sia popolata
-	    Assertions.assertThat(rL.getRc()).isTrue();
-	    Assertions.assertThat(rL.getDati()).isNotEmpty();
+	    // Recupera un prodotto esistente per eliminarlo
+	    ResponseEntity<List<ProdottoDTO>> responseEntity = prodC.list(null, "ProdottoDaEliminare", null, null, null, null, null, null, null);
 
-	    //Trova il prodotto da eliminare
-	    ProdottoDTO prodottoDaEliminare = rL.getDati().stream()
-	        .findFirst()
-	        .orElse(null);
+	    // Verifica che la risposta HTTP sia valida
+	    Assertions.assertThat(responseEntity.getStatusCode().is2xxSuccessful()).isTrue();
 
-	    //Verifica che il prodotto esista
+	    // Estrai la lista di prodotti
+	    List<ProdottoDTO> prodotti = responseEntity.getBody();
+
+	    // Verifica che la lista non sia vuota
+	    Assertions.assertThat(prodotti).isNotNull().isNotEmpty();
+
+	    // Trova il prodotto da eliminare
+	    ProdottoDTO prodottoDaEliminare = prodotti.stream().findFirst().orElse(null);
+
+	    // Verifica che il prodotto esista
 	    Assertions.assertThat(prodottoDaEliminare).isNotNull();
 
-	    //Crea la richiesta di eliminazione
+	    // Crea la richiesta di eliminazione
 	    ProdottoRequest reqP = new ProdottoRequest();
 	    reqP.setId(prodottoDaEliminare.getId());
 
-	    //Esegui la chiamata di eliminazione
-	    ResponseEntity<ResponseBase> rB = prodC.delete(reqP);
+	    // Esegui la chiamata di eliminazione
+	    ResponseEntity<ResponseBase> deleteResponse = prodC.delete(reqP);
 
-	    //Estrai il corpo della risposta
-	    //Perchè nel controller è stato usato ResponseEntity<ResponseBase>
-	    ResponseBase response = rB.getBody();
+	    // Estrai il corpo della risposta
+	    ResponseBase responseBody = deleteResponse.getBody();
 
-	    //Verifica che la risposta non sia nulla
-	    Assertions.assertThat(response).isNotNull();
+	    // Verifica che la risposta non sia nulla
+	    Assertions.assertThat(responseBody).isNotNull();
 
-	    //Verifica che la chiamata sia andata a buon fine
-	    Assertions.assertThat(response.getRc()).isTrue();
+	    // Verifica che la chiamata sia andata a buon fine
+	    Assertions.assertThat(responseBody.getRc()).isTrue();
 
-	    //Controlla che il prodotto non esista più nella lista
-	    ResponseList<ProdottoDTO> rLAfterDelete = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
+	    // Controlla che il prodotto non esista più nella lista
+	    ResponseEntity<List<ProdottoDTO>> responseAfterDelete = prodC.list(null, "ProdottoBalordo", null, null, null, null, null, null, null);
 
-	    Assertions.assertThat(rLAfterDelete.getDati()).doesNotContain(prodottoDaEliminare);
+	    // Estrai la lista dopo la cancellazione
+	    List<ProdottoDTO> prodottiDopoCancellazione = responseAfterDelete.getBody();
+
+	    // Verifica che il prodotto sia stato rimosso
+	    Assertions.assertThat(prodottiDopoCancellazione).doesNotContain(prodottoDaEliminare);
 	}
+	
+	@Test
+	@Order(5)
+	public void createBis() {
+	    //Creazione del primo prodotto
+	    ProdottoRequest reqP1 = new ProdottoRequest();        
+	    reqP1.setPrezzo(9.99);
+	    reqP1.setQuantita(3);
+	    reqP1.setTitolo("ProdottoBalordo");
+	    reqP1.setAnimaleID(1);
+	    reqP1.setMarcaID(2);
+	    reqP1.setTipologiaID(2);
+	    reqP1.setDescrizione("Prodotto bello");
+
+	    // Simula un'immagine finta
+	    MockMultipartFile mockImage1 = new MockMultipartFile(
+	        "file", "test1.jpg", "image/jpeg", "fake image content".getBytes()
+	    );
+
+	    MultipartFile[] immaginiArray1 = { mockImage1 };
+	    reqP1.setImmagini(immaginiArray1); 
+
+	    // Chiamata al controller per il primo prodotto
+	    ResponseEntity<ResponseBase> rE1 = prodC.create(reqP1);
+	    ResponseBase rB1 = rE1.getBody();
+
+	    Assertions.assertThat(rB1).isNotNull();
+	    Assertions.assertThat(rB1.getRc()).isTrue();
+
+	    //Verifica che l'immagine sia stata salvata correttamente
+	    List<Immagine> immaginiSalvate = imgR.findAll();
+	    System.out.println("Numero di immagini salvate: " + immaginiSalvate.size());
+
+	    //Stampa i dettagli delle immagini salvate
+	    for (Immagine img : immaginiSalvate) {
+	        System.out.println("Immagine salvata: ID = " + img.getId() + ", Nome = " + img.getNomeImmagine());
+	    }
+
+	    //Assicurati che almeno un'immagine sia presente
+	    Assertions.assertThat(immaginiSalvate).isNotEmpty();
+	    Assertions.assertThat(immaginiSalvate.get(0).getNomeImmagine()).isEqualTo("test1.jpg");
+	}
+
+
+
 
 }

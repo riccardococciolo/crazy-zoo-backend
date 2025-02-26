@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.request.OrdineRequest;
 import com.betacom.cz.response.ResponseBase;
+import com.betacom.cz.response.ResponseList;
 import com.betacom.cz.response.ResponseObject;
 
 @SpringBootTest
@@ -28,21 +29,10 @@ public class OrdineControllerTest {
 	@Order(1)
 	public void create() {
 		
-		OrdineRequest reqOrdine = new OrdineRequest();	
-		
-		reqOrdine.setUtenteID(1);
-		reqOrdine.setCarrelloID(null);
-		
-		ResponseBase rB = ordineController.create(reqOrdine);
-		
-		OrdineRequest reqOrdine2 = new OrdineRequest();
-		
-		reqOrdine2.setUtenteID(1);
-		
-		ResponseBase rB2 = ordineController.create(reqOrdine2);
-		
+		OrdineRequest reqOrdine = new OrdineRequest();		
+		reqOrdine.setUtenteID(1);	
+		ResponseBase rB = ordineController.create(reqOrdine);			
 		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
-		Assertions.assertThat(rB2.getRc()).isEqualTo(true);	
 	}
 	
 	@Test
@@ -60,27 +50,57 @@ public class OrdineControllerTest {
 	@Order(3)
 	public void delete() 
 	{
-		ResponseObject<OrdineDTO> rObj = ordineController.listByID(1);
+	    ResponseObject<OrdineDTO> rObj = ordineController.listByID(1);
+	    System.out.println("PRIMA della cancellazione: " + rObj.getDati());
 
 	    Assertions.assertThat(rObj.getRc()).isTrue();
 	    Assertions.assertThat(rObj.getDati()).isNotNull();
 
 	    OrdineDTO ordineDaEliminare = rObj.getDati();
-
 	    Assertions.assertThat(ordineDaEliminare).isNotNull();
 
 	    OrdineRequest ordineReq = new OrdineRequest();
-	    ordineReq.setId(ordineDaEliminare.getId()); 
+	    ordineReq.setId(ordineDaEliminare.getId());
 
 	    ResponseBase uRB = ordineController.delete(ordineReq);
 	    Assertions.assertThat(uRB.getRc()).isTrue();
 
 	    ResponseObject<OrdineDTO> uRL = ordineController.listByID(1);
+	    System.out.println("DOPO la cancellazione: " + uRL.getDati());
 
 	    Assertions.assertThat(uRL.getRc()).isFalse();
-
-	    OrdineDTO ordineEliminato = uRL.getDati();
-	    
-	    Assertions.assertThat(ordineEliminato).isNull();
+	    Assertions.assertThat(uRL.getDati()).isNull();
 	}
+
+	@Test
+	@Order(4)
+	public void createBis() {
+		
+		OrdineRequest reqOrdine = new OrdineRequest();		
+		reqOrdine.setUtenteID(3);	
+		ResponseBase rB = ordineController.create(reqOrdine);			
+		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
+	}
+	
+	@Test
+	@Order(5)
+	public void listByUtente() {
+		
+		ResponseList<OrdineDTO> lO = ordineController.listByUtente(3);
+		
+		Assertions.assertThat(lO.getRc()).isEqualTo(true);
+		Assertions.assertThat(lO.getDati()).isNotEmpty();
+	}
+	
+	@Test
+	@Order(6)
+	public void listAll() {
+		
+		ResponseList<OrdineDTO> lO = ordineController.listAll();
+		
+		Assertions.assertThat(lO.getRc()).isEqualTo(true);
+		Assertions.assertThat(lO.getDati()).isNotEmpty();
+	}
+	
+
 }

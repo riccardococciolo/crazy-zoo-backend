@@ -49,12 +49,11 @@ public class ProdottoOrdineControllerTest {
 	}
 	
 	@Test
-	@Order(3)
+	@Order(4)
 	public void deleteAll() {
 		ProdottoOrdineRequest prodOrdReq = new ProdottoOrdineRequest();
 		
 		prodOrdReq.setOrdineID(2);
-		prodOrdReq.setProdottoID(1);
 		
 		ResponseBase rB = poController.removeAll(prodOrdReq);
 		

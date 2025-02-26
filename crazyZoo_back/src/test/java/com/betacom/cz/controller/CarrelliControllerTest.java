@@ -98,4 +98,19 @@ public class CarrelliControllerTest {
 
 	    Assertions.assertThat(carrelloEliminato).isNull();
 	}
+	
+	@Test
+	@Order(5)
+	public void createBis() {
+		
+		CarrelloRequest reqCarrello = new CarrelloRequest();	
+		
+		reqCarrello.setUtenteID(3);
+		
+		ResponseBase rB = carController.create(reqCarrello);
+		
+		
+		Assertions.assertThat(rB.getRc()).isEqualTo(true);	
+	}
+	
 }

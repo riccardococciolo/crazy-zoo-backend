@@ -37,6 +37,10 @@ public class UtenteControllerTest {
 		reqUtente.setPassword("passwordMario");
 		reqUtente.setUsername("marione");
 		reqUtente.setRuolo("ADMIN");
+		reqUtente.setVia("Via Palla");
+		reqUtente.setCivico("29");
+		reqUtente.setCap("20133");
+		reqUtente.setCitta("Milano");
 		
 		ResponseBase rB = utController.create(reqUtente);
 		
@@ -49,6 +53,10 @@ public class UtenteControllerTest {
 		reqUtente2.setPassword("passwordGiorgia");
 		reqUtente2.setUsername("georgina");
 		reqUtente2.setRuolo("CLIENTE");
+		reqUtente2.setVia("Via Stella");
+		reqUtente2.setCivico("24");
+		reqUtente2.setCap("22133");
+		reqUtente2.setCitta("Roma");
 		
 		ResponseBase rB2 = utController.create(reqUtente2);
 		
@@ -61,6 +69,10 @@ public class UtenteControllerTest {
 		reqUtente3.setPassword("passwordSvetlana");
 		reqUtente3.setUsername("Svetti");
 		reqUtente3.setRuolo("CLIENTE");
+		reqUtente3.setVia("Via Cubo");
+		reqUtente3.setCivico("27");
+		reqUtente3.setCap("21133");
+		reqUtente3.setCitta("Torino");
 		
 		ResponseBase rB3 = utController.create(reqUtente3);
 		
