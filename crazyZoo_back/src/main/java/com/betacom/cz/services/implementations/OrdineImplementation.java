@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import static com.betacom.cz.utils.Utilities.mapToProdottoDTOList;
 import com.betacom.cz.dto.CarrelloDTO;
 import com.betacom.cz.dto.IndirizzoDTO;
+import com.betacom.cz.dto.IntegerOrdineDTO;
 import com.betacom.cz.dto.OrdineDTO;
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.models.Carrello;
@@ -48,7 +49,7 @@ public class OrdineImplementation implements OrdineServices{
 
 	@Override
 	@Transactional
-	public void create(OrdineRequest req) throws Exception {
+	public IntegerOrdineDTO create(OrdineRequest req) throws Exception {
 	    
 	    Optional<Utente> u = utenteR.findById(req.getUtenteID());
 	    if (u.isEmpty()) {
@@ -88,6 +89,7 @@ public class OrdineImplementation implements OrdineServices{
 	    // Salvataggio dell'ordine nel database
 	    ordine = ordineR.save(ordine);
 	    Integer id = ordine.getId(); // ID dell'ordine salvato
+	    
 
 	    // Associare ogni prodotto all'ordine
 	    for (Prodotto p : carrello.getProdotti()) {
@@ -99,6 +101,7 @@ public class OrdineImplementation implements OrdineServices{
 	    carrelloR.save(carrello); // Assicurarsi che l'aggiornamento sia persistente
 
 	    log.info("Ordine creato con successo. ID Ordine: {}, Utente: {}, Carrello: {}", id, utente.getId(), carrello.getId());
+	    return new IntegerOrdineDTO(id);
 	}
 
 
@@ -141,6 +144,7 @@ public class OrdineImplementation implements OrdineServices{
 	    ordineR.delete(ordine);
 
 	    log.info("Ordine con ID '{}' eliminato con successo.", req.getId());
+	    
 
 
 	}
