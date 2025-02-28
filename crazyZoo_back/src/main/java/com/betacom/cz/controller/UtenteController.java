@@ -98,13 +98,13 @@ public class UtenteController
 	}
 	
 	@PostMapping("/updaterole")
-	public ResponseBase updateRole(@RequestParam Integer id) {
+	public ResponseBase updateRole(@RequestBody UtenteRequest req) {
 		log.debug("Inizio updateRole:");
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try{
-			userS.updateRole(id);
+			userS.updateRole(req.getId());
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
