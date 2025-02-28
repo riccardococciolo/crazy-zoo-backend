@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.request.UtenteRequest;
 import com.betacom.cz.response.ResponseBase;
@@ -17,14 +16,13 @@ import com.betacom.cz.response.ResponseList;
 import com.betacom.cz.response.ResponseObject;
 import com.betacom.cz.services.interfaces.UtenteServices;
 
-
 @RestController
 @RequestMapping("/rest/utente")
 @CrossOrigin(origins = "${url_api}")
 public class UtenteController
 {
 	@Autowired
-	UtenteServices userR;
+	UtenteServices userS;
 
 	@Autowired
 	Logger log;
@@ -43,7 +41,7 @@ public class UtenteController
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
-			userR.create(req);
+			userS.create(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);
@@ -58,7 +56,7 @@ public class UtenteController
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
-			userR.delete(req);
+			userS.delete(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);
@@ -74,7 +72,7 @@ public class UtenteController
 		ResponseList<UtenteDTO> r = new ResponseList<UtenteDTO>();
 		r.setRc(true);
 		try{
-			r.setDati(userR.listAll());
+			r.setDati(userS.listAll());
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
@@ -90,7 +88,23 @@ public class UtenteController
 		ResponseObject<UtenteDTO> r = new ResponseObject<UtenteDTO>();
 		r.setRc(true);
 		try{
-			r.setDati(userR.listByID(id));
+			r.setDati(userS.listByID(id));
+		} catch (Exception e) {
+			log.error(e.getMessage());
+			r.setMsg(e.getMessage());
+			r.setRc(false);
+		}
+		return r;
+	}
+	
+	@PostMapping("/updaterole")
+	public ResponseBase updateRole(@RequestParam Integer id) {
+		log.debug("Inizio updateRole:");
+	
+		ResponseBase r = new ResponseBase();
+		r.setRc(true);
+		try{
+			userS.updateRole(id);
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			r.setMsg(e.getMessage());

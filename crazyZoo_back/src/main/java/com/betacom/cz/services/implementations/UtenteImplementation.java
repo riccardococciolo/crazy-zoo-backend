@@ -133,9 +133,18 @@ public class UtenteImplementation implements UtenteServices{
                 				 		  u.get().getIndirizzo().getCap(), 
                 				 		  u.get().getIndirizzo().getCitta()));
 	}
-	
 
-	
-	
 
+	@Override
+	public void updateRole(Integer id) throws Exception {
+		
+		Optional<Utente> userById = userR.findById(id);
+		
+		if(userById.isPresent()) {						
+			userById.get().setRuolo(Ruolo.ADMIN);
+			
+			userR.save(userById.get());
+		}
+		log.error("User not found.");
+	}
 }
