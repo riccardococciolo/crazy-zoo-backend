@@ -18,13 +18,13 @@ public class MailController {
 	@Autowired
 	MailServices mailS;
 	
-	@PostMapping("/send")
+	@PostMapping("/registermail")
 	public ResponseBase send(@RequestBody MailRequest req) {
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
 		try {
-			mailS.sendMail(req);
+			mailS.registerMail(req);
 		}catch(Exception e) {
 			r.setMsg(e.getMessage());
 			r.setRc(false);

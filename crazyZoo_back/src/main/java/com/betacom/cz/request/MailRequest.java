@@ -40,6 +40,11 @@ public class MailRequest {
 		this.attachment = attachment;
 	}
 	
+	
+	
+	public MailRequest() {
+		super();
+	}
 	@Override
 	public String toString() {
 		return "MailRequest [to=" + to + ", oggetto=" + oggetto + ", body=" + body + ", attachment=" + attachment + "]";
