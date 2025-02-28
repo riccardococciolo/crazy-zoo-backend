@@ -85,19 +85,23 @@ public class MailImplementation implements MailServices {
 	    if (uO.isPresent()) {
 	        Utente utente = uO.get();
 	        StringBuilder sb = new StringBuilder();
-	        sb.append("Ciao ").append(utente.getNome()).append(",\n\n");
-	        sb.append("Siamo felicissimi di darti il benvenuto su **CrazyZooApp**! 🎉\n\n");
-	        sb.append("La tua registrazione è avvenuta con successo e ora puoi accedere a tutte le nostre funzionalità esclusive. ")
-	          .append("Esplora, scopri e divertiti con i nostri servizi pensati apposta per te.\n\n");
-	        sb.append("✨ **Cosa puoi fare ora?**\n")
-	          .append("✅ Accedere alla tua area personale\n")
-	          .append("✅ Scoprire contenuti esclusivi\n")
-	          .append("✅ Ricevere aggiornamenti e offerte speciali\n\n");
-	        sb.append("Se hai domande o hai bisogno di supporto, il nostro team è sempre a tua disposizione. ")
-	          .append("Scrivici e saremo felici di aiutarti!\n\n");
-	        sb.append("Grazie per aver scelto **CrazyZooApp**. Siamo entusiasti di averti con noi! 🦁🐼🐵\n\n");
-	        sb.append("A presto,\n");
-	        sb.append("**Il team di CrazyZooApp**");
+	        sb.append("<html><body>")
+	          .append("<p>Ciao <b>").append(utente.getNome()).append("</b>,</p>")
+	          .append("<p>Siamo felicissimi di darti il benvenuto su <b>CrazyZooApp</b>! 🎉</p>")
+	          .append("<p>La tua registrazione è avvenuta con successo e ora puoi accedere a tutte le nostre funzionalità esclusive.</p>")
+	          .append("<p>Esplora, scopri e divertiti con i nostri servizi pensati apposta per te.</p>")
+	          .append("<h3>✨ Cosa puoi fare ora?</h3>")
+	          .append("<ul>")
+	          .append("<li>✅ Accedere alla tua area personale</li>")
+	          .append("<li>✅ Scoprire contenuti esclusivi</li>")
+	          .append("<li>✅ Ricevere aggiornamenti e offerte speciali</li>")
+	          .append("</ul>")
+	          .append("<p>Se hai domande o hai bisogno di supporto, il nostro team è sempre a tua disposizione.</p>")
+	          .append("<p>Scrivici e saremo felici di aiutarti!</p>")
+	          .append("<p>Grazie per aver scelto <b>CrazyZooApp</b>. Siamo entusiasti di averti con noi! 🦁🐼🐵</p>")
+	          .append("<p>A presto,</p>")
+	          .append("<p><b>Il team di CrazyZooApp</b></p>")
+	          .append("</body></html>");
 
 	        MailRequest confirmationMail = new MailRequest();
 	        confirmationMail.setTo(req.getTo());
@@ -109,6 +113,8 @@ public class MailImplementation implements MailServices {
 	        throw new Exception("Utente non trovato con l'email: " + req.getTo());
 	    }
 	}
+
+
 
 
 }
