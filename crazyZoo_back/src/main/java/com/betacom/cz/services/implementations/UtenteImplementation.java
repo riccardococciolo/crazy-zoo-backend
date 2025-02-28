@@ -38,14 +38,21 @@ public class UtenteImplementation implements UtenteServices{
 
 	    Optional<Utente> userByEmail = userR.findByEmail(req.getEmail());
 	    Optional<Utente> userByUsername = userR.findByUsername(req.getUsername());
+	    Optional<Utente> userByCell = userR.findByCellulare(req.getCellulare());
 
-	    if (userByEmail.isPresent() || userByUsername.isPresent()) {
-	        throw new Exception("Utente già esistente nel database!");
-	    }
-
+	    if (userByEmail.isPresent()) 
+	        throw new Exception("Email già esitente");
+	    if(userByUsername.isPresent())
+	    	throw new Exception("Username già esitente");
+	    if(userByCell.isPresent())
+	    	throw new Exception("Cellulare già esistente");
+	    
+	   
 	    Utente u = new Utente();
 	    u.setNome(req.getNome());
 	    u.setCognome(req.getCognome());
+	    
+	    
 	    u.setUsername(req.getUsername());
 
 	    //Crittografia della password prima di salvarla

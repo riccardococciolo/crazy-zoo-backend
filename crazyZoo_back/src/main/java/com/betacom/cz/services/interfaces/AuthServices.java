@@ -10,5 +10,5 @@ public interface AuthServices {
 	
 	RegisterDTO registerUser(UtenteRequest req) throws Exception;
     
-    ResponseObject<LoginDTO> authenticate(LoginRequest req);
+    ResponseObject<LoginDTO> authenticate(LoginRequest req) throws Exception;
 }

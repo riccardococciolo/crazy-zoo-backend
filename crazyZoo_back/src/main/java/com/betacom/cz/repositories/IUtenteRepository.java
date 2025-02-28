@@ -10,5 +10,7 @@ public interface IUtenteRepository extends JpaRepository<Utente, Integer>{
 	
 	Optional<Utente> findByEmail(String email);
 	Optional<Utente> findByUsername(String username);
+	
+	Optional<Utente> findByCellulare(String cell);
 
 }

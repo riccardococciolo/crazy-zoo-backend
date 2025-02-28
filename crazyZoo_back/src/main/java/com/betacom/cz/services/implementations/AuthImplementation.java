@@ -36,7 +36,7 @@ public class AuthImplementation implements AuthServices {
 	        //Creazione dell'utente tramite il metodo create()
 	        utenteS.create(req);
 	    } catch (Exception e) {
-	        throw new RuntimeException("Registration failed: " + e.getMessage());
+	        throw new RuntimeException(e.getMessage());
 	    }
 	    Optional <Utente> utente = utenteR.findByEmail(req.getEmail());
 	    
@@ -45,12 +45,17 @@ public class AuthImplementation implements AuthServices {
 	}
 
 	@Override
-	public ResponseObject<LoginDTO> authenticate(LoginRequest req) {
+	public ResponseObject<LoginDTO> authenticate(LoginRequest req) throws Exception {
 	    
 	    ResponseObject<LoginDTO> response = new ResponseObject<>();
 	    
 	    //Ricerca utente nel database
 	    Optional<Utente> utente = utenteR.findByUsername(req.getUsername());
+	    if(!utente.isPresent())
+	    	throw new Exception("Username errato");
+	    
+	    if(!pwdEncoder.matches(req.getPassword(), utente.get().getPassword()))
+	    	throw new Exception("Password errata");
 
 	    if (utente.isPresent() && pwdEncoder.matches(req.getPassword(), utente.get().getPassword())) {
 	        //Genera il token JWT
@@ -69,13 +74,13 @@ public class AuthImplementation implements AuthServices {
 	        loginDTO.setCellulare(utente.get().getCellulare());
 	        loginDTO.setCarrelloID(utente.get().getCarrello().getId());
 	        
-	        ;
+	        
 	        response.setRc(true);
 	        response.setMsg("Login successful");
 	        response.setDati(loginDTO);
 	    } else {
+	    	
 	        response.setRc(false);
-	        response.setMsg("Invalid credentials");
 	    }
 
 	    return response;

@@ -36,7 +36,7 @@ public class AuthController {
             response.setMsg("User registered successfully");
         } catch (Exception e) {
             response.setRc(false);
-            response.setMsg("Registration failed: " + e.getMessage());
+            response.setMsg(e.getMessage());
         }
         
         return response;
@@ -51,7 +51,7 @@ public class AuthController {
             response = authS.authenticate(request);
         } catch (Exception e) {
             response.setRc(false);
-            response.setMsg("Login failed: " + e.getMessage());
+            response.setMsg(e.getMessage());
         }
         
         return response;
