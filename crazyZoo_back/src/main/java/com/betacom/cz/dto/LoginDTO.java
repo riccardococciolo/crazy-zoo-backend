@@ -2,7 +2,8 @@ package com.betacom.cz.dto;
 
 public class LoginDTO {
 	
-    private String token;    
+    private String token;  
+    private String ruolo;
 	private Integer id;
 	private String nome;
 	private String cognome;
@@ -74,6 +75,14 @@ public class LoginDTO {
 
 	public void setCarrelloID(Integer carrelloID) {
 		this.carrelloID = carrelloID;
+	}
+
+	public String getRuolo() {
+		return ruolo;
+	}
+
+	public void setRuolo(String ruolo) {
+		this.ruolo = ruolo;
 	}     
 	
 }

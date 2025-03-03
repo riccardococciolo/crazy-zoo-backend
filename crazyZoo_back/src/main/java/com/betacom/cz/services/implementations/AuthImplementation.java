@@ -57,11 +57,12 @@ public class AuthImplementation implements AuthServices {
 			throw new Exception("Password errata");
 
 		//Genera il token JWT
-		String token = jwt.generateToken(req.getUsername(), utente.get().getRuolo().toString());
+		String token = jwt.generateToken(req.getUsername());
 
 		LoginDTO loginDTO = new LoginDTO();
 
-		loginDTO.setToken(token);      
+		loginDTO.setToken(token);  
+		loginDTO.setRuolo(utente.get().getRuolo().toString());
 		loginDTO.setId(utente.get().getId());
 		loginDTO.setNome(utente.get().getNome());
 		loginDTO.setCognome(utente.get().getCognome());

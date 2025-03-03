@@ -20,10 +20,9 @@ public class Jwt {
 		this.key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secret));
 	}
 
-	public String generateToken(String username, String ruolo) {
+	public String generateToken(String username) {
 		return Jwts.builder()
 				.setSubject(username)
-				.claim("ruolo", ruolo)
 				.signWith(key, SignatureAlgorithm.HS256)
 				.compact();
 	}
