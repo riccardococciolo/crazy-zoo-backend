@@ -67,8 +67,6 @@ public class UtenteDTO {
 		this.ruolo = ruolo;
 	}
 	
-	
-	
 	public IndirizzoDTO getIndirizzo() {
 		return indirizzo;
 	}
@@ -77,6 +75,7 @@ public class UtenteDTO {
 		this.indirizzo = indirizzo;
 	}
 
+	//Costruttori
 	public UtenteDTO(Integer id, String nome, String cognome, String username, String email, String cellulare,
 			String ruolo) {
 		super();
@@ -89,8 +88,6 @@ public class UtenteDTO {
 		this.ruolo = ruolo;
 	}
 	
-	
-
 	public UtenteDTO(Integer id, String nome, String cognome, String username, String email, String cellulare,
 			String ruolo, IndirizzoDTO indirizzo) {
 		super();

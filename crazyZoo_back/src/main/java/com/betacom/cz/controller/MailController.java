@@ -1,5 +1,6 @@
 package com.betacom.cz.controller;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,9 @@ public class MailController {
 	@Autowired
 	MailServices mailS;
 	
+	@Autowired
+	Logger log;
+	
 	@PostMapping("/registermail")
 	public ResponseBase send(@RequestBody MailRequest req) {
 
@@ -26,6 +30,8 @@ public class MailController {
 		try {
 			mailS.registerMail(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}

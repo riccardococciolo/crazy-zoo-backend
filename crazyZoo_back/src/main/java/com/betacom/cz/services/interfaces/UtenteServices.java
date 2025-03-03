@@ -4,12 +4,11 @@ import java.util.List;
 import com.betacom.cz.dto.UtenteDTO;
 import com.betacom.cz.request.UtenteRequest;
 
-public interface UtenteServices 
-{
+public interface UtenteServices {
+	
 	void create(UtenteRequest req) throws Exception;
 	void delete(UtenteRequest req) throws Exception;
 	void updateRole(Integer id) throws Exception;
-	
 	List<UtenteDTO> listAll();
 	UtenteDTO listByID(Integer id) throws Exception;
 	

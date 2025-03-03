@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -36,16 +35,6 @@ public class Ordine {
 	@Column(nullable = false)
 	private Double totale;
 	
-	
-	
-	public Double getTotale() {
-		return totale;
-	}
-
-	public void setTotale(Double totale) {
-		this.totale = totale;
-	}
-
 	//Getters&Setters
 	public Integer getId() {
 		return id;
@@ -79,21 +68,18 @@ public class Ordine {
 		this.prodotti = prodotti;
 	}
 	
+	public Double getTotale() {
+		return totale;
+	}
+
+	public void setTotale(Double totale) {
+		this.totale = totale;
+	}
 	
+	//addProdotto
 	public void addProdtto(Prodotto prodotto) {
 	    prodotti.add(prodotto);
 	    prodotto.getOrdini().add(this);
 	}
-	
-//	public void removeImmagine(Immagine immagine) {
-//	    if (immagine != null && immagini.contains(immagine)) {
-//	        immagini.remove(immagine);
-//	        immagine.setProdotto(null);
-//	    }
-//	}
-
-
-	
-	
 	
 }

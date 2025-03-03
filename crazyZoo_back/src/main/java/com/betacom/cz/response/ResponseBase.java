@@ -1,9 +1,11 @@
 package com.betacom.cz.response;
 
 public class ResponseBase {
+	
 	private Boolean rc;
 	private String msg;
 	
+	//Getters&Setters
 	public Boolean getRc() {
 		return rc;
 	}
@@ -16,4 +18,5 @@ public class ResponseBase {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+	
 }

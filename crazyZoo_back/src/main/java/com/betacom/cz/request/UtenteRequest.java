@@ -73,9 +73,6 @@ public class UtenteRequest {
 		this.cellulare = cellulare;
 	}
 	
-	
-	
-	
 	public String getVia() {
 		return via;
 	}
@@ -107,7 +104,16 @@ public class UtenteRequest {
 	public void setCitta(String citta) {
 		this.citta = citta;
 	}
+	
+	public String getRuolo() {
+		return ruolo;
+	}
 
+	public void setRuolo(String ruolo) {
+		this.ruolo = ruolo;
+	}
+
+	//Costruttori
 	public UtenteRequest(Integer id, String nome, String cognome, String username, String password, String email,
 			String cellulare, String ruolo, String via, String civico, String cap, String citta) {
 		super();
@@ -137,15 +143,9 @@ public class UtenteRequest {
 		this.cellulare = cellulare;
 		this.ruolo = ruolo;
 	}
-	public String getRuolo() {
-		return ruolo;
-	}
-
-	public void setRuolo(String ruolo) {
-		this.ruolo = ruolo;
-	}
-
+	
 	public UtenteRequest() {
 		super();
 	}
+	
 }

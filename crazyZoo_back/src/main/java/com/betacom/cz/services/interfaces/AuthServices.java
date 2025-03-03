@@ -8,7 +8,7 @@ import com.betacom.cz.response.ResponseObject;
 
 public interface AuthServices {
 	
-	RegisterDTO registerUser(UtenteRequest req) throws Exception;
-    
+	RegisterDTO registerUser(UtenteRequest req) throws Exception; 
     ResponseObject<LoginDTO> authenticate(LoginRequest req) throws Exception;
+    
 }

@@ -21,6 +21,7 @@ public class RicevutaController {
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			ricevutaS.sendRicevuta(id);
 		}catch(Exception e) {

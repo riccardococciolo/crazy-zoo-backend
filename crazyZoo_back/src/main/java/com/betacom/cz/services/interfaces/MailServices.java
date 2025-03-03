@@ -6,7 +6,6 @@ public interface MailServices {
 	
 	void sendMail(MailRequest req) throws Exception;
 	void sendMailWithAttachment(MailRequest req) throws Exception;
-	
 	void registerMail(MailRequest req) throws Exception;
 
 }

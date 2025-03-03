@@ -29,13 +29,15 @@ public class AnimaleController {
 
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody AnimaleRequest req) {
-		log.debug("Inizio creazione animale: {}", req.getNome());
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			animaleS.create(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -44,13 +46,15 @@ public class AnimaleController {
 
 	@PostMapping("/update")
 	public ResponseBase update(@RequestBody AnimaleRequest req) {
-		log.debug("Inizio update animale:");
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			animaleS.update(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -59,13 +63,15 @@ public class AnimaleController {
 
 	@PostMapping("/delete")
 	public ResponseBase delete(@RequestBody AnimaleRequest req) {
-		log.debug("Inizio delete animale: {}", req.getNome());
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			animaleS.delete(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -74,13 +80,15 @@ public class AnimaleController {
 
 	@GetMapping("/listall")
 	public ResponseList<AnimaleDTO> listAll() {
-		log.debug("Inizio listAll:");
 
 		ResponseList<AnimaleDTO> r = new ResponseList<AnimaleDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(animaleS.listAll());
 		} catch (Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -89,13 +97,15 @@ public class AnimaleController {
 
 	@GetMapping("/listbyid")
 	public ResponseObject<AnimaleDTO> listByID(@RequestParam Integer id) {
-		log.debug("Inizio listAll:");
 
 		ResponseObject<AnimaleDTO> r = new ResponseObject<AnimaleDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(animaleS.listByID(id));
 		} catch (Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}

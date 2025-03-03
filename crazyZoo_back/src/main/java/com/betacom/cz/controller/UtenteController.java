@@ -19,30 +19,25 @@ import com.betacom.cz.services.interfaces.UtenteServices;
 @RestController
 @RequestMapping("/rest/utente")
 @CrossOrigin(origins = "${url_api}")
-public class UtenteController
-{
+public class UtenteController {
+	
 	@Autowired
 	UtenteServices userS;
-
+	
 	@Autowired
 	Logger log;
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody UtenteRequest req) {
-		log.debug("Inizio creazione Utente: {},{},{},{},{}", 
-				req.getNome(),
-				req.getCognome(),
-				req.getCellulare(),
-				req.getEmail(),
-				req.getUsername(),
-				req.getPassword(),
-				req.getRuolo());
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			userS.create(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -51,13 +46,15 @@ public class UtenteController
 	
 	@PostMapping("/delete")
 	public ResponseBase delete(@RequestBody UtenteRequest req) {
-		log.debug("Inizio delete Utente: {}", req.getNome());
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			userS.delete(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -67,14 +64,15 @@ public class UtenteController
 	
 	@GetMapping("/listall")
 	public ResponseList<UtenteDTO> listAll() {
-		log.debug("Inizio listAll:");
 		
 		ResponseList<UtenteDTO> r = new ResponseList<UtenteDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(userS.listAll());
 		} catch (Exception e) {
 			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -83,14 +81,15 @@ public class UtenteController
 	
 	@GetMapping("/listbyid")
 	public ResponseObject<UtenteDTO> listByID(@RequestParam Integer id) {
-		log.debug("Inizio listById:");
 		
 		ResponseObject<UtenteDTO> r = new ResponseObject<UtenteDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(userS.listByID(id));
 		} catch (Exception e) {
 			log.error(e.getMessage());
+			
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -99,20 +98,19 @@ public class UtenteController
 	
 	@PostMapping("/updaterole")
 	public ResponseBase updateRole(@RequestBody UtenteRequest req) {
-		log.debug("Inizio updateRole:");
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try{
 			userS.updateRole(req.getId());
 		} catch (Exception e) {
 			log.error(e.getMessage());
+			
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
 		return r;
 	}
-	
-	
 	
 }

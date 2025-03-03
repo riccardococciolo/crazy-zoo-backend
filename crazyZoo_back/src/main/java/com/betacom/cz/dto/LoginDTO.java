@@ -85,6 +85,5 @@ public class LoginDTO {
 	public void setCarrelloID(Integer carrelloID) {
 		this.carrelloID = carrelloID;
 	}     
-
 	
 }

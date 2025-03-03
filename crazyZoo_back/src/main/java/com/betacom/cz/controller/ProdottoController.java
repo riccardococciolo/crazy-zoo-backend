@@ -1,7 +1,6 @@
 package com.betacom.cz.controller;
 
 import java.util.List;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,21 +25,22 @@ import com.betacom.cz.services.interfaces.ProdottoServices;
 public class ProdottoController {
 	
 	@Autowired
-	ProdottoServices proS;
+	ProdottoServices prodottoS;
 	
 	@Autowired
 	Logger log;
 	
 	@PostMapping(value = "/create", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<ResponseBase> create(@ModelAttribute ProdottoRequest req) {
-		log.debug("Inizio creazione prodotto: {}", req.getTitolo());
-
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
-			proS.create(req);
+			prodottoS.create(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -49,14 +49,15 @@ public class ProdottoController {
 	
 	@PostMapping(value = "/update", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<ResponseBase> update(@ModelAttribute ProdottoRequest req) {
-		log.debug("Inizio update prodotto: {}", req.getTitolo());
-
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
-			proS.update(req);
+			prodottoS.update(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -65,14 +66,15 @@ public class ProdottoController {
 	
 	@PostMapping(value = "/delete", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<ResponseBase> delete(@ModelAttribute ProdottoRequest req) {
-		log.debug("Inizio update prodotto: {}", req.getTitolo());
-
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
-			proS.delete(req);
+			prodottoS.delete(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -92,8 +94,9 @@ public class ProdottoController {
             @RequestParam(required = false) String descrizione) 
     {
 
-        List<ProdottoDTO> lP = proS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
+        List<ProdottoDTO> lP = prodottoS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione);
         return ResponseEntity.ok(lP);
+        
     }
 	
     @GetMapping("/listbyfilterpage")
@@ -109,7 +112,9 @@ public class ProdottoController {
             @RequestParam(required = false) String descrizione,
             Pageable pageable) {
 
-        Page<ProdottoDTO> page = proS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione, pageable);
+        Page<ProdottoDTO> page = prodottoS.list(id, titolo, prezzoMin, prezzoMax, quantita, nomeAnimale, nomeTipologia, nomeMarca, descrizione, pageable);
         return ResponseEntity.ok(page);
+        
     }
+    
 }

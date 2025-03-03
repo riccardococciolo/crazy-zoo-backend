@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.betacom.cz.dto.MarcaDTO;
 import com.betacom.cz.request.MarcaRequest;
 import com.betacom.cz.response.ResponseBase;
@@ -30,14 +29,15 @@ public class MarcaController {
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody MarcaRequest req) {
-		log.debug("Inizio creazione marca: {}", req.getNome());
-
 
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			marcaS.create(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -46,13 +46,15 @@ public class MarcaController {
 	
 	@PostMapping("/update")
 	public ResponseBase update(@RequestBody MarcaRequest req) {
-		log.debug("Inizio update:");
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			marcaS.update(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -61,13 +63,15 @@ public class MarcaController {
 	
 	@PostMapping("/delete")
 	public ResponseBase delete(@RequestBody MarcaRequest req) {
-		log.debug("Inizio delete marca: {}", req.getNome());
 	
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			marcaS.delete(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -76,14 +80,15 @@ public class MarcaController {
 	
 	@GetMapping("/listall")
 	public ResponseList<MarcaDTO> listAll() {
-		log.debug("Inizio listAll:");
 		
 		ResponseList<MarcaDTO> r = new ResponseList<MarcaDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(marcaS.listAll());
 		} catch (Exception e) {
 			log.error(e.getMessage());
+			
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -92,14 +97,15 @@ public class MarcaController {
 	
 	@GetMapping("/listbyid")
 	public ResponseObject<MarcaDTO> listByID(@RequestParam Integer id) {
-		log.debug("Inizio listAll:");
 		
 		ResponseObject<MarcaDTO> r = new ResponseObject<MarcaDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(marcaS.listByID(id));
 		} catch (Exception e) {
 			log.error(e.getMessage());
+			
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}

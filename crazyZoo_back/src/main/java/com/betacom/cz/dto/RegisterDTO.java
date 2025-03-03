@@ -4,6 +4,7 @@ public class RegisterDTO {
 	
 	private Integer id;
 
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}
@@ -12,11 +13,10 @@ public class RegisterDTO {
 		this.id = id;
 	}
 
+	//Costruttori
 	public RegisterDTO(Integer id) {
 		super();
 		this.id = id;
 	}
 	
-	
-
 }

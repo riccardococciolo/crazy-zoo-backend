@@ -77,7 +77,16 @@ public class ProdottoDTO {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
+	
+	public List<ImmagineDTO> getImmagini() {
+		return immagini;
+	}
 
+	public void setImmagini(List<ImmagineDTO> immagini) {
+		this.immagini = immagini;
+	}
+
+	//Costruttori
 	public ProdottoDTO(Integer id, Double prezzo, Integer quantita, String titolo, AnimaleDTO animale, MarcaDTO marca,
 			TipologiaDTO tipologia, List<ImmagineDTO> immagini, String descrizione) {
 		super();
@@ -92,25 +101,15 @@ public class ProdottoDTO {
 		this.descrizione = descrizione;
 	}
 
-	public List<ImmagineDTO> getImmagini() {
-		return immagini;
-	}
-
-	public void setImmagini(List<ImmagineDTO> immagini) {
-		this.immagini = immagini;
-	}
-
 	public ProdottoDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
+	//toString
 	@Override
 	public String toString() {
 		return "ProdottoDTO [id=" + id + ", prezzo=" + prezzo + ", quantita=" + quantita + ", titolo=" + titolo
 				+ ", animale=" + animale + ", marca=" + marca + ", tipologia=" + tipologia + "]";
 	}
-	
-	
-		
+			
 }

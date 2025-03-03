@@ -1,7 +1,6 @@
 package com.betacom.cz.models;
 
 import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -14,9 +13,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tipologie")
 public class Tipologia {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column (name = "nome", nullable = false)
 	private String nome;
 	
@@ -24,6 +25,7 @@ public class Tipologia {
 				fetch = FetchType.LAZY)
 	private List<Prodotto> prodotti;
 
+	//Getters&Setters
 	public Integer getId() {
 		return id;
 	}

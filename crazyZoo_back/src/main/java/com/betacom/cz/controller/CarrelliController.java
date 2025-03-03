@@ -30,13 +30,14 @@ public class CarrelliController {
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody CarrelloRequest req) {
 
-
-
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			carrS.create(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -45,11 +46,15 @@ public class CarrelliController {
 	
 	@PostMapping("/delete")
 	public ResponseBase delete(@RequestBody CarrelloRequest req) {
+		
 		ResponseBase r = new ResponseBase();
 		r.setRc(true);
+		
 		try {
 			carrS.delete(req);
 		}catch(Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
@@ -59,12 +64,13 @@ public class CarrelliController {
 	@GetMapping("/listbyid")
 	public ResponseList<ProdottoDTO> listByID(@RequestParam Integer id) {
 
-
 		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(carrS.listProdotto(id));
 		} catch (Exception e) {
+			log.error(e.getMessage());
 
 			r.setMsg(e.getMessage());
 			r.setRc(false);
@@ -74,13 +80,15 @@ public class CarrelliController {
 
 	@GetMapping("/listAll")
 	public ResponseList<CarrelloDTO> listAll() {
-		log.debug("Inizio listAll:");
 
 		ResponseList<CarrelloDTO> r = new ResponseList<CarrelloDTO>();
 		r.setRc(true);
+		
 		try{
 			r.setDati(carrS.listAll());
 		} catch (Exception e) {
+			log.error(e.getMessage());
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}

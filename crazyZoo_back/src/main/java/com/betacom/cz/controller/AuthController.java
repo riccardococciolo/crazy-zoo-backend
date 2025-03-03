@@ -1,5 +1,6 @@
 package com.betacom.cz.controller;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,9 @@ public class AuthController {
 
 	@Autowired
 	UtenteServices utenteS;
+	
+	@Autowired
+	Logger log;
 
 	@PostMapping("/register")
 	public ResponseObject<RegisterDTO> register(@RequestBody UtenteRequest request) {
@@ -33,10 +37,11 @@ public class AuthController {
 
 		try {
 			response.setDati(authS.registerUser(request));
-			response.setMsg("User registered successfully");
-		} catch (Exception e) {
-			response.setRc(false);
+		} catch (Exception e) {			
+			log.error(e.getMessage());
+			
 			response.setMsg(e.getMessage());
+			response.setRc(false);
 		}
 
 		return response;
@@ -51,8 +56,10 @@ public class AuthController {
 		try {
 			response = authS.authenticate(request);
 		} catch (Exception e) {
-			response.setRc(false);
+			log.error(e.getMessage());
+
 			response.setMsg(e.getMessage());
+			response.setRc(false);
 		}
 
 		return response;

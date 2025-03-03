@@ -8,10 +8,8 @@ public interface TipologiaService {
 	
 	void create(TipologiaRequest req) throws Exception;
 	void update(TipologiaRequest req) throws Exception;
-	void delete(TipologiaRequest req) throws Exception;
-	
+	void delete(TipologiaRequest req) throws Exception;	
 	List<TipologiaDTO> listAll();
 	TipologiaDTO listByID(Integer id) throws Exception;
-	
 
 }

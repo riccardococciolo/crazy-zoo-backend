@@ -8,7 +8,7 @@ public interface RecensioneServices {
 	
 	void create(RecensioniRequest req) throws Exception;
 	void delete(RecensioniRequest req) throws Exception;
-	
 	List<RecensioneDTO> listByProdotto(Integer id) throws Exception;
 	List<RecensioneDTO> listByUtente(Integer id) throws Exception;
+	
 }
