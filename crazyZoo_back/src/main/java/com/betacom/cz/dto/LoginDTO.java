@@ -2,9 +2,7 @@ package com.betacom.cz.dto;
 
 public class LoginDTO {
 	
-    private String token;
-    private String role;
-    
+    private String token;    
 	private Integer id;
 	private String nome;
 	private String cognome;
@@ -28,14 +26,6 @@ public class LoginDTO {
 	
 	public void setUsername(String username) {
 		this.username = username;
-	}
-	
-	public String getRole() {
-		return role;
-	}
-	
-	public void setRole(String role) {
-		this.role = role;
 	}
 
 	public Integer getId() {

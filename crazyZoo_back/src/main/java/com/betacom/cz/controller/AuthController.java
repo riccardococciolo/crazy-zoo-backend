@@ -25,44 +25,44 @@ public class AuthController {
 
 	@Autowired
 	UtenteServices utenteS;
-	
+
 	@Autowired
 	Logger log;
 
 	@PostMapping("/register")
 	public ResponseObject<RegisterDTO> register(@RequestBody UtenteRequest request) {
-		
-		ResponseObject<RegisterDTO> response = new ResponseObject<>();
-		response.setRc(true);
+
+		ResponseObject<RegisterDTO> rObj = new ResponseObject<>();
+		rObj.setRc(true);
 
 		try {
-			response.setDati(authS.registerUser(request));
+			rObj.setDati(authS.registerUser(request));
 		} catch (Exception e) {			
 			log.error(e.getMessage());
-			
-			response.setMsg(e.getMessage());
-			response.setRc(false);
+
+			rObj.setMsg(e.getMessage());
+			rObj.setRc(false);
 		}
 
-		return response;
+		return rObj;
 	}
 
 	@PostMapping("/login")
 	public ResponseObject<LoginDTO> login(@RequestBody LoginRequest request) {
-		
-		ResponseObject<LoginDTO> response = new ResponseObject<>();
-		response.setRc(true);
+
+		ResponseObject<LoginDTO> rObj = new ResponseObject<>();
+		rObj.setRc(true);
 
 		try {
-			response = authS.authenticate(request);
+			rObj.setDati(authS.authenticate(request));
 		} catch (Exception e) {
 			log.error(e.getMessage());
 
-			response.setMsg(e.getMessage());
-			response.setRc(false);
+			rObj.setMsg(e.getMessage());
+			rObj.setRc(false);
 		}
 
-		return response;
+		return rObj;
 	}
 
 }

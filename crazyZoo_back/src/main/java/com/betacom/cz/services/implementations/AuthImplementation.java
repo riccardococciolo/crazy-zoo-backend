@@ -10,79 +10,67 @@ import com.betacom.cz.models.Utente;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.LoginRequest;
 import com.betacom.cz.request.UtenteRequest;
-import com.betacom.cz.response.ResponseObject;
 import com.betacom.cz.services.interfaces.AuthServices;
 import com.betacom.cz.services.interfaces.UtenteServices;
 import com.betacom.cz.utils.Jwt;
 
 @Service
 public class AuthImplementation implements AuthServices {
-	
+
 	@Autowired
 	IUtenteRepository utenteR;
-	
+
 	@Autowired
 	UtenteServices utenteS;
-	
+
 	@Autowired
 	PasswordEncoder pwdEncoder;
-	
+
 	@Autowired
 	Jwt jwt;
 
 	@Override
 	public RegisterDTO registerUser(UtenteRequest req) {
-	    try {
-	        //Creazione dell'utente tramite il metodo create()
-	        utenteS.create(req);
-	    } catch (Exception e) {
-	        throw new RuntimeException(e.getMessage());
-	    }
-	    Optional <Utente> utente = utenteR.findByEmail(req.getEmail());
-	    
-	    return new RegisterDTO(utente.get().getId());
+
+		try {
+			//Creazione dell'utente tramite il metodo create di utente
+			utenteS.create(req);
+		} catch (Exception e) {
+			throw new RuntimeException(e.getMessage());
+		}
+
+		Optional <Utente> utente = utenteR.findByEmail(req.getEmail());
+
+		return new RegisterDTO(utente.get().getId());
 
 	}
 
 	@Override
-	public ResponseObject<LoginDTO> authenticate(LoginRequest req) throws Exception {
-	    
-	    ResponseObject<LoginDTO> response = new ResponseObject<>();
-	    
-	    Optional<Utente> utente = utenteR.findByUsername(req.getUsername());
-	    if(!utente.isPresent())
-	    	throw new Exception("Username errato");
-	    
-	    if(!pwdEncoder.matches(req.getPassword(), utente.get().getPassword()))
-	    	throw new Exception("Password errata");
+	public LoginDTO authenticate(LoginRequest req) throws Exception {
 
-	    if (utente.isPresent() && pwdEncoder.matches(req.getPassword(), utente.get().getPassword())) {
-	        
-	    	//Genera il token JWT
-	        String token = jwt.generateToken(req.getUsername());
+		Optional<Utente> utente = utenteR.findByUsername(req.getUsername());
 
-	        LoginDTO loginDTO = new LoginDTO();
-	        loginDTO.setToken(token);
-	        loginDTO.setRole(utente.get().getRuolo().toString());
-	        
-	        loginDTO.setId(utente.get().getId());
-	        loginDTO.setNome(utente.get().getNome());
-	        loginDTO.setCognome(utente.get().getCognome());
-	        loginDTO.setUsername(utente.get().getUsername());
-	        loginDTO.setEmail(utente.get().getEmail());
-	        loginDTO.setCellulare(utente.get().getCellulare());
-	        loginDTO.setCarrelloID(utente.get().getCarrello().getId());
-	        
-	        
-	        response.setRc(true);
-	        response.setMsg("Login successful");
-	        response.setDati(loginDTO);
-	    } else {
-	    	
-	        response.setRc(false);
-	    }
+		if(!utente.isPresent())
+			throw new Exception("Username errato");
 
-	    return response;
+		if(!pwdEncoder.matches(req.getPassword(), utente.get().getPassword()))
+			throw new Exception("Password errata");
+
+		//Genera il token JWT
+		String token = jwt.generateToken(req.getUsername(), utente.get().getRuolo().toString());
+
+		LoginDTO loginDTO = new LoginDTO();
+
+		loginDTO.setToken(token);      
+		loginDTO.setId(utente.get().getId());
+		loginDTO.setNome(utente.get().getNome());
+		loginDTO.setCognome(utente.get().getCognome());
+		loginDTO.setUsername(utente.get().getUsername());
+		loginDTO.setEmail(utente.get().getEmail());
+		loginDTO.setCellulare(utente.get().getCellulare());
+		loginDTO.setCarrelloID(utente.get().getCarrello().getId());	    	    
+
+		return loginDTO;
 	}
 
 }
