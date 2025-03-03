@@ -85,13 +85,10 @@ public class UtenteControllerTest {
 	@Order(2)
 	public void listAll() {
 	    
-	    // Recupera la lista degli utenti
 	    ResponseList<UtenteDTO> resList = utController.listAll(); 
 
-	    // Verifica che la risposta abbia avuto successo
 	    Assertions.assertThat(resList.getRc()).isEqualTo(true);	
 
-	    // Fai l'asserzione sul primo utente della lista
 	    Assertions.assertThat(resList.getDati().get(0).getUsername()).isEqualTo("marione");		
 	}
 	
@@ -108,14 +105,11 @@ public class UtenteControllerTest {
 	@Order(4)
 	public void delete() {
 
-	    // Recupera la lista di utenti
 	    ResponseList<UtenteDTO> rL = utController.listAll();
 
-	    // Verifica che la lista non sia vuota e che la risposta sia valida
 	    Assertions.assertThat(rL.getRc()).isTrue();
 	    Assertions.assertThat(rL.getDati()).isNotEmpty();
 
-	    // Trova l'utente da eliminare
 	    UtenteDTO utenteDaEliminare = rL.getDati().stream()
 	        .filter(m -> "georgina".equals(m.getUsername())) 
 	        .findFirst()
@@ -123,26 +117,21 @@ public class UtenteControllerTest {
 
 	    Assertions.assertThat(utenteDaEliminare).isNotNull();
 
-	    // Crea una richiesta di eliminazione con l'ID dell'utente da eliminare
 	    UtenteRequest utenteReq = new UtenteRequest();
 	    utenteReq.setId(utenteDaEliminare.getId()); 
 
-	    // Elimina l'utente
 	    ResponseBase uRB = utController.delete(utenteReq);
 	    Assertions.assertThat(uRB.getRc()).isTrue();
 
-	    // Recupera nuovamente la lista per verificare l'eliminazione
 	    ResponseList<UtenteDTO> uRL = utController.listAll();
 
 	    Assertions.assertThat(uRL.getRc()).isTrue();
 
-	    // Verifica che l'utente eliminato non sia più nella lista
 	    UtenteDTO utenteEliminato = uRL.getDati().stream()
 	        .filter(m -> "georgina".equals(m.getUsername())) 
 	        .findFirst()
 	        .orElse(null);
 
-	    // L'utente dovrebbe essere nullo, indicando che è stato eliminato
 	    Assertions.assertThat(utenteEliminato).isNull();
 	}
 

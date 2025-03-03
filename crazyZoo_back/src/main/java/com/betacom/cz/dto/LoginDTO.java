@@ -84,7 +84,22 @@ public class LoginDTO {
 
 	public void setCarrelloID(Integer carrelloID) {
 		this.carrelloID = carrelloID;
+	}
+
+	public LoginDTO(String token, String role, Integer id, String nome, String cognome, String username, String email,
+			String cellulare, Integer carrelloID) {
+		super();
+		this.token = token;
+		this.role = role;
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.username = username;
+		this.email = email;
+		this.cellulare = cellulare;
+		this.carrelloID = carrelloID;
 	}     
 
+	
 	
 }

@@ -61,8 +61,6 @@ public class CarrelliControllerTest {
 		ResponseList<ProdottoDTO> resList = carController.listByID(1); 
 
 	    Assertions.assertThat(resList.getRc()).isEqualTo(true);	
-
-	   // Assertions.assertThat(resList.getDati().get(0).getId()).isEqualTo(2);		
 	}
 	
 	@Test

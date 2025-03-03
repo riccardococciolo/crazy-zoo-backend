@@ -33,7 +33,6 @@ public class AuthController {
 
 		try {
 			response.setDati(authS.registerUser(request));
-			response.setMsg("User registered successfully");
 		} catch (Exception e) {
 			response.setRc(false);
 			response.setMsg(e.getMessage());
@@ -49,7 +48,7 @@ public class AuthController {
 		response.setRc(true);
 
 		try {
-			response = authS.authenticate(request);
+			response.setDati(authS.authenticate(request));
 		} catch (Exception e) {
 			response.setRc(false);
 			response.setMsg(e.getMessage());

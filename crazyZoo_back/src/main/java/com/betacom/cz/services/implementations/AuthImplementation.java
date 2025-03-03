@@ -10,7 +10,6 @@ import com.betacom.cz.models.Utente;
 import com.betacom.cz.repositories.IUtenteRepository;
 import com.betacom.cz.request.LoginRequest;
 import com.betacom.cz.request.UtenteRequest;
-import com.betacom.cz.response.ResponseObject;
 import com.betacom.cz.services.interfaces.AuthServices;
 import com.betacom.cz.services.interfaces.UtenteServices;
 import com.betacom.cz.utils.Jwt;
@@ -45,44 +44,34 @@ public class AuthImplementation implements AuthServices {
 	}
 
 	@Override
-	public ResponseObject<LoginDTO> authenticate(LoginRequest req) throws Exception {
+	public LoginDTO authenticate(LoginRequest req) throws Exception {
 	    
-	    ResponseObject<LoginDTO> response = new ResponseObject<>();
-	    
-	    Optional<Utente> utente = utenteR.findByUsername(req.getUsername());
-	    if(!utente.isPresent())
-	    	throw new Exception("Username errato");
-	    
-	    if(!pwdEncoder.matches(req.getPassword(), utente.get().getPassword()))
-	    	throw new Exception("Password errata");
+	    Optional<Utente> optionalUtente = utenteR.findByUsername(req.getUsername());
 
-	    if (utente.isPresent() && pwdEncoder.matches(req.getPassword(), utente.get().getPassword())) {
-	        
-	    	//Genera il token JWT
-	        String token = jwt.generateToken(req.getUsername());
-
-	        LoginDTO loginDTO = new LoginDTO();
-	        loginDTO.setToken(token);
-	        loginDTO.setRole(utente.get().getRuolo().toString());
-	        
-	        loginDTO.setId(utente.get().getId());
-	        loginDTO.setNome(utente.get().getNome());
-	        loginDTO.setCognome(utente.get().getCognome());
-	        loginDTO.setUsername(utente.get().getUsername());
-	        loginDTO.setEmail(utente.get().getEmail());
-	        loginDTO.setCellulare(utente.get().getCellulare());
-	        loginDTO.setCarrelloID(utente.get().getCarrello().getId());
-	        
-	        
-	        response.setRc(true);
-	        response.setMsg("Login successful");
-	        response.setDati(loginDTO);
-	    } else {
-	    	
-	        response.setRc(false);
+	    if (!optionalUtente.isPresent()) {
+	        throw new Exception("Username errato");
 	    }
 
-	    return response;
+	    Utente utente = optionalUtente.get();
+
+	    if (!pwdEncoder.matches(req.getPassword(), utente.getPassword())) {
+	        throw new Exception("Password errata");
+	    }
+
+	    String token = jwt.generateToken(utente.getUsername());
+
+	    return new LoginDTO(
+	        token,
+	        utente.getRuolo().toString(),
+	        utente.getId(),
+	        utente.getNome(),
+	        utente.getCognome(),
+	        utente.getUsername(),
+	        utente.getEmail(),
+	        utente.getCellulare(),
+	        utente.getCarrello().getId()
+	    );
 	}
+
 
 }

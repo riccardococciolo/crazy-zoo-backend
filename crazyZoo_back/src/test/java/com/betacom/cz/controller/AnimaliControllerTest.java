@@ -50,9 +50,6 @@ public class AnimaliControllerTest {
 		
 		ResponseList<AnimaleDTO> resList = animController.listAll(); 
 		Assertions.assertThat(resList.getRc()).isEqualTo(true);	
-//		 List<AnimaleDTO> rLsort = resList.getDati().stream()
-//                 .sorted(Comparator.comparing(AnimaleDTO::getId))
-//                 .toList();
 		Assertions.assertThat(resList.getDati().get(0).getNome()).isEqualTo("cane");		
 	}
 	
@@ -106,44 +103,34 @@ public class AnimaliControllerTest {
 	@Order(5)
     public void delete() {
 
-        //Recupera tutte le marche
         ResponseList<AnimaleDTO> rL = animController.listAll();
 
-        //Verifica che la lista sia popolata
         Assertions.assertThat(rL.getRc()).isTrue();
         Assertions.assertThat(rL.getDati()).isNotEmpty();
 
-        //Trova la marca da eliminare
         AnimaleDTO animaleDaEliminare = rL.getDati().stream()
             .filter(m -> "lemure".equals(m.getNome())) 
             .findFirst()
             .orElse(null);
 
-        //Verifica che esista la marca
         Assertions.assertThat(animaleDaEliminare).isNotNull();
 
-        //Crea la richiesta di eliminazione
         AnimaleRequest animaleReq = new AnimaleRequest();
         animaleReq.setId(animaleDaEliminare.getId()); 
 
-        //Esegui il delete
         ResponseBase uRB = animController.delete(animaleReq);
 
-        //Verifica che il delete sia andato a buon fine
         Assertions.assertThat(uRB.getRc()).isTrue();
 
-        //Recupera nuovamente tutte le marche per verificare che sia stata eliminata
         ResponseList<AnimaleDTO> uRL = animController.listAll();
 
         Assertions.assertThat(uRL.getRc()).isTrue();
 
-        //Cerca la marca eliminata
         AnimaleDTO animaleEliminato = uRL.getDati().stream()
             .filter(m -> "lemure".equals(m.getNome())) 
             .findFirst()
             .orElse(null);
 
-        //Verifica che la marca eliminata NON esista più
         Assertions.assertThat(animaleEliminato).isNull();
     }
 }
