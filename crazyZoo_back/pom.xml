@@ -24,7 +24,7 @@
 
     <dependencies>
 
-        <!-- Spring Boot Starter per JPA (Gestione Database) -->
+        <!-- Spring Boot Starter pJPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -36,7 +36,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- DevTools per ricaricamento automatico durante lo sviluppo -->
+        <!-- DevTools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -44,7 +44,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Database H2 (solo per test) -->
+        <!-- Database H2 (test) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -58,7 +58,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Spring Boot Starter per Test -->
+        <!-- Spring Boot Starter (test) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -71,14 +71,12 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!-- JUnit per i test -->
+        <!-- JUnit (test) -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- 📌 Nuove dipendenze aggiunte per autenticazione e sicurezza -->
 
         <!-- Spring Boot Starter per Spring Security -->
         <dependency>
@@ -86,7 +84,7 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency> 
 
-        <!-- Libreria per la gestione dei JWT (JSON Web Token) -->
+        <!-- Libreria per JSON Web Token -->
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt-api</artifactId>
@@ -108,7 +106,7 @@
 		</dependency>
 
 
-        <!-- Spring Security Test (opzionale per i test di autenticazione) -->
+        <!-- Spring Security Test  -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>

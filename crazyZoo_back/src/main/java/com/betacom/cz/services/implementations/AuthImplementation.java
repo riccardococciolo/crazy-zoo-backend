@@ -49,7 +49,6 @@ public class AuthImplementation implements AuthServices {
 	    
 	    ResponseObject<LoginDTO> response = new ResponseObject<>();
 	    
-	    //Ricerca utente nel database
 	    Optional<Utente> utente = utenteR.findByUsername(req.getUsername());
 	    if(!utente.isPresent())
 	    	throw new Exception("Username errato");
@@ -58,10 +57,10 @@ public class AuthImplementation implements AuthServices {
 	    	throw new Exception("Password errata");
 
 	    if (utente.isPresent() && pwdEncoder.matches(req.getPassword(), utente.get().getPassword())) {
-	        //Genera il token JWT
+	        
+	    	//Genera il token JWT
 	        String token = jwt.generateToken(req.getUsername());
 
-	        //Creazione DTO per la risposta
 	        LoginDTO loginDTO = new LoginDTO();
 	        loginDTO.setToken(token);
 	        loginDTO.setRole(utente.get().getRuolo().toString());

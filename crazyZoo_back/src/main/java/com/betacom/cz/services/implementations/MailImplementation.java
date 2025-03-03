@@ -38,8 +38,6 @@ public class MailImplementation implements MailServices {
 	public void sendMail(MailRequest req) throws Exception {
 		log.debug("sendMail :" + req);
 
-		//SimpleMailMessage message = new SimpleMailMessage();
-
 		if (req.getTo() == null || req.getOggetto() == null || req.getBody() == null)
 		        throw new Exception("To, Oggetto e Body sono obbligatori");
 
@@ -47,9 +45,9 @@ public class MailImplementation implements MailServices {
 		    MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 
 		    helper.setTo(req.getTo());
-		    helper.setFrom("crazyzooapp@zohomail.eu"); // Deve essere lo stesso del tuo account SMTP
+		    helper.setFrom("crazyzooapp@zohomail.eu"); 
 		    helper.setSubject(req.getOggetto());
-		    helper.setText(req.getBody(), true); // true -> supporta HTML
+		    helper.setText(req.getBody(), true); 
 
 		    mailSender.send(mimeMessage);
 		
@@ -65,11 +63,10 @@ public class MailImplementation implements MailServices {
 		byte[] attachment = pdf.generatePDF("test.pdt", req.getAttachment());
 
 		    helper.setTo(req.getTo());
-		    helper.setFrom("crazyzooapp@zohomail.eu"); // Deve essere lo stesso del tuo account SMTP
+		    helper.setFrom("crazyzooapp@zohomail.eu"); 
 		    helper.setSubject(req.getOggetto());
-		    helper.setText(req.getBody(), true); // true -> supporta HTML
+		    helper.setText(req.getBody(), true); 
 
-		    // FileSystemResource fileSystemResource = new FileSystemResource(new File(attachment)); 
 		    helper.addAttachment("ricevuta.pdf", new ByteArrayDataSource(attachment, "application/pdf"));
 
 		   

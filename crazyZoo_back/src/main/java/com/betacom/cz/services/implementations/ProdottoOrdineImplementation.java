@@ -1,10 +1,8 @@
 package com.betacom.cz.services.implementations;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,40 +26,6 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 	@Autowired
 	Logger log;
 
-//
-//	@Override
-//	@Transactional
-//	public void aggiungiProdottoAOrdine(ProdottoOrdineRequest reqPO) {
-//		
-//		Optional<Prodotto> prodotto = prodottoR.findById(reqPO.getProdottoID());
-//		if(prodotto.isEmpty()) {
-//			throw new NoSuchElementException("Prodotto non trovato");
-//		}
-//		
-//		Optional<Ordine> ordine = ordineR.findById(reqPO.getOrdineID());
-//		if(ordine.isEmpty()) {
-//			throw new NoSuchElementException("Ordine non trovato");
-//		}
-//		
-//		Prodotto prod = prodotto.get();
-//		
-//		Ordine ord = ordine.get();
-//		
-//		prod.getOrdini().add(ord);
-//		ord.getProdotti().add(prod);
-//		
-//		prodottoR.save(prod);
-//		ordineR.save(ord);
-//		
-//		
-//		
-//		
-//		
-////		ordine.get().getProdotti().add(p.get());
-////		p.get().getOrdini().add(o.get());
-////		prodottoR.save(p.get());
-////		ordineR.save(o.get());		
-//	}
 	
 	@Override
 	@Transactional
@@ -87,7 +51,6 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 	    log.debug("Prodotto trovato: ID = {}, Nome = {}", prodotto.getId(), prodotto.getTitolo());
 	    log.debug("Ordine trovato: ID = {}", ordine.getId());
 
-	    // Assicuriamoci che le liste non siano null
 	    if (ordine.getProdotti() == null) {
 	        log.warn("Lista prodotti in Ordine ID {} è null, inizializzazione in corso...", ordine.getId());
 	        ordine.setProdotti(new ArrayList<>());
@@ -98,13 +61,11 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 	        prodotto.setOrdini(new ArrayList<>());
 	    }
 
-	    // Aggiunta del prodotto all'ordine
 	    ordine.getProdotti().add(prodotto);
 	    prodotto.getOrdini().add(ordine);
 
 	    log.debug("Aggiunto Prodotto ID {} all'Ordine ID {}", prodotto.getId(), ordine.getId());
 
-	    // Salvataggio aggiornamenti
 	    ordineR.save(ordine);
 	    prodottoR.save(prodotto);
 
@@ -135,11 +96,6 @@ public class ProdottoOrdineImplementation implements ProdottoOrdineServices{
 		
 	}
 
-	@Override
-	public List<Prodotto> listaProdottiInOrdine(ProdottoOrdineRequest reqPO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void removeById(ProdottoOrdineRequest reqPO) {

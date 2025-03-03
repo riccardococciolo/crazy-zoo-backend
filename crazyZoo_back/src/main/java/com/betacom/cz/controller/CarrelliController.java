@@ -20,16 +20,16 @@ import com.betacom.cz.services.interfaces.CarrelloServices;
 @RequestMapping("/rest/carrelli")
 @CrossOrigin(origins = "${url_api}")
 public class CarrelliController {
-	
+
 	@Autowired
 	CarrelloServices carrS;
-	
+
 	@Autowired
 	Logger log;
-	
+
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody CarrelloRequest req) {
-		
+
 
 
 		ResponseBase r = new ResponseBase();
@@ -42,6 +42,7 @@ public class CarrelliController {
 		}
 		return r;
 	}
+	
 	@PostMapping("/delete")
 	public ResponseBase delete(@RequestBody CarrelloRequest req) {
 		ResponseBase r = new ResponseBase();
@@ -54,33 +55,32 @@ public class CarrelliController {
 		}
 		return r;
 	}
-	
+
 	@GetMapping("/listbyid")
 	public ResponseList<ProdottoDTO> listByID(@RequestParam Integer id) {
-	
-		
+
+
 		ResponseList<ProdottoDTO> r = new ResponseList<ProdottoDTO>();
 		r.setRc(true);
 		try{
 			r.setDati(carrS.listProdotto(id));
 		} catch (Exception e) {
-			
+
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}
 		return r;
 	}
-	
+
 	@GetMapping("/listAll")
 	public ResponseList<CarrelloDTO> listAll() {
 		log.debug("Inizio listAll:");
-		
+
 		ResponseList<CarrelloDTO> r = new ResponseList<CarrelloDTO>();
 		r.setRc(true);
 		try{
 			r.setDati(carrS.listAll());
 		} catch (Exception e) {
-			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}

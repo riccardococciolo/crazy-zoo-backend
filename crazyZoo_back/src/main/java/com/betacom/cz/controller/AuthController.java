@@ -18,43 +18,44 @@ import com.betacom.cz.services.interfaces.UtenteServices;
 @RequestMapping("/rest/auth")
 @CrossOrigin(origins = "${url_api}")
 public class AuthController {
-	
+
 	@Autowired
 	AuthServices authS;
-	
+
 	@Autowired
 	UtenteServices utenteS;
-	
-    @PostMapping("/register")
-    public ResponseObject<RegisterDTO> register(@RequestBody UtenteRequest request) {
-    	ResponseObject<RegisterDTO> response = new ResponseObject<>();
-    	
-        response.setRc(true);
-   
-        try {
-            response.setDati(authS.registerUser(request));
-            response.setMsg("User registered successfully");
-        } catch (Exception e) {
-            response.setRc(false);
-            response.setMsg(e.getMessage());
-        }
-        
-        return response;
-    }
 
-    @PostMapping("/login")
-    public ResponseObject<LoginDTO> login(@RequestBody LoginRequest request) {
-        ResponseObject<LoginDTO> response = new ResponseObject<>();
-        response.setRc(true);
-        
-        try {
-            response = authS.authenticate(request);
-        } catch (Exception e) {
-            response.setRc(false);
-            response.setMsg(e.getMessage());
-        }
-        
-        return response;
-    }
+	@PostMapping("/register")
+	public ResponseObject<RegisterDTO> register(@RequestBody UtenteRequest request) {
+		
+		ResponseObject<RegisterDTO> response = new ResponseObject<>();
+		response.setRc(true);
+
+		try {
+			response.setDati(authS.registerUser(request));
+			response.setMsg("User registered successfully");
+		} catch (Exception e) {
+			response.setRc(false);
+			response.setMsg(e.getMessage());
+		}
+
+		return response;
+	}
+
+	@PostMapping("/login")
+	public ResponseObject<LoginDTO> login(@RequestBody LoginRequest request) {
+		
+		ResponseObject<LoginDTO> response = new ResponseObject<>();
+		response.setRc(true);
+
+		try {
+			response = authS.authenticate(request);
+		} catch (Exception e) {
+			response.setRc(false);
+			response.setMsg(e.getMessage());
+		}
+
+		return response;
+	}
 
 }

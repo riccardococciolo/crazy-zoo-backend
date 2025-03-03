@@ -23,6 +23,7 @@ import jakarta.transaction.Transactional;
 
 @Service
 public class CarrelloImplementation implements CarrelloServices{
+	
 	@Autowired
 	ICarrelloRepository carrR;
 	@Autowired
@@ -43,55 +44,22 @@ public class CarrelloImplementation implements CarrelloServices{
 	        throw new Exception("Utente non trovato");
 	    }
 
-	    // Controllo se il carrello esiste già per quell'utente
 	    Optional<Carrello> existingCarrello = carrR.findByUtenteId(req.getUtenteID());
 	    if (existingCarrello.isPresent()) {
 	        throw new Exception("Carrello già esistente per l'utente con ID: " + req.getUtenteID());
 	    }
 
-	    // Creazione di un nuovo carrello se non esiste
 	    Carrello car = new Carrello();
 	    car.setUtente(ut.get());
-	    //utente.setCarrello(car)
+	    
 	    carrR.save(car);
 	}
 
-
-//	@Override
-//	public void update(CarrelloRequest req) throws Exception {
-//		 Optional<Utente> ut = uttR.findById(req.getUtenteID());
-//		    
-//		    if (ut.isEmpty()) {
-//		        throw new Exception("Utente non trovato");
-//		    }
-//		    Optional<Carrello> existingCarrello = carrR.findById(req.getId());
-//		    if (existingCarrello.isEmpty()) {
-//		        throw new Exception("Carrello non esistente");
-//		    }
-//		    Optional<Carrello> existinCarrello = carrR.findByUtenteId(req.getUtenteID());
-//		    if (existinCarrello.isPresent()) {
-//		        throw new Exception("Carrello già esistente per l'utente con ID: " + req.getUtenteID());
-//		    }
-//		    existingCarrello.get().setUtente(ut.get());
-//		    carrR.save(existingCarrello.get());
-//		    
-//		
-//	}
-
-//	@Override
-//	public void delete(CarrelloRequest req) throws Exception {
-//		// TODO Auto-generated method stub
-//		Optional<Carrello> existingCarrello = carrR.findById(req.getId());
-//		 if (existingCarrello.isEmpty()) {
-//		        throw new Exception("Carrello non esistente");
-//	    }
-//		 carrR.delete(existingCarrello.get());
-//		
-//	}
 	
 	@Override
 	@Transactional
 	public void delete(CarrelloRequest req) throws Exception {
+		
 	    Optional<Carrello> existingCarrello = carrR.findById(req.getId());
 
 	    if (existingCarrello.isEmpty()) {
@@ -100,22 +68,22 @@ public class CarrelloImplementation implements CarrelloServices{
 
 	    Carrello carrello = existingCarrello.get();
 
-	    // 1️⃣ Scollega il carrello dall'utente
 	    if (carrello.getUtente() != null) {
 	        carrello.getUtente().setCarrello(null);
-	        uttR.save(carrello.getUtente());  // Salva l'utente aggiornato
+	        uttR.save(carrello.getUtente());  
 	    }
 
-	    // 2️⃣ Scollega il carrello dai prodotti
 	    if (carrello.getProdotti() != null && !carrello.getProdotti().isEmpty()) {
 	        for (Prodotto p : carrello.getProdotti()) {
-	            p.getCarrelli().remove(carrello);  // Rimuove il carrello dalla lista dei prodotti
+	        	//Rimuove il carrello dalla lista dei prodotti
+	            p.getCarrelli().remove(carrello);  
 	        }
 	        prodottoR.saveAll(carrello.getProdotti());
-	        carrello.getProdotti().clear(); // Rimuove tutti i prodotti dalla lista del carrello
+	        
+	        //Rimuove tutti i prodotti dalla lista del carrello
+	        carrello.getProdotti().clear(); 
 	    }
 
-	    // 3️⃣ Ora si può eliminare il carrello senza errori
 	    carrR.delete(carrello);
 
 	    log.info("Carrello con ID '{}' eliminato con successo.", carrello.getId());
@@ -159,8 +127,5 @@ public class CarrelloImplementation implements CarrelloServices{
 		List<Prodotto> lP = carrello.get().getProdotti();
 		return mapToProdottoDTOList(lP);
 	}
-
-
-	
 
 }

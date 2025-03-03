@@ -31,7 +31,6 @@ public class ImmagineController {
 		try{
 			r.setDati(immS.listAll());
 		} catch (Exception e) {
-			log.error(e.getMessage());
 			r.setMsg(e.getMessage());
 			r.setRc(false);
 		}

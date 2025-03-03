@@ -18,7 +18,7 @@ public class PDFGeneratorImplementation implements PDFGeneratorServices {
 	public byte[] generatePDF(String nome, String body) throws Exception {
 		
 		Document document = new Document(PageSize.A4);  
-		ByteArrayOutputStream out = new ByteArrayOutputStream(); // Output in memoria
+		ByteArrayOutputStream out = new ByteArrayOutputStream(); 
 
 		try {
 			PdfWriter.getInstance(document, out);
@@ -34,7 +34,7 @@ public class PDFGeneratorImplementation implements PDFGeneratorServices {
 			document.close();
 		}
 
-		return out.toByteArray(); // Restituisce il PDF come array di byte		
+		return out.toByteArray();
 	}
 
 }
